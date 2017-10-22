@@ -1,0 +1,221 @@
+swagger: '2.0'
+info:
+  title: Aces Encoded Listener API
+  description: |
+    API Specification for Encoded Listeners that read data on a blockchain and
+    forward transaction events to registered subscribers.
+  version: "0.1.0"
+schemes:
+  - https
+basePath: /v1
+produces:
+  - application/json
+paths:
+  /status:
+    get:
+      summary: Get Health of node.
+      description: Get application health information.
+      responses:
+        200:
+          description: Health information.
+          schema:
+            $ref: "#/definitions/Health"
+  /subscriptions:
+    post:
+      summary: Registers a subscriber node to receive blockchain events.
+      description: |
+        The Subscribers endpoint allows subscriber to register their node to receive blockchain
+        events from the Encoded Listener.
+      parameters:
+        - in: body
+          name: SubscriptionRequest
+          description: The request to create a new Subscription.
+          schema:
+            type: object
+            required:
+              - host
+              - min_confirmations
+            properties:
+              host:
+                type: string
+                description: Target host implementing Encoded Listener Subscriber API interface.
+              min_confirmations:
+                type: integer
+                description: Confirmations required before event is sent to subscribers.
+      responses:
+        200:
+          description: The created Subscription
+          schema:
+            $ref: '#/definitions/Subscription'
+        400:
+          $ref: "#/responses/BadRequest"
+        404:
+          $ref: "#/responses/NotFound"
+  /subscriptions/{id}:
+    get:
+      summary: Gets Subscription
+      description: Get a Subscription by identifier.
+      parameters:
+        -
+          name: id
+          in: path
+          description: Subscription Identifier
+          type: string
+          required: true
+      responses:
+        200:
+          description: The Subscription.
+          schema:
+            $ref: '#/definitions/Subscription'
+        404:
+          $ref: "#/responses/NotFound"
+  /subscriptions/{id}/events:
+    get:
+      summary: List Subscription Events
+      description: Gets a page of Subscription Events.
+      parameters:
+        -
+          name: id
+          in: path
+          description: Subscription Identifier
+          type: string
+          required: true
+        -
+          name: page_size
+          in: query
+          type: integer
+          default: 100
+          description: Number of items to return per page.
+        -
+          name: page
+          in: query
+          type: integer
+          description: Zero-offset page number to return.
+        -
+          name: continuation
+          in: query
+          type: string
+          description: Continuation param for fetching next page.
+      responses:
+        200:
+          description: Page of Subscription Events
+          schema:
+            type: object
+            properties:
+              page_size:
+                type: integer
+              page:
+                type: integer
+              continuation:
+                type: string
+              items:
+                type: array
+                items:
+                  $ref: "#/definitions/SubscriptionEvent"
+        404:
+          $ref: "#/responses/NotFound"
+  /subscriptions/{id}/unsubscribes:
+    post:
+      summary: Create an Unsubscription.
+      description: Unsubscribes an active Subscription.
+      parameters:
+        -
+          name: id
+          in: path
+          description: Subscription Identifier
+          type: string
+          required: true
+      responses:
+        200:
+          description: Page of Subscription Events
+          schema:
+            $ref: "#/definitions/SubscriptionUnsubscribe"
+        404:
+          $ref: "#/responses/NotFound"
+
+responses:
+  BadRequest:
+    description: The request was invalid.
+    schema:
+      $ref: "#/definitions/ValidationError"
+  NotFound:
+    description: The specified resource was not found.
+    schema:
+      $ref: "#/definitions/NotFoundError"
+
+definitions:
+  Subscription:
+    type: object
+    properties:
+      id:
+        type: string
+        description: Unique identifier for a Subscription.
+      created_at:
+        type: string
+        format: date-time
+        description: Date the Subscription was created.
+      status:
+        type: string
+        enum: [active, unsubscribed, cancelled]
+  SubscriptionEvent:
+    type: object
+    properties:
+      id:
+        type: string
+        description: Subscription Event identifier
+      created_at:
+        type: string
+        format: date-time
+        description: Date the Subscription Event was created.
+      status:
+        type: string
+        enum: [new, delivered, failed]
+      tries:
+        type: integer
+        default: 0
+      data:
+        type: string
+        description: Event data encoded as a Json string.
+  SubscriptionUnsubscribe:
+    type: object
+    properties:
+      id:
+        type: string
+        description: Unsubscription identifier
+      created_at:
+        type: string
+        format: date-time
+        description: Date the Unsubscription was created.
+  Health:
+    type: object
+    properties:
+      status:
+        type: string
+        enum: [up, down]
+  ValidationError:
+    type: object
+    properties:
+      code:
+        type: string
+      message:
+        type: string
+      field_errors:
+        type: array
+        items:
+          $ref: "#/definitions/FieldError"
+  FieldError:
+    type: object
+    properties:
+      field:
+        type: string
+      code:
+        type: string
+      message:
+        type: string
+  NotFoundError:
+    type: object
+    properties:
+      code:
+        type: string
+      message:
+        type: string
