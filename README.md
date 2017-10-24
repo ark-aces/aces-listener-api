@@ -14,9 +14,9 @@ transaction events to be easily consumed via a common REST-ful API.
 
 ## SDKs
 
-* [Java SDK](skds/java/)
-* [Go SDK](skds/go/)
-* [PHP SDK](skds/php/)
-* [Javascript SDK](skds/javascript/)
+* [Java SDK](sdks/java/)
+* [Go SDK](sdks/go/)
+* [PHP SDK](sdks/php/)
+* [Javascript SDK](sdks/javascript/)
 * [Python SDK](sdks/python/)
 * [C# SDK](sdks/csharp/)
