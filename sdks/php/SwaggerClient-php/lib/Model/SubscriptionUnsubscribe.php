@@ -57,7 +57,7 @@ class SubscriptionUnsubscribe implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'id' => 'string',
-        'created_at' => '\DateTime'
+        'createdAt' => '\DateTime'
     ];
 
     /**
@@ -67,7 +67,7 @@ class SubscriptionUnsubscribe implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'id' => null,
-        'created_at' => 'date-time'
+        'createdAt' => 'date-time'
     ];
 
     /**
@@ -98,7 +98,7 @@ class SubscriptionUnsubscribe implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'created_at' => 'created_at'
+        'createdAt' => 'created_at'
     ];
 
     /**
@@ -108,7 +108,7 @@ class SubscriptionUnsubscribe implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'id' => 'setId',
-        'created_at' => 'setCreatedAt'
+        'createdAt' => 'setCreatedAt'
     ];
 
     /**
@@ -118,7 +118,7 @@ class SubscriptionUnsubscribe implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'id' => 'getId',
-        'created_at' => 'getCreatedAt'
+        'createdAt' => 'getCreatedAt'
     ];
 
     /**
@@ -182,7 +182,7 @@ class SubscriptionUnsubscribe implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['created_at'] = isset($data['created_at']) ? $data['created_at'] : null;
+        $this->container['createdAt'] = isset($data['createdAt']) ? $data['createdAt'] : null;
     }
 
     /**
@@ -235,25 +235,25 @@ class SubscriptionUnsubscribe implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets created_at
+     * Gets createdAt
      *
      * @return \DateTime
      */
     public function getCreatedAt()
     {
-        return $this->container['created_at'];
+        return $this->container['createdAt'];
     }
 
     /**
-     * Sets created_at
+     * Sets createdAt
      *
-     * @param \DateTime $created_at Date the Unsubscription was created.
+     * @param \DateTime $createdAt Date the Unsubscription was created.
      *
      * @return $this
      */
-    public function setCreatedAt($created_at)
+    public function setCreatedAt($createdAt)
     {
-        $this->container['created_at'] = $created_at;
+        $this->container['createdAt'] = $createdAt;
 
         return $this;
     }

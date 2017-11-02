@@ -22,7 +22,7 @@ import SubscriptionEvent from './model/SubscriptionEvent';
 import SubscriptionRequest from './model/SubscriptionRequest';
 import SubscriptionUnsubscribe from './model/SubscriptionUnsubscribe';
 import ValidationError from './model/ValidationError';
-import DefaultApi from './api/DefaultApi';
+import DefaultApi from './arkaces-encoded-listener-client/DefaultApi';
 
 
 /**
@@ -119,7 +119,7 @@ export {
 
     /**
     * The DefaultApi service constructor.
-    * @property {module:api/DefaultApi}
+    * @property {module:arkaces-encoded-listener-client/DefaultApi}
     */
     DefaultApi
 };

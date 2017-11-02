@@ -26,7 +26,7 @@ import java.io.IOException;
 /**
  * FieldError
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-10-23T23:56:49.035-07:00")
+
 public class FieldError {
   @SerializedName("field")
   private String field = null;

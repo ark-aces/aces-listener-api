@@ -1,4 +1,4 @@
-# IO.Swagger.Model.NotFoundError
+# ArkAces.EncodedListenerClient.Model.NotFoundError
 ## Properties
 
 Name | Type | Description | Notes

@@ -56,7 +56,7 @@ class InlineResponse200 implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'page_size' => 'int',
+        'pageSize' => 'int',
         'page' => 'int',
         'continuation' => 'string',
         'items' => '\Swagger\Client\Model\SubscriptionEvent[]'
@@ -68,7 +68,7 @@ class InlineResponse200 implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'page_size' => null,
+        'pageSize' => null,
         'page' => null,
         'continuation' => null,
         'items' => null
@@ -101,7 +101,7 @@ class InlineResponse200 implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'page_size' => 'page_size',
+        'pageSize' => 'page_size',
         'page' => 'page',
         'continuation' => 'continuation',
         'items' => 'items'
@@ -113,7 +113,7 @@ class InlineResponse200 implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'page_size' => 'setPageSize',
+        'pageSize' => 'setPageSize',
         'page' => 'setPage',
         'continuation' => 'setContinuation',
         'items' => 'setItems'
@@ -125,7 +125,7 @@ class InlineResponse200 implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'page_size' => 'getPageSize',
+        'pageSize' => 'getPageSize',
         'page' => 'getPage',
         'continuation' => 'getContinuation',
         'items' => 'getItems'
@@ -191,7 +191,7 @@ class InlineResponse200 implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['page_size'] = isset($data['page_size']) ? $data['page_size'] : null;
+        $this->container['pageSize'] = isset($data['pageSize']) ? $data['pageSize'] : null;
         $this->container['page'] = isset($data['page']) ? $data['page'] : null;
         $this->container['continuation'] = isset($data['continuation']) ? $data['continuation'] : null;
         $this->container['items'] = isset($data['items']) ? $data['items'] : null;
@@ -223,25 +223,25 @@ class InlineResponse200 implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets page_size
+     * Gets pageSize
      *
      * @return int
      */
     public function getPageSize()
     {
-        return $this->container['page_size'];
+        return $this->container['pageSize'];
     }
 
     /**
-     * Sets page_size
+     * Sets pageSize
      *
-     * @param int $page_size page_size
+     * @param int $pageSize pageSize
      *
      * @return $this
      */
-    public function setPageSize($page_size)
+    public function setPageSize($pageSize)
     {
-        $this->container['page_size'] = $page_size;
+        $this->container['pageSize'] = $pageSize;
 
         return $this;
     }

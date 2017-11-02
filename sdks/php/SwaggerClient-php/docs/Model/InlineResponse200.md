@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**page_size** | **int** |  | [optional] 
+**pageSize** | **int** |  | [optional] 
 **page** | **int** |  | [optional] 
 **continuation** | **string** |  | [optional] 
 **items** | [**\Swagger\Client\Model\SubscriptionEvent[]**](SubscriptionEvent.md) |  | [optional] 

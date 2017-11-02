@@ -53,7 +53,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **subscriptionsIdEventsGet**
-> \Swagger\Client\Model\InlineResponse200 subscriptionsIdEventsGet($id, $page_size, $page, $continuation)
+> \Swagger\Client\Model\InlineResponse200 subscriptionsIdEventsGet($id, $pageSize, $page, $continuation)
 
 List Subscription Events
 
@@ -66,12 +66,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Swagger\Client\Api\DefaultApi(new \Http\Adapter\Guzzle6\Client());
 $id = "id_example"; // string | Subscription Identifier
-$page_size = 100; // int | Number of items to return per page.
+$pageSize = 100; // int | Number of items to return per page.
 $page = 56; // int | Zero-offset page number to return.
 $continuation = "continuation_example"; // string | Continuation param for fetching next page.
 
 try {
-    $result = $api_instance->subscriptionsIdEventsGet($id, $page_size, $page, $continuation);
+    $result = $api_instance->subscriptionsIdEventsGet($id, $pageSize, $page, $continuation);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DefaultApi->subscriptionsIdEventsGet: ', $e->getMessage(), PHP_EOL;
@@ -84,7 +84,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| Subscription Identifier |
- **page_size** | **int**| Number of items to return per page. | [optional] [default to 100]
+ **pageSize** | **int**| Number of items to return per page. | [optional] [default to 100]
  **page** | **int**| Zero-offset page number to return. | [optional]
  **continuation** | **string**| Continuation param for fetching next page. | [optional]
 
@@ -194,7 +194,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **subscriptionsPost**
-> \Swagger\Client\Model\Subscription subscriptionsPost($subscription_request)
+> \Swagger\Client\Model\Subscription subscriptionsPost($subscriptionRequest)
 
 Registers a subscriber node to receive blockchain events.
 
@@ -206,10 +206,10 @@ The Subscribers endpoint allows subscriber to register their node to receive blo
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Swagger\Client\Api\DefaultApi(new \Http\Adapter\Guzzle6\Client());
-$subscription_request = new \Swagger\Client\Model\SubscriptionRequest(); // \Swagger\Client\Model\SubscriptionRequest | The request to create a new Subscription.
+$subscriptionRequest = new \Swagger\Client\Model\SubscriptionRequest(); // \Swagger\Client\Model\SubscriptionRequest | The request to create a new Subscription.
 
 try {
-    $result = $api_instance->subscriptionsPost($subscription_request);
+    $result = $api_instance->subscriptionsPost($subscriptionRequest);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DefaultApi->subscriptionsPost: ', $e->getMessage(), PHP_EOL;
@@ -221,7 +221,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **subscription_request** | [**\Swagger\Client\Model\SubscriptionRequest**](../Model/SubscriptionRequest.md)| The request to create a new Subscription. | [optional]
+ **subscriptionRequest** | [**\Swagger\Client\Model\SubscriptionRequest**](../Model/SubscriptionRequest.md)| The request to create a new Subscription. | [optional]
 
 ### Return type
 

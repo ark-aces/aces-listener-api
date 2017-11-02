@@ -1,4 +1,4 @@
-# IO.Swagger.Model.ValidationError
+# ArkAces.EncodedListenerClient.Model.ValidationError
 ## Properties
 
 Name | Type | Description | Notes

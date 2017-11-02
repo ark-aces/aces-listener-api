@@ -17,9 +17,9 @@ import os
 import sys
 import unittest
 
-import swagger_client
-from swagger_client.rest import ApiException
-from swagger_client.models.subscription import Subscription
+import io.arkaces.encoded_listener_client
+from io.arkaces.encoded_listener_client.rest import ApiException
+from io.arkaces.encoded_listener_client.models.subscription import Subscription
 
 
 class TestSubscription(unittest.TestCase):
@@ -36,7 +36,7 @@ class TestSubscription(unittest.TestCase):
         Test Subscription
         """
         # FIXME: construct object with mandatory attributes with example values
-        #model = swagger_client.models.subscription.Subscription()
+        #model = io.arkaces.encoded_listener_client.models.subscription.Subscription()
         pass
 
 

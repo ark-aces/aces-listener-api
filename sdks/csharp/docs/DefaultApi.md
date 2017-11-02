@@ -1,4 +1,4 @@
-# IO.Swagger.Api.DefaultApi
+# ArkAces.EncodedListenerClient.Api.DefaultApi
 
 All URIs are relative to *https://localhost/v1*
 
@@ -23,9 +23,9 @@ Get application health information.
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using ArkAces.EncodedListenerClient.Api;
+using ArkAces.EncodedListenerClient.Client;
+using ArkAces.EncodedListenerClient.Model;
 
 namespace Example
 {
@@ -80,9 +80,9 @@ Gets a page of Subscription Events.
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using ArkAces.EncodedListenerClient.Api;
+using ArkAces.EncodedListenerClient.Client;
+using ArkAces.EncodedListenerClient.Model;
 
 namespace Example
 {
@@ -147,9 +147,9 @@ Get a Subscription by identifier.
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using ArkAces.EncodedListenerClient.Api;
+using ArkAces.EncodedListenerClient.Client;
+using ArkAces.EncodedListenerClient.Model;
 
 namespace Example
 {
@@ -208,9 +208,9 @@ Unsubscribes an active Subscription.
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using ArkAces.EncodedListenerClient.Api;
+using ArkAces.EncodedListenerClient.Client;
+using ArkAces.EncodedListenerClient.Model;
 
 namespace Example
 {
@@ -269,9 +269,9 @@ The Subscribers endpoint allows subscriber to register their node to receive blo
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using ArkAces.EncodedListenerClient.Api;
+using ArkAces.EncodedListenerClient.Client;
+using ArkAces.EncodedListenerClient.Model;
 
 namespace Example
 {

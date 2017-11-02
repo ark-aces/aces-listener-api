@@ -91,7 +91,7 @@ class ValidationErrorTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "field_errors"
+     * Test attribute "fieldErrors"
      */
     public function testPropertyFieldErrors()
     {

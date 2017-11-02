@@ -1,4 +1,4 @@
-# IO.Swagger.Model.Subscription
+# ArkAces.EncodedListenerClient.Model.Subscription
 ## Properties
 
 Name | Type | Description | Notes

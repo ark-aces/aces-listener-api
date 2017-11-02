@@ -17,9 +17,9 @@ import os
 import sys
 import unittest
 
-import swagger_client
-from swagger_client.rest import ApiException
-from swagger_client.models.not_found_error import NotFoundError
+import io.arkaces.encoded_listener_client
+from io.arkaces.encoded_listener_client.rest import ApiException
+from io.arkaces.encoded_listener_client.models.not_found_error import NotFoundError
 
 
 class TestNotFoundError(unittest.TestCase):
@@ -36,7 +36,7 @@ class TestNotFoundError(unittest.TestCase):
         Test NotFoundError
         """
         # FIXME: construct object with mandatory attributes with example values
-        #model = swagger_client.models.not_found_error.NotFoundError()
+        #model = io.arkaces.encoded_listener_client.models.not_found_error.NotFoundError()
         pass
 
 

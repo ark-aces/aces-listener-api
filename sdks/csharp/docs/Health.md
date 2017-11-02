@@ -1,4 +1,4 @@
-# IO.Swagger.Model.Health
+# ArkAces.EncodedListenerClient.Model.Health
 ## Properties
 
 Name | Type | Description | Notes

@@ -17,9 +17,9 @@ import os
 import sys
 import unittest
 
-import swagger_client
-from swagger_client.rest import ApiException
-from swagger_client.models.health import Health
+import io.arkaces.encoded_listener_client
+from io.arkaces.encoded_listener_client.rest import ApiException
+from io.arkaces.encoded_listener_client.models.health import Health
 
 
 class TestHealth(unittest.TestCase):
@@ -36,7 +36,7 @@ class TestHealth(unittest.TestCase):
         Test Health
         """
         # FIXME: construct object with mandatory attributes with example values
-        #model = swagger_client.models.health.Health()
+        #model = io.arkaces.encoded_listener_client.models.health.Health()
         pass
 
 

@@ -57,7 +57,7 @@ class SubscriptionEvent implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'id' => 'string',
-        'created_at' => '\DateTime',
+        'createdAt' => '\DateTime',
         'status' => 'string',
         'tries' => 'int',
         'data' => 'string'
@@ -70,7 +70,7 @@ class SubscriptionEvent implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'id' => null,
-        'created_at' => 'date-time',
+        'createdAt' => 'date-time',
         'status' => null,
         'tries' => null,
         'data' => null
@@ -104,7 +104,7 @@ class SubscriptionEvent implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'created_at' => 'created_at',
+        'createdAt' => 'created_at',
         'status' => 'status',
         'tries' => 'tries',
         'data' => 'data'
@@ -117,7 +117,7 @@ class SubscriptionEvent implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'id' => 'setId',
-        'created_at' => 'setCreatedAt',
+        'createdAt' => 'setCreatedAt',
         'status' => 'setStatus',
         'tries' => 'setTries',
         'data' => 'setData'
@@ -130,7 +130,7 @@ class SubscriptionEvent implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'id' => 'getId',
-        'created_at' => 'getCreatedAt',
+        'createdAt' => 'getCreatedAt',
         'status' => 'getStatus',
         'tries' => 'getTries',
         'data' => 'getData'
@@ -214,7 +214,7 @@ class SubscriptionEvent implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['created_at'] = isset($data['created_at']) ? $data['created_at'] : null;
+        $this->container['createdAt'] = isset($data['createdAt']) ? $data['createdAt'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['tries'] = isset($data['tries']) ? $data['tries'] : null;
         $this->container['data'] = isset($data['data']) ? $data['data'] : null;
@@ -282,25 +282,25 @@ class SubscriptionEvent implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets created_at
+     * Gets createdAt
      *
      * @return \DateTime
      */
     public function getCreatedAt()
     {
-        return $this->container['created_at'];
+        return $this->container['createdAt'];
     }
 
     /**
-     * Sets created_at
+     * Sets createdAt
      *
-     * @param \DateTime $created_at Date the Subscription Event was created.
+     * @param \DateTime $createdAt Date the Subscription Event was created.
      *
      * @return $this
      */
-    public function setCreatedAt($created_at)
+    public function setCreatedAt($createdAt)
     {
-        $this->container['created_at'] = $created_at;
+        $this->container['createdAt'] = $createdAt;
 
         return $this;
     }

@@ -77,7 +77,7 @@ class InlineResponse200Test extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "page_size"
+     * Test attribute "pageSize"
      */
     public function testPropertyPageSize()
     {

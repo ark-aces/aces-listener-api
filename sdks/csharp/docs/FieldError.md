@@ -1,4 +1,4 @@
-# IO.Swagger.Model.FieldError
+# ArkAces.EncodedListenerClient.Model.FieldError
 ## Properties
 
 Name | Type | Description | Notes

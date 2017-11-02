@@ -84,7 +84,7 @@ class SubscriptionTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "created_at"
+     * Test attribute "createdAt"
      */
     public function testPropertyCreatedAt()
     {

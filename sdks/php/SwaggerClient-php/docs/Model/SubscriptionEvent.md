@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **string** | Subscription Event identifier | [optional] 
-**created_at** | [**\DateTime**](\DateTime.md) | Date the Subscription Event was created. | [optional] 
+**createdAt** | [**\DateTime**](\DateTime.md) | Date the Subscription Event was created. | [optional] 
 **status** | **string** |  | [optional] 
 **tries** | **int** |  | [optional] 
 **data** | **string** | Event data encoded as a Json string. | [optional] 

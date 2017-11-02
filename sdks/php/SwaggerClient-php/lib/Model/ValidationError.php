@@ -58,7 +58,7 @@ class ValidationError implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'code' => 'string',
         'message' => 'string',
-        'field_errors' => '\Swagger\Client\Model\FieldError[]'
+        'fieldErrors' => '\Swagger\Client\Model\FieldError[]'
     ];
 
     /**
@@ -69,7 +69,7 @@ class ValidationError implements ModelInterface, ArrayAccess
     protected static $swaggerFormats = [
         'code' => null,
         'message' => null,
-        'field_errors' => null
+        'fieldErrors' => null
     ];
 
     /**
@@ -101,7 +101,7 @@ class ValidationError implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
         'code' => 'code',
         'message' => 'message',
-        'field_errors' => 'field_errors'
+        'fieldErrors' => 'field_errors'
     ];
 
     /**
@@ -112,7 +112,7 @@ class ValidationError implements ModelInterface, ArrayAccess
     protected static $setters = [
         'code' => 'setCode',
         'message' => 'setMessage',
-        'field_errors' => 'setFieldErrors'
+        'fieldErrors' => 'setFieldErrors'
     ];
 
     /**
@@ -123,7 +123,7 @@ class ValidationError implements ModelInterface, ArrayAccess
     protected static $getters = [
         'code' => 'getCode',
         'message' => 'getMessage',
-        'field_errors' => 'getFieldErrors'
+        'fieldErrors' => 'getFieldErrors'
     ];
 
     /**
@@ -188,7 +188,7 @@ class ValidationError implements ModelInterface, ArrayAccess
     {
         $this->container['code'] = isset($data['code']) ? $data['code'] : null;
         $this->container['message'] = isset($data['message']) ? $data['message'] : null;
-        $this->container['field_errors'] = isset($data['field_errors']) ? $data['field_errors'] : null;
+        $this->container['fieldErrors'] = isset($data['fieldErrors']) ? $data['fieldErrors'] : null;
     }
 
     /**
@@ -265,25 +265,25 @@ class ValidationError implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets field_errors
+     * Gets fieldErrors
      *
      * @return \Swagger\Client\Model\FieldError[]
      */
     public function getFieldErrors()
     {
-        return $this->container['field_errors'];
+        return $this->container['fieldErrors'];
     }
 
     /**
-     * Sets field_errors
+     * Sets fieldErrors
      *
-     * @param \Swagger\Client\Model\FieldError[] $field_errors field_errors
+     * @param \Swagger\Client\Model\FieldError[] $fieldErrors fieldErrors
      *
      * @return $this
      */
-    public function setFieldErrors($field_errors)
+    public function setFieldErrors($fieldErrors)
     {
-        $this->container['field_errors'] = $field_errors;
+        $this->container['fieldErrors'] = $fieldErrors;
 
         return $this;
     }

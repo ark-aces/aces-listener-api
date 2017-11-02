@@ -1,4 +1,4 @@
-# swagger_client.DefaultApi
+# io.arkaces.encoded_listener_client.DefaultApi
 
 All URIs are relative to *https://localhost/v1*
 
@@ -22,12 +22,12 @@ Get application health information.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import io.arkaces.encoded_listener_client
+from io.arkaces.encoded_listener_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DefaultApi()
+api_instance = io.arkaces.encoded_listener_client.DefaultApi()
 
 try: 
     # Get Health of node.
@@ -66,12 +66,12 @@ Gets a page of Subscription Events.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import io.arkaces.encoded_listener_client
+from io.arkaces.encoded_listener_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DefaultApi()
+api_instance = io.arkaces.encoded_listener_client.DefaultApi()
 id = 'id_example' # str | Subscription Identifier
 page_size = 100 # int | Number of items to return per page. (optional) (default to 100)
 page = 56 # int | Zero-offset page number to return. (optional)
@@ -120,12 +120,12 @@ Get a Subscription by identifier.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import io.arkaces.encoded_listener_client
+from io.arkaces.encoded_listener_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DefaultApi()
+api_instance = io.arkaces.encoded_listener_client.DefaultApi()
 id = 'id_example' # str | Subscription Identifier
 
 try: 
@@ -168,12 +168,12 @@ Unsubscribes an active Subscription.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import io.arkaces.encoded_listener_client
+from io.arkaces.encoded_listener_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DefaultApi()
+api_instance = io.arkaces.encoded_listener_client.DefaultApi()
 id = 'id_example' # str | Subscription Identifier
 
 try: 
@@ -216,13 +216,13 @@ The Subscribers endpoint allows subscriber to register their node to receive blo
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import io.arkaces.encoded_listener_client
+from io.arkaces.encoded_listener_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DefaultApi()
-subscription_request = swagger_client.SubscriptionRequest() # SubscriptionRequest | The request to create a new Subscription. (optional)
+api_instance = io.arkaces.encoded_listener_client.DefaultApi()
+subscription_request = io.arkaces.encoded_listener_client.SubscriptionRequest() # SubscriptionRequest | The request to create a new Subscription. (optional)
 
 try: 
     # Registers a subscriber node to receive blockchain events.

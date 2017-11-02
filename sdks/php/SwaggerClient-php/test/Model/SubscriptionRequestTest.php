@@ -84,7 +84,7 @@ class SubscriptionRequestTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "min_confirmations"
+     * Test attribute "minConfirmations"
      */
     public function testPropertyMinConfirmations()
     {

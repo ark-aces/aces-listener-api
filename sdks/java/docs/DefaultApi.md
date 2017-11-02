@@ -22,8 +22,8 @@ Get application health information.
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiException;
-//import io.swagger.client.api.DefaultApi;
+//import invalidPackageName.ApiException;
+//import ArkAces_EncodedListenerClient.DefaultApi;
 
 
 DefaultApi apiInstance = new DefaultApi();
@@ -63,8 +63,8 @@ Gets a page of Subscription Events.
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiException;
-//import io.swagger.client.api.DefaultApi;
+//import invalidPackageName.ApiException;
+//import ArkAces_EncodedListenerClient.DefaultApi;
 
 
 DefaultApi apiInstance = new DefaultApi();
@@ -114,8 +114,8 @@ Get a Subscription by identifier.
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiException;
-//import io.swagger.client.api.DefaultApi;
+//import invalidPackageName.ApiException;
+//import ArkAces_EncodedListenerClient.DefaultApi;
 
 
 DefaultApi apiInstance = new DefaultApi();
@@ -159,8 +159,8 @@ Unsubscribes an active Subscription.
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiException;
-//import io.swagger.client.api.DefaultApi;
+//import invalidPackageName.ApiException;
+//import ArkAces_EncodedListenerClient.DefaultApi;
 
 
 DefaultApi apiInstance = new DefaultApi();
@@ -204,8 +204,8 @@ The Subscribers endpoint allows subscriber to register their node to receive blo
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiException;
-//import io.swagger.client.api.DefaultApi;
+//import invalidPackageName.ApiException;
+//import ArkAces_EncodedListenerClient.DefaultApi;
 
 
 DefaultApi apiInstance = new DefaultApi();

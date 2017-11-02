@@ -27,7 +27,7 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * SubscriptionUnsubscribe
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-10-23T23:56:49.035-07:00")
+
 public class SubscriptionUnsubscribe {
   @SerializedName("id")
   private String id = null;

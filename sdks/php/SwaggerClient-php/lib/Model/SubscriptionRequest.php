@@ -57,7 +57,7 @@ class SubscriptionRequest implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'host' => 'string',
-        'min_confirmations' => 'int'
+        'minConfirmations' => 'int'
     ];
 
     /**
@@ -67,7 +67,7 @@ class SubscriptionRequest implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'host' => null,
-        'min_confirmations' => null
+        'minConfirmations' => null
     ];
 
     /**
@@ -98,7 +98,7 @@ class SubscriptionRequest implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'host' => 'host',
-        'min_confirmations' => 'min_confirmations'
+        'minConfirmations' => 'min_confirmations'
     ];
 
     /**
@@ -108,7 +108,7 @@ class SubscriptionRequest implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'host' => 'setHost',
-        'min_confirmations' => 'setMinConfirmations'
+        'minConfirmations' => 'setMinConfirmations'
     ];
 
     /**
@@ -118,7 +118,7 @@ class SubscriptionRequest implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'host' => 'getHost',
-        'min_confirmations' => 'getMinConfirmations'
+        'minConfirmations' => 'getMinConfirmations'
     ];
 
     /**
@@ -182,7 +182,7 @@ class SubscriptionRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['host'] = isset($data['host']) ? $data['host'] : null;
-        $this->container['min_confirmations'] = isset($data['min_confirmations']) ? $data['min_confirmations'] : null;
+        $this->container['minConfirmations'] = isset($data['minConfirmations']) ? $data['minConfirmations'] : null;
     }
 
     /**
@@ -197,8 +197,8 @@ class SubscriptionRequest implements ModelInterface, ArrayAccess
         if ($this->container['host'] === null) {
             $invalidProperties[] = "'host' can't be null";
         }
-        if ($this->container['min_confirmations'] === null) {
-            $invalidProperties[] = "'min_confirmations' can't be null";
+        if ($this->container['minConfirmations'] === null) {
+            $invalidProperties[] = "'minConfirmations' can't be null";
         }
         return $invalidProperties;
     }
@@ -215,7 +215,7 @@ class SubscriptionRequest implements ModelInterface, ArrayAccess
         if ($this->container['host'] === null) {
             return false;
         }
-        if ($this->container['min_confirmations'] === null) {
+        if ($this->container['minConfirmations'] === null) {
             return false;
         }
         return true;
@@ -247,25 +247,25 @@ class SubscriptionRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets min_confirmations
+     * Gets minConfirmations
      *
      * @return int
      */
     public function getMinConfirmations()
     {
-        return $this->container['min_confirmations'];
+        return $this->container['minConfirmations'];
     }
 
     /**
-     * Sets min_confirmations
+     * Sets minConfirmations
      *
-     * @param int $min_confirmations Confirmations required before event is sent to subscribers.
+     * @param int $minConfirmations Confirmations required before event is sent to subscribers.
      *
      * @return $this
      */
-    public function setMinConfirmations($min_confirmations)
+    public function setMinConfirmations($minConfirmations)
     {
-        $this->container['min_confirmations'] = $min_confirmations;
+        $this->container['minConfirmations'] = $minConfirmations;
 
         return $this;
     }

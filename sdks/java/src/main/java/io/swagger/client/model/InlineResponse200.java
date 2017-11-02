@@ -29,7 +29,7 @@ import java.util.List;
 /**
  * InlineResponse200
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-10-23T23:56:49.035-07:00")
+
 public class InlineResponse200 {
   @SerializedName("page_size")
   private Integer pageSize = null;

@@ -17,9 +17,9 @@ import os
 import sys
 import unittest
 
-import swagger_client
-from swagger_client.rest import ApiException
-from swagger_client.models.validation_error import ValidationError
+import io.arkaces.encoded_listener_client
+from io.arkaces.encoded_listener_client.rest import ApiException
+from io.arkaces.encoded_listener_client.models.validation_error import ValidationError
 
 
 class TestValidationError(unittest.TestCase):
@@ -36,7 +36,7 @@ class TestValidationError(unittest.TestCase):
         Test ValidationError
         """
         # FIXME: construct object with mandatory attributes with example values
-        #model = swagger_client.models.validation_error.ValidationError()
+        #model = io.arkaces.encoded_listener_client.models.validation_error.ValidationError()
         pass
 
 

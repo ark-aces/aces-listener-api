@@ -17,9 +17,9 @@ import os
 import sys
 import unittest
 
-import swagger_client
-from swagger_client.rest import ApiException
-from swagger_client.models.subscription_unsubscribe import SubscriptionUnsubscribe
+import io.arkaces.encoded_listener_client
+from io.arkaces.encoded_listener_client.rest import ApiException
+from io.arkaces.encoded_listener_client.models.subscription_unsubscribe import SubscriptionUnsubscribe
 
 
 class TestSubscriptionUnsubscribe(unittest.TestCase):
@@ -36,7 +36,7 @@ class TestSubscriptionUnsubscribe(unittest.TestCase):
         Test SubscriptionUnsubscribe
         """
         # FIXME: construct object with mandatory attributes with example values
-        #model = swagger_client.models.subscription_unsubscribe.SubscriptionUnsubscribe()
+        #model = io.arkaces.encoded_listener_client.models.subscription_unsubscribe.SubscriptionUnsubscribe()
         pass
 
 

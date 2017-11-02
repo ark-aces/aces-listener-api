@@ -1,4 +1,4 @@
-# IO.Swagger.Model.SubscriptionEvent
+# ArkAces.EncodedListenerClient.Model.SubscriptionEvent
 ## Properties
 
 Name | Type | Description | Notes
