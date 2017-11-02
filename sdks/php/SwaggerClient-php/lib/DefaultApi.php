@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  ArkAces\EncodedListenerClient
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -25,23 +25,23 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\ArkAces\EncodedListenerClient;
+namespace ArkAces\EncodedListenerClient\ArkAces\EncodedListenerClient;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use ArkAces\EncodedListenerClient\ApiException;
+use ArkAces\EncodedListenerClient\Configuration;
+use ArkAces\EncodedListenerClient\HeaderSelector;
+use ArkAces\EncodedListenerClient\ObjectSerializer;
 
 /**
  * DefaultApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  ArkAces\EncodedListenerClient
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -86,9 +86,9 @@ class DefaultApi
      * Get Health of node.
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \ArkAces\EncodedListenerClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Health
+     * @return \ArkAces\EncodedListenerClient\Model\Health
      */
     public function statusGet()
     {
@@ -102,13 +102,13 @@ class DefaultApi
      * Get Health of node.
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \ArkAces\EncodedListenerClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Health, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArkAces\EncodedListenerClient\Model\Health, HTTP status code, HTTP response headers (array of strings)
      */
     public function statusGetWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\Health';
+        $returnType = '\ArkAces\EncodedListenerClient\Model\Health';
         $request = $this->statusGetRequest();
 
         try {
@@ -159,7 +159,7 @@ class DefaultApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Health',
+                        '\ArkAces\EncodedListenerClient\Model\Health',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -199,7 +199,7 @@ class DefaultApi
      */
     public function statusGetAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\Health';
+        $returnType = '\ArkAces\EncodedListenerClient\Model\Health';
         $request = $this->statusGetRequest();
 
         return $this->client
@@ -332,9 +332,9 @@ class DefaultApi
      * @param  int $page Zero-offset page number to return. (optional)
      * @param  string $continuation Continuation param for fetching next page. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \ArkAces\EncodedListenerClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse200
+     * @return \ArkAces\EncodedListenerClient\Model\InlineResponse200
      */
     public function subscriptionsIdEventsGet($id, $pageSize = '100', $page = null, $continuation = null)
     {
@@ -352,13 +352,13 @@ class DefaultApi
      * @param  int $page Zero-offset page number to return. (optional)
      * @param  string $continuation Continuation param for fetching next page. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \ArkAces\EncodedListenerClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse200, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArkAces\EncodedListenerClient\Model\InlineResponse200, HTTP status code, HTTP response headers (array of strings)
      */
     public function subscriptionsIdEventsGetWithHttpInfo($id, $pageSize = '100', $page = null, $continuation = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse200';
+        $returnType = '\ArkAces\EncodedListenerClient\Model\InlineResponse200';
         $request = $this->subscriptionsIdEventsGetRequest($id, $pageSize, $page, $continuation);
 
         try {
@@ -409,7 +409,7 @@ class DefaultApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse200',
+                        '\ArkAces\EncodedListenerClient\Model\InlineResponse200',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -417,7 +417,7 @@ class DefaultApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\NotFoundError',
+                        '\ArkAces\EncodedListenerClient\Model\NotFoundError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -465,7 +465,7 @@ class DefaultApi
      */
     public function subscriptionsIdEventsGetAsyncWithHttpInfo($id, $pageSize = '100', $page = null, $continuation = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse200';
+        $returnType = '\ArkAces\EncodedListenerClient\Model\InlineResponse200';
         $request = $this->subscriptionsIdEventsGetRequest($id, $pageSize, $page, $continuation);
 
         return $this->client
@@ -625,9 +625,9 @@ class DefaultApi
      *
      * @param  string $id Subscription Identifier (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \ArkAces\EncodedListenerClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Subscription
+     * @return \ArkAces\EncodedListenerClient\Model\Subscription
      */
     public function subscriptionsIdGet($id)
     {
@@ -642,13 +642,13 @@ class DefaultApi
      *
      * @param  string $id Subscription Identifier (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \ArkAces\EncodedListenerClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Subscription, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArkAces\EncodedListenerClient\Model\Subscription, HTTP status code, HTTP response headers (array of strings)
      */
     public function subscriptionsIdGetWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\Subscription';
+        $returnType = '\ArkAces\EncodedListenerClient\Model\Subscription';
         $request = $this->subscriptionsIdGetRequest($id);
 
         try {
@@ -699,7 +699,7 @@ class DefaultApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Subscription',
+                        '\ArkAces\EncodedListenerClient\Model\Subscription',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -707,7 +707,7 @@ class DefaultApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\NotFoundError',
+                        '\ArkAces\EncodedListenerClient\Model\NotFoundError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -749,7 +749,7 @@ class DefaultApi
      */
     public function subscriptionsIdGetAsyncWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\Subscription';
+        $returnType = '\ArkAces\EncodedListenerClient\Model\Subscription';
         $request = $this->subscriptionsIdGetRequest($id);
 
         return $this->client
@@ -894,9 +894,9 @@ class DefaultApi
      *
      * @param  string $id Subscription Identifier (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \ArkAces\EncodedListenerClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\SubscriptionUnsubscribe
+     * @return \ArkAces\EncodedListenerClient\Model\SubscriptionUnsubscribe
      */
     public function subscriptionsIdUnsubscribesPost($id)
     {
@@ -911,13 +911,13 @@ class DefaultApi
      *
      * @param  string $id Subscription Identifier (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \ArkAces\EncodedListenerClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\SubscriptionUnsubscribe, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArkAces\EncodedListenerClient\Model\SubscriptionUnsubscribe, HTTP status code, HTTP response headers (array of strings)
      */
     public function subscriptionsIdUnsubscribesPostWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\SubscriptionUnsubscribe';
+        $returnType = '\ArkAces\EncodedListenerClient\Model\SubscriptionUnsubscribe';
         $request = $this->subscriptionsIdUnsubscribesPostRequest($id);
 
         try {
@@ -968,7 +968,7 @@ class DefaultApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\SubscriptionUnsubscribe',
+                        '\ArkAces\EncodedListenerClient\Model\SubscriptionUnsubscribe',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -976,7 +976,7 @@ class DefaultApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\NotFoundError',
+                        '\ArkAces\EncodedListenerClient\Model\NotFoundError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1018,7 +1018,7 @@ class DefaultApi
      */
     public function subscriptionsIdUnsubscribesPostAsyncWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\SubscriptionUnsubscribe';
+        $returnType = '\ArkAces\EncodedListenerClient\Model\SubscriptionUnsubscribe';
         $request = $this->subscriptionsIdUnsubscribesPostRequest($id);
 
         return $this->client
@@ -1161,11 +1161,11 @@ class DefaultApi
      *
      * Registers a subscriber node to receive blockchain events.
      *
-     * @param  \Swagger\Client\Model\SubscriptionRequest $subscriptionRequest The request to create a new Subscription. (optional)
+     * @param  \ArkAces\EncodedListenerClient\Model\SubscriptionRequest $subscriptionRequest The request to create a new Subscription. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \ArkAces\EncodedListenerClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Subscription
+     * @return \ArkAces\EncodedListenerClient\Model\Subscription
      */
     public function subscriptionsPost($subscriptionRequest = null)
     {
@@ -1178,15 +1178,15 @@ class DefaultApi
      *
      * Registers a subscriber node to receive blockchain events.
      *
-     * @param  \Swagger\Client\Model\SubscriptionRequest $subscriptionRequest The request to create a new Subscription. (optional)
+     * @param  \ArkAces\EncodedListenerClient\Model\SubscriptionRequest $subscriptionRequest The request to create a new Subscription. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \ArkAces\EncodedListenerClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Subscription, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArkAces\EncodedListenerClient\Model\Subscription, HTTP status code, HTTP response headers (array of strings)
      */
     public function subscriptionsPostWithHttpInfo($subscriptionRequest = null)
     {
-        $returnType = '\Swagger\Client\Model\Subscription';
+        $returnType = '\ArkAces\EncodedListenerClient\Model\Subscription';
         $request = $this->subscriptionsPostRequest($subscriptionRequest);
 
         try {
@@ -1237,7 +1237,7 @@ class DefaultApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Subscription',
+                        '\ArkAces\EncodedListenerClient\Model\Subscription',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1245,7 +1245,7 @@ class DefaultApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ValidationError',
+                        '\ArkAces\EncodedListenerClient\Model\ValidationError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1253,7 +1253,7 @@ class DefaultApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\NotFoundError',
+                        '\ArkAces\EncodedListenerClient\Model\NotFoundError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1268,7 +1268,7 @@ class DefaultApi
      *
      * Registers a subscriber node to receive blockchain events.
      *
-     * @param  \Swagger\Client\Model\SubscriptionRequest $subscriptionRequest The request to create a new Subscription. (optional)
+     * @param  \ArkAces\EncodedListenerClient\Model\SubscriptionRequest $subscriptionRequest The request to create a new Subscription. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1288,14 +1288,14 @@ class DefaultApi
      *
      * Registers a subscriber node to receive blockchain events.
      *
-     * @param  \Swagger\Client\Model\SubscriptionRequest $subscriptionRequest The request to create a new Subscription. (optional)
+     * @param  \ArkAces\EncodedListenerClient\Model\SubscriptionRequest $subscriptionRequest The request to create a new Subscription. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function subscriptionsPostAsyncWithHttpInfo($subscriptionRequest = null)
     {
-        $returnType = '\Swagger\Client\Model\Subscription';
+        $returnType = '\ArkAces\EncodedListenerClient\Model\Subscription';
         $request = $this->subscriptionsPostRequest($subscriptionRequest);
 
         return $this->client
@@ -1338,7 +1338,7 @@ class DefaultApi
     /**
      * Create request for operation 'subscriptionsPost'
      *
-     * @param  \Swagger\Client\Model\SubscriptionRequest $subscriptionRequest The request to create a new Subscription. (optional)
+     * @param  \ArkAces\EncodedListenerClient\Model\SubscriptionRequest $subscriptionRequest The request to create a new Subscription. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

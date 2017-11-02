@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **pageSize** | **int** |  | [optional] 
 **page** | **int** |  | [optional] 
 **continuation** | **string** |  | [optional] 
-**items** | [**\Swagger\Client\Model\SubscriptionEvent[]**](SubscriptionEvent.md) |  | [optional] 
+**items** | [**\ArkAces\EncodedListenerClient\Model\SubscriptionEvent[]**](SubscriptionEvent.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

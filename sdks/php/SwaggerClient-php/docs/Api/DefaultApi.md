@@ -1,4 +1,4 @@
-# Swagger\Client\DefaultApi
+# ArkAces\EncodedListenerClient\DefaultApi
 
 All URIs are relative to *https://localhost/v1*
 
@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 # **statusGet**
-> \Swagger\Client\Model\Health statusGet()
+> \ArkAces\EncodedListenerClient\Model\Health statusGet()
 
 Get Health of node.
 
@@ -23,7 +23,7 @@ Get application health information.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\DefaultApi(new \Http\Adapter\Guzzle6\Client());
+$api_instance = new ArkAces\EncodedListenerClient\Api\DefaultApi(new \Http\Adapter\Guzzle6\Client());
 
 try {
     $result = $api_instance->statusGet();
@@ -39,7 +39,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Swagger\Client\Model\Health**](../Model/Health.md)
+[**\ArkAces\EncodedListenerClient\Model\Health**](../Model/Health.md)
 
 ### Authorization
 
@@ -53,7 +53,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **subscriptionsIdEventsGet**
-> \Swagger\Client\Model\InlineResponse200 subscriptionsIdEventsGet($id, $pageSize, $page, $continuation)
+> \ArkAces\EncodedListenerClient\Model\InlineResponse200 subscriptionsIdEventsGet($id, $pageSize, $page, $continuation)
 
 List Subscription Events
 
@@ -64,7 +64,7 @@ Gets a page of Subscription Events.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\DefaultApi(new \Http\Adapter\Guzzle6\Client());
+$api_instance = new ArkAces\EncodedListenerClient\Api\DefaultApi(new \Http\Adapter\Guzzle6\Client());
 $id = "id_example"; // string | Subscription Identifier
 $pageSize = 100; // int | Number of items to return per page.
 $page = 56; // int | Zero-offset page number to return.
@@ -90,7 +90,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\ArkAces\EncodedListenerClient\Model\InlineResponse200**](../Model/InlineResponse200.md)
 
 ### Authorization
 
@@ -104,7 +104,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **subscriptionsIdGet**
-> \Swagger\Client\Model\Subscription subscriptionsIdGet($id)
+> \ArkAces\EncodedListenerClient\Model\Subscription subscriptionsIdGet($id)
 
 Gets Subscription
 
@@ -115,7 +115,7 @@ Get a Subscription by identifier.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\DefaultApi(new \Http\Adapter\Guzzle6\Client());
+$api_instance = new ArkAces\EncodedListenerClient\Api\DefaultApi(new \Http\Adapter\Guzzle6\Client());
 $id = "id_example"; // string | Subscription Identifier
 
 try {
@@ -135,7 +135,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\Subscription**](../Model/Subscription.md)
+[**\ArkAces\EncodedListenerClient\Model\Subscription**](../Model/Subscription.md)
 
 ### Authorization
 
@@ -149,7 +149,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **subscriptionsIdUnsubscribesPost**
-> \Swagger\Client\Model\SubscriptionUnsubscribe subscriptionsIdUnsubscribesPost($id)
+> \ArkAces\EncodedListenerClient\Model\SubscriptionUnsubscribe subscriptionsIdUnsubscribesPost($id)
 
 Create an Unsubscription.
 
@@ -160,7 +160,7 @@ Unsubscribes an active Subscription.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\DefaultApi(new \Http\Adapter\Guzzle6\Client());
+$api_instance = new ArkAces\EncodedListenerClient\Api\DefaultApi(new \Http\Adapter\Guzzle6\Client());
 $id = "id_example"; // string | Subscription Identifier
 
 try {
@@ -180,7 +180,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\SubscriptionUnsubscribe**](../Model/SubscriptionUnsubscribe.md)
+[**\ArkAces\EncodedListenerClient\Model\SubscriptionUnsubscribe**](../Model/SubscriptionUnsubscribe.md)
 
 ### Authorization
 
@@ -194,7 +194,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **subscriptionsPost**
-> \Swagger\Client\Model\Subscription subscriptionsPost($subscriptionRequest)
+> \ArkAces\EncodedListenerClient\Model\Subscription subscriptionsPost($subscriptionRequest)
 
 Registers a subscriber node to receive blockchain events.
 
@@ -205,8 +205,8 @@ The Subscribers endpoint allows subscriber to register their node to receive blo
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\DefaultApi(new \Http\Adapter\Guzzle6\Client());
-$subscriptionRequest = new \Swagger\Client\Model\SubscriptionRequest(); // \Swagger\Client\Model\SubscriptionRequest | The request to create a new Subscription.
+$api_instance = new ArkAces\EncodedListenerClient\Api\DefaultApi(new \Http\Adapter\Guzzle6\Client());
+$subscriptionRequest = new \ArkAces\EncodedListenerClient\Model\SubscriptionRequest(); // \ArkAces\EncodedListenerClient\Model\SubscriptionRequest | The request to create a new Subscription.
 
 try {
     $result = $api_instance->subscriptionsPost($subscriptionRequest);
@@ -221,11 +221,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **subscriptionRequest** | [**\Swagger\Client\Model\SubscriptionRequest**](../Model/SubscriptionRequest.md)| The request to create a new Subscription. | [optional]
+ **subscriptionRequest** | [**\ArkAces\EncodedListenerClient\Model\SubscriptionRequest**](../Model/SubscriptionRequest.md)| The request to create a new Subscription. | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\Subscription**](../Model/Subscription.md)
+[**\ArkAces\EncodedListenerClient\Model\Subscription**](../Model/Subscription.md)
 
 ### Authorization
 

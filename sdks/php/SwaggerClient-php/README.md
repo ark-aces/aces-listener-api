@@ -21,11 +21,11 @@ To install the bindings via [Composer](http://getcomposer.org/), add the followi
   "repositories": [
     {
       "type": "git",
-      "url": "https://github.com/ArkAces/EncodedListenerClient.git"
+      "url": "https://github.com/ark-aces/aces-encoded-listener-api.git"
     }
   ],
   "require": {
-    "ArkAces/EncodedListenerClient": "*@dev"
+    "ark-aces/aces-encoded-listener-api": "*@dev"
   }
 }
 ```
@@ -57,7 +57,7 @@ Please follow the [installation procedure](#installation--usage) and then run th
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\DefaultApi();
+$api_instance = new ArkAces\EncodedListenerClient\Api\DefaultApi();
 
 try {
     $result = $api_instance->statusGet();

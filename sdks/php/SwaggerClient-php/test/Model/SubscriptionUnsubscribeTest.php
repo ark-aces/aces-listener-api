@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  ArkAces\EncodedListenerClient
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,7 +26,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace Swagger\Client;
+namespace ArkAces\EncodedListenerClient;
 
 /**
  * SubscriptionUnsubscribeTest Class Doc Comment
@@ -34,7 +34,7 @@ namespace Swagger\Client;
  * @category    Class */
 // * @description SubscriptionUnsubscribe
 /**
- * @package     Swagger\Client
+ * @package     ArkAces\EncodedListenerClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */

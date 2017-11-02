@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  ArkAces\EncodedListenerClient
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace ArkAces\EncodedListenerClient\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \ArkAces\EncodedListenerClient\ObjectSerializer;
 
 /**
  * InlineResponse200 Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  ArkAces\EncodedListenerClient
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -59,7 +59,7 @@ class InlineResponse200 implements ModelInterface, ArrayAccess
         'pageSize' => 'int',
         'page' => 'int',
         'continuation' => 'string',
-        'items' => '\Swagger\Client\Model\SubscriptionEvent[]'
+        'items' => '\ArkAces\EncodedListenerClient\Model\SubscriptionEvent[]'
     ];
 
     /**
@@ -297,7 +297,7 @@ class InlineResponse200 implements ModelInterface, ArrayAccess
     /**
      * Gets items
      *
-     * @return \Swagger\Client\Model\SubscriptionEvent[]
+     * @return \ArkAces\EncodedListenerClient\Model\SubscriptionEvent[]
      */
     public function getItems()
     {
@@ -307,7 +307,7 @@ class InlineResponse200 implements ModelInterface, ArrayAccess
     /**
      * Sets items
      *
-     * @param \Swagger\Client\Model\SubscriptionEvent[] $items items
+     * @param \ArkAces\EncodedListenerClient\Model\SubscriptionEvent[] $items items
      *
      * @return $this
      */

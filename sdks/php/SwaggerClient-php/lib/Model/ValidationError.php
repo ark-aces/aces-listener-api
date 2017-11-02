@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  ArkAces\EncodedListenerClient
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace ArkAces\EncodedListenerClient\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \ArkAces\EncodedListenerClient\ObjectSerializer;
 
 /**
  * ValidationError Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  ArkAces\EncodedListenerClient
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -58,7 +58,7 @@ class ValidationError implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'code' => 'string',
         'message' => 'string',
-        'fieldErrors' => '\Swagger\Client\Model\FieldError[]'
+        'fieldErrors' => '\ArkAces\EncodedListenerClient\Model\FieldError[]'
     ];
 
     /**
@@ -267,7 +267,7 @@ class ValidationError implements ModelInterface, ArrayAccess
     /**
      * Gets fieldErrors
      *
-     * @return \Swagger\Client\Model\FieldError[]
+     * @return \ArkAces\EncodedListenerClient\Model\FieldError[]
      */
     public function getFieldErrors()
     {
@@ -277,7 +277,7 @@ class ValidationError implements ModelInterface, ArrayAccess
     /**
      * Sets fieldErrors
      *
-     * @param \Swagger\Client\Model\FieldError[] $fieldErrors fieldErrors
+     * @param \ArkAces\EncodedListenerClient\Model\FieldError[] $fieldErrors fieldErrors
      *
      * @return $this
      */
