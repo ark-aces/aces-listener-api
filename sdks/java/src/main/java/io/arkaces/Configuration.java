@@ -11,7 +11,7 @@
  */
 
 
-package invalidPackageName;
+package io.arkaces;
 
 
 public class Configuration {

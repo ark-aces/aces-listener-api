@@ -11,7 +11,7 @@
  */
 
 
-package invalidPackageName;
+package io.arkaces;
 
 import com.squareup.okhttp.*;
 import okio.Buffer;

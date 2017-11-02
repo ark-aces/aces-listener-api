@@ -11,7 +11,7 @@
  */
 
 
-package invalidPackageName;
+package io.arkaces;
 
 import com.squareup.okhttp.*;
 import com.squareup.okhttp.internal.http.HttpMethod;
@@ -45,10 +45,10 @@ import java.util.concurrent.TimeUnit;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import invalidPackageName.auth.Authentication;
-import invalidPackageName.auth.HttpBasicAuth;
-import invalidPackageName.auth.ApiKeyAuth;
-import invalidPackageName.auth.OAuth;
+import io.arkaces.auth.Authentication;
+import io.arkaces.auth.HttpBasicAuth;
+import io.arkaces.auth.ApiKeyAuth;
+import io.arkaces.auth.OAuth;
 
 public class ApiClient {
 

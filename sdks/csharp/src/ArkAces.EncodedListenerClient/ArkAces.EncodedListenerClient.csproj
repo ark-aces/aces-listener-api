@@ -12,7 +12,7 @@ OpenAPI spec version: 0.1.0
     
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F119C1CD-DB33-444D-A7CF-C05952A5AD74}</ProjectGuid>
+    <ProjectGuid>{935DDDC7-CB69-4822-BD96-5B32BF8CF5B9}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ArkAces.EncodedListenerClient</RootNamespace>

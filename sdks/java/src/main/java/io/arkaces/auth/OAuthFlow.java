@@ -11,7 +11,7 @@
  */
 
 
-package invalidPackageName.auth;
+package io.arkaces.auth;
 
 public enum OAuthFlow {
     accessCode, implicit, password, application

@@ -11,16 +11,16 @@
  */
 
 
-package ArkAces_EncodedListenerClient;
+package io.arkaces.encoded_listener_client;
 
-import invalidPackageName.ApiCallback;
-import invalidPackageName.ApiClient;
-import invalidPackageName.ApiException;
-import invalidPackageName.ApiResponse;
-import invalidPackageName.Configuration;
-import invalidPackageName.Pair;
-import invalidPackageName.ProgressRequestBody;
-import invalidPackageName.ProgressResponseBody;
+import io.arkaces.ApiCallback;
+import io.arkaces.ApiClient;
+import io.arkaces.ApiException;
+import io.arkaces.ApiResponse;
+import io.arkaces.Configuration;
+import io.arkaces.Pair;
+import io.arkaces.ProgressRequestBody;
+import io.arkaces.ProgressResponseBody;
 
 import com.google.gson.reflect.TypeToken;
 

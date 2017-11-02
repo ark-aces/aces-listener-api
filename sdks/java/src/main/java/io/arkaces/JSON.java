@@ -11,7 +11,7 @@
  */
 
 
-package invalidPackageName;
+package io.arkaces;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;

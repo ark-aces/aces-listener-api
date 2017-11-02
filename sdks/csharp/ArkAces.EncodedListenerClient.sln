@@ -2,7 +2,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 VisualStudioVersion = 12.0.0.0
 MinimumVisualStudioVersion = 10.0.0.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArkAces.EncodedListenerClient", "src\ArkAces.EncodedListenerClient\ArkAces.EncodedListenerClient.csproj", "{F119C1CD-DB33-444D-A7CF-C05952A5AD74}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArkAces.EncodedListenerClient", "src\ArkAces.EncodedListenerClient\ArkAces.EncodedListenerClient.csproj", "{935DDDC7-CB69-4822-BD96-5B32BF8CF5B9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArkAces.EncodedListenerClient.Test", "src\ArkAces.EncodedListenerClient.Test\ArkAces.EncodedListenerClient.Test.csproj", "{19F1DEBC-DE5E-4517-8062-F000CD499087}"
 EndProject
@@ -12,10 +12,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F119C1CD-DB33-444D-A7CF-C05952A5AD74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F119C1CD-DB33-444D-A7CF-C05952A5AD74}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F119C1CD-DB33-444D-A7CF-C05952A5AD74}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F119C1CD-DB33-444D-A7CF-C05952A5AD74}.Release|Any CPU.Build.0 = Release|Any CPU
+		{935DDDC7-CB69-4822-BD96-5B32BF8CF5B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{935DDDC7-CB69-4822-BD96-5B32BF8CF5B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{935DDDC7-CB69-4822-BD96-5B32BF8CF5B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{935DDDC7-CB69-4822-BD96-5B32BF8CF5B9}.Release|Any CPU.Build.0 = Release|Any CPU
 		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Release|Any CPU.ActiveCfg = Release|Any CPU

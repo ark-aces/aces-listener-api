@@ -11,9 +11,9 @@
  */
 
 
-package ArkAces_EncodedListenerClient;
+package io.arkaces.encoded_listener_client;
 
-import invalidPackageName.ApiException;
+import io.arkaces.ApiException;
 import io.swagger.client.model.Health;
 import io.swagger.client.model.InlineResponse200;
 import io.swagger.client.model.NotFoundError;

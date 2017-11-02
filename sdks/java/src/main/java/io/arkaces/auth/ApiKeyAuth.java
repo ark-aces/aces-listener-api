@@ -11,9 +11,9 @@
  */
 
 
-package invalidPackageName.auth;
+package io.arkaces.auth;
 
-import invalidPackageName.Pair;
+import io.arkaces.Pair;
 
 import java.util.Map;
 import java.util.List;

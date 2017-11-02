@@ -11,7 +11,7 @@
  */
 
 
-package invalidPackageName;
+package io.arkaces;
 
 import java.util.Map;
 import java.util.List;
