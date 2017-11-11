@@ -28,28 +28,28 @@ import java.io.IOException;
  */
 
 public class SubscriptionRequest {
-  @SerializedName("host")
-  private String host = null;
+  @SerializedName("callbackUrl")
+  private String callbackUrl = null;
 
-  @SerializedName("min_confirmations")
+  @SerializedName("minConfirmations")
   private Integer minConfirmations = null;
 
-  public SubscriptionRequest host(String host) {
-    this.host = host;
+  public SubscriptionRequest callbackUrl(String callbackUrl) {
+    this.callbackUrl = callbackUrl;
     return this;
   }
 
    /**
-   * Target host implementing Encoded Listener Subscriber API interface.
-   * @return host
+   * Target target URL to POST Encoded Listener events to.
+   * @return callbackUrl
   **/
-  @ApiModelProperty(required = true, value = "Target host implementing Encoded Listener Subscriber API interface.")
-  public String getHost() {
-    return host;
+  @ApiModelProperty(required = true, value = "Target target URL to POST Encoded Listener events to.")
+  public String getCallbackUrl() {
+    return callbackUrl;
   }
 
-  public void setHost(String host) {
-    this.host = host;
+  public void setCallbackUrl(String callbackUrl) {
+    this.callbackUrl = callbackUrl;
   }
 
   public SubscriptionRequest minConfirmations(Integer minConfirmations) {
@@ -58,10 +58,10 @@ public class SubscriptionRequest {
   }
 
    /**
-   * Confirmations required before event is sent to subscribers.
+   * Confirmations required before event is sent to subscriber.
    * @return minConfirmations
   **/
-  @ApiModelProperty(required = true, value = "Confirmations required before event is sent to subscribers.")
+  @ApiModelProperty(required = true, value = "Confirmations required before event is sent to subscriber.")
   public Integer getMinConfirmations() {
     return minConfirmations;
   }
@@ -80,13 +80,13 @@ public class SubscriptionRequest {
       return false;
     }
     SubscriptionRequest subscriptionRequest = (SubscriptionRequest) o;
-    return Objects.equals(this.host, subscriptionRequest.host) &&
+    return Objects.equals(this.callbackUrl, subscriptionRequest.callbackUrl) &&
         Objects.equals(this.minConfirmations, subscriptionRequest.minConfirmations);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(host, minConfirmations);
+    return Objects.hash(callbackUrl, minConfirmations);
   }
 
 
@@ -95,7 +95,7 @@ public class SubscriptionRequest {
     StringBuilder sb = new StringBuilder();
     sb.append("class SubscriptionRequest {\n");
     
-    sb.append("    host: ").append(toIndentedString(host)).append("\n");
+    sb.append("    callbackUrl: ").append(toIndentedString(callbackUrl)).append("\n");
     sb.append("    minConfirmations: ").append(toIndentedString(minConfirmations)).append("\n");
     sb.append("}");
     return sb.toString();

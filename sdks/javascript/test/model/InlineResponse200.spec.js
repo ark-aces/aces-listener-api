@@ -54,7 +54,7 @@
       //expect(instance).to.be.a(AcesEncodedListenerApi.InlineResponse200);
     });
 
-    it('should have the property pageSize (base name: "page_size")', function() {
+    it('should have the property pageSize (base name: "pageSize")', function() {
       // uncomment below and update the code to test the property pageSize
       //var instane = new AcesEncodedListenerApi.InlineResponse200();
       //expect(instance).to.be();

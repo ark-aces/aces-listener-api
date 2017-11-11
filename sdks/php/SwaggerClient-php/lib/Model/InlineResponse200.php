@@ -101,7 +101,7 @@ class InlineResponse200 implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'pageSize' => 'page_size',
+        'pageSize' => 'pageSize',
         'page' => 'page',
         'continuation' => 'continuation',
         'items' => 'items'

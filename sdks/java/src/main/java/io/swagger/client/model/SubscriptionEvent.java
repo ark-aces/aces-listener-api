@@ -32,7 +32,7 @@ public class SubscriptionEvent {
   @SerializedName("id")
   private String id = null;
 
-  @SerializedName("created_at")
+  @SerializedName("createdAt")
   private OffsetDateTime createdAt = null;
 
   /**

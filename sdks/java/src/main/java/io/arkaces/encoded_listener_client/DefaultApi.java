@@ -198,7 +198,7 @@ public class DefaultApi {
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
         if (pageSize != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("page_size", pageSize));
+        localVarQueryParams.addAll(apiClient.parameterToPair("pageSize", pageSize));
         if (page != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("page", page));
         if (continuation != null)

@@ -58,7 +58,7 @@ namespace ArkAces.EncodedListenerClient.Model
         /// <summary>
         /// Gets or Sets FieldErrors
         /// </summary>
-        [DataMember(Name="field_errors", EmitDefaultValue=false)]
+        [DataMember(Name="fieldErrors", EmitDefaultValue=false)]
         public List<FieldError> FieldErrors { get; set; }
 
         /// <summary>

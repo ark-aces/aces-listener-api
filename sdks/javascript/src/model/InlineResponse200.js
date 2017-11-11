@@ -57,8 +57,8 @@ export default class InlineResponse200 {
             
             
 
-            if (data.hasOwnProperty('page_size')) {
-                obj['page_size'] = ApiClient.convertToType(data['page_size'], 'Number');
+            if (data.hasOwnProperty('pageSize')) {
+                obj['pageSize'] = ApiClient.convertToType(data['pageSize'], 'Number');
             }
             if (data.hasOwnProperty('page')) {
                 obj['page'] = ApiClient.convertToType(data['page'], 'Number');
@@ -74,9 +74,9 @@ export default class InlineResponse200 {
     }
 
     /**
-    * @member {Number} page_size
+    * @member {Number} pageSize
     */
-    page_size = undefined;
+    pageSize = undefined;
     /**
     * @member {Number} page
     */

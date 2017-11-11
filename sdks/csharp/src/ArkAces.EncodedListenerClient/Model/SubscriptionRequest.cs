@@ -38,18 +38,18 @@ namespace ArkAces.EncodedListenerClient.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SubscriptionRequest" /> class.
         /// </summary>
-        /// <param name="Host">Target host implementing Encoded Listener Subscriber API interface. (required).</param>
-        /// <param name="MinConfirmations">Confirmations required before event is sent to subscribers. (required).</param>
-        public SubscriptionRequest(string Host = default(string), int? MinConfirmations = default(int?))
+        /// <param name="CallbackUrl">Target target URL to POST Encoded Listener events to. (required).</param>
+        /// <param name="MinConfirmations">Confirmations required before event is sent to subscriber. (required).</param>
+        public SubscriptionRequest(string CallbackUrl = default(string), int? MinConfirmations = default(int?))
         {
-            // to ensure "Host" is required (not null)
-            if (Host == null)
+            // to ensure "CallbackUrl" is required (not null)
+            if (CallbackUrl == null)
             {
-                throw new InvalidDataException("Host is a required property for SubscriptionRequest and cannot be null");
+                throw new InvalidDataException("CallbackUrl is a required property for SubscriptionRequest and cannot be null");
             }
             else
             {
-                this.Host = Host;
+                this.CallbackUrl = CallbackUrl;
             }
             // to ensure "MinConfirmations" is required (not null)
             if (MinConfirmations == null)
@@ -63,17 +63,17 @@ namespace ArkAces.EncodedListenerClient.Model
         }
         
         /// <summary>
-        /// Target host implementing Encoded Listener Subscriber API interface.
+        /// Target target URL to POST Encoded Listener events to.
         /// </summary>
-        /// <value>Target host implementing Encoded Listener Subscriber API interface.</value>
-        [DataMember(Name="host", EmitDefaultValue=false)]
-        public string Host { get; set; }
+        /// <value>Target target URL to POST Encoded Listener events to.</value>
+        [DataMember(Name="callbackUrl", EmitDefaultValue=false)]
+        public string CallbackUrl { get; set; }
 
         /// <summary>
-        /// Confirmations required before event is sent to subscribers.
+        /// Confirmations required before event is sent to subscriber.
         /// </summary>
-        /// <value>Confirmations required before event is sent to subscribers.</value>
-        [DataMember(Name="min_confirmations", EmitDefaultValue=false)]
+        /// <value>Confirmations required before event is sent to subscriber.</value>
+        [DataMember(Name="minConfirmations", EmitDefaultValue=false)]
         public int? MinConfirmations { get; set; }
 
         /// <summary>
@@ -84,7 +84,7 @@ namespace ArkAces.EncodedListenerClient.Model
         {
             var sb = new StringBuilder();
             sb.Append("class SubscriptionRequest {\n");
-            sb.Append("  Host: ").Append(Host).Append("\n");
+            sb.Append("  CallbackUrl: ").Append(CallbackUrl).Append("\n");
             sb.Append("  MinConfirmations: ").Append(MinConfirmations).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -121,9 +121,9 @@ namespace ArkAces.EncodedListenerClient.Model
 
             return 
                 (
-                    this.Host == input.Host ||
-                    (this.Host != null &&
-                    this.Host.Equals(input.Host))
+                    this.CallbackUrl == input.CallbackUrl ||
+                    (this.CallbackUrl != null &&
+                    this.CallbackUrl.Equals(input.CallbackUrl))
                 ) && 
                 (
                     this.MinConfirmations == input.MinConfirmations ||
@@ -141,8 +141,8 @@ namespace ArkAces.EncodedListenerClient.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.Host != null)
-                    hashCode = hashCode * 59 + this.Host.GetHashCode();
+                if (this.CallbackUrl != null)
+                    hashCode = hashCode * 59 + this.CallbackUrl.GetHashCode();
                 if (this.MinConfirmations != null)
                     hashCode = hashCode * 59 + this.MinConfirmations.GetHashCode();
                 return hashCode;

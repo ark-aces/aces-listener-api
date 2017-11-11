@@ -37,7 +37,7 @@ class SubscriptionUnsubscribe(object):
 
     attribute_map = {
         'id': 'id',
-        'created_at': 'created_at'
+        'created_at': 'createdAt'
     }
 
     def __init__(self, id=None, created_at=None):

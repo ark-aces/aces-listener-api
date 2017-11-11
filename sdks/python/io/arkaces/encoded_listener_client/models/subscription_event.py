@@ -40,7 +40,7 @@ class SubscriptionEvent(object):
 
     attribute_map = {
         'id': 'id',
-        'created_at': 'created_at',
+        'created_at': 'createdAt',
         'status': 'status',
         'tries': 'tries',
         'data': 'data'

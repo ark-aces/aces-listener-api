@@ -125,7 +125,7 @@ func (a *DefaultApiService) SubscriptionsIdEventsGet(id string, localVarOptional
 	}
 
 	if localVarTempParam, localVarOk := localVarOptionals["pageSize"].(int32); localVarOk {
-		localVarQueryParams.Add("page_size", parameterToString(localVarTempParam, ""))
+		localVarQueryParams.Add("pageSize", parameterToString(localVarTempParam, ""))
 	}
 	if localVarTempParam, localVarOk := localVarOptionals["page"].(int32); localVarOk {
 		localVarQueryParams.Add("page", parameterToString(localVarTempParam, ""))

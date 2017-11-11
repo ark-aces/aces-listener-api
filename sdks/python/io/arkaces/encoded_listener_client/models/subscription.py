@@ -38,7 +38,7 @@ class Subscription(object):
 
     attribute_map = {
         'id': 'id',
-        'created_at': 'created_at',
+        'created_at': 'createdAt',
         'status': 'status'
     }
 

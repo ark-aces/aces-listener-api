@@ -104,7 +104,7 @@ class SubscriptionEvent implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'createdAt' => 'created_at',
+        'createdAt' => 'createdAt',
         'status' => 'status',
         'tries' => 'tries',
         'data' => 'data'

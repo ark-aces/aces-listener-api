@@ -39,7 +39,7 @@ class ValidationError(object):
     attribute_map = {
         'code': 'code',
         'message': 'message',
-        'field_errors': 'field_errors'
+        'field_errors': 'fieldErrors'
     }
 
     def __init__(self, code=None, message=None, field_errors=None):

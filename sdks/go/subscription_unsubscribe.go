@@ -19,5 +19,5 @@ type SubscriptionUnsubscribe struct {
 	Id string `json:"id,omitempty"`
 
 	// Date the Unsubscription was created.
-	CreatedAt time.Time `json:"created_at,omitempty"`
+	CreatedAt time.Time `json:"createdAt,omitempty"`
 }

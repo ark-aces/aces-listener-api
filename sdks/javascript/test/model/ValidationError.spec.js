@@ -66,7 +66,7 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property fieldErrors (base name: "field_errors")', function() {
+    it('should have the property fieldErrors (base name: "fieldErrors")', function() {
       // uncomment below and update the code to test the property fieldErrors
       //var instane = new AcesEncodedListenerApi.ValidationError();
       //expect(instance).to.be();

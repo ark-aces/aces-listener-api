@@ -85,7 +85,7 @@ namespace ArkAces.EncodedListenerClient.Model
         /// Date the Subscription was created.
         /// </summary>
         /// <value>Date the Subscription was created.</value>
-        [DataMember(Name="created_at", EmitDefaultValue=false)]
+        [DataMember(Name="createdAt", EmitDefaultValue=false)]
         public DateTime? CreatedAt { get; set; }
 
 

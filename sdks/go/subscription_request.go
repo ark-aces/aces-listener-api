@@ -11,9 +11,9 @@ package arkaces/encoded-listener-client
 
 type SubscriptionRequest struct {
 
-	// Target host implementing Encoded Listener Subscriber API interface.
-	Host string `json:"host"`
+	// Target target URL to POST Encoded Listener events to.
+	CallbackUrl string `json:"callbackUrl"`
 
-	// Confirmations required before event is sent to subscribers.
-	MinConfirmations int32 `json:"min_confirmations"`
+	// Confirmations required before event is sent to subscriber.
+	MinConfirmations int32 `json:"minConfirmations"`
 }

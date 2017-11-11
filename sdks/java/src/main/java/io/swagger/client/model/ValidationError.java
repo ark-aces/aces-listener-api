@@ -37,7 +37,7 @@ public class ValidationError {
   @SerializedName("message")
   private String message = null;
 
-  @SerializedName("field_errors")
+  @SerializedName("fieldErrors")
   private List<FieldError> fieldErrors = null;
 
   public ValidationError code(String code) {

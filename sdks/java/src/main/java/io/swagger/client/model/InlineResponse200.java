@@ -31,7 +31,7 @@ import java.util.List;
  */
 
 public class InlineResponse200 {
-  @SerializedName("page_size")
+  @SerializedName("pageSize")
   private Integer pageSize = null;
 
   @SerializedName("page")

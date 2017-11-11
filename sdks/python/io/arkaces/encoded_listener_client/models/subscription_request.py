@@ -31,57 +31,57 @@ class SubscriptionRequest(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'host': 'str',
+        'callback_url': 'str',
         'min_confirmations': 'int'
     }
 
     attribute_map = {
-        'host': 'host',
-        'min_confirmations': 'min_confirmations'
+        'callback_url': 'callbackUrl',
+        'min_confirmations': 'minConfirmations'
     }
 
-    def __init__(self, host=None, min_confirmations=None):
+    def __init__(self, callback_url=None, min_confirmations=None):
         """
         SubscriptionRequest - a model defined in Swagger
         """
 
-        self._host = None
+        self._callback_url = None
         self._min_confirmations = None
         self.discriminator = None
 
-        self.host = host
+        self.callback_url = callback_url
         self.min_confirmations = min_confirmations
 
     @property
-    def host(self):
+    def callback_url(self):
         """
-        Gets the host of this SubscriptionRequest.
-        Target host implementing Encoded Listener Subscriber API interface.
+        Gets the callback_url of this SubscriptionRequest.
+        Target target URL to POST Encoded Listener events to.
 
-        :return: The host of this SubscriptionRequest.
+        :return: The callback_url of this SubscriptionRequest.
         :rtype: str
         """
-        return self._host
+        return self._callback_url
 
-    @host.setter
-    def host(self, host):
+    @callback_url.setter
+    def callback_url(self, callback_url):
         """
-        Sets the host of this SubscriptionRequest.
-        Target host implementing Encoded Listener Subscriber API interface.
+        Sets the callback_url of this SubscriptionRequest.
+        Target target URL to POST Encoded Listener events to.
 
-        :param host: The host of this SubscriptionRequest.
+        :param callback_url: The callback_url of this SubscriptionRequest.
         :type: str
         """
-        if host is None:
-            raise ValueError("Invalid value for `host`, must not be `None`")
+        if callback_url is None:
+            raise ValueError("Invalid value for `callback_url`, must not be `None`")
 
-        self._host = host
+        self._callback_url = callback_url
 
     @property
     def min_confirmations(self):
         """
         Gets the min_confirmations of this SubscriptionRequest.
-        Confirmations required before event is sent to subscribers.
+        Confirmations required before event is sent to subscriber.
 
         :return: The min_confirmations of this SubscriptionRequest.
         :rtype: int
@@ -92,7 +92,7 @@ class SubscriptionRequest(object):
     def min_confirmations(self, min_confirmations):
         """
         Sets the min_confirmations of this SubscriptionRequest.
-        Confirmations required before event is sent to subscribers.
+        Confirmations required before event is sent to subscriber.
 
         :param min_confirmations: The min_confirmations of this SubscriptionRequest.
         :type: int

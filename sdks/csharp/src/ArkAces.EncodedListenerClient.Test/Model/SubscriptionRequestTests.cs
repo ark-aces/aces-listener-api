@@ -67,12 +67,12 @@ namespace ArkAces.EncodedListenerClient.Test
 
 
         /// <summary>
-        /// Test the property 'Host'
+        /// Test the property 'CallbackUrl'
         /// </summary>
         [Test]
-        public void HostTest()
+        public void CallbackUrlTest()
         {
-            // TODO unit test for the property 'Host'
+            // TODO unit test for the property 'CallbackUrl'
         }
         /// <summary>
         /// Test the property 'MinConfirmations'

@@ -98,7 +98,7 @@ class SubscriptionUnsubscribe implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'createdAt' => 'created_at'
+        'createdAt' => 'createdAt'
     ];
 
     /**

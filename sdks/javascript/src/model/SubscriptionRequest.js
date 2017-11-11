@@ -28,17 +28,17 @@ export default class SubscriptionRequest {
     * Constructs a new <code>SubscriptionRequest</code>.
     * @alias module:model/SubscriptionRequest
     * @class
-    * @param host {String} Target host implementing Encoded Listener Subscriber API interface.
-    * @param minConfirmations {Number} Confirmations required before event is sent to subscribers.
+    * @param callbackUrl {String} Target target URL to POST Encoded Listener events to.
+    * @param minConfirmations {Number} Confirmations required before event is sent to subscriber.
     */
 
-    constructor(host, minConfirmations) {
+    constructor(callbackUrl, minConfirmations) {
         
 
         
         
 
-        this['host'] = host;this['min_confirmations'] = minConfirmations;
+        this['callbackUrl'] = callbackUrl;this['minConfirmations'] = minConfirmations;
 
         
     }
@@ -58,26 +58,26 @@ export default class SubscriptionRequest {
             
             
 
-            if (data.hasOwnProperty('host')) {
-                obj['host'] = ApiClient.convertToType(data['host'], 'String');
+            if (data.hasOwnProperty('callbackUrl')) {
+                obj['callbackUrl'] = ApiClient.convertToType(data['callbackUrl'], 'String');
             }
-            if (data.hasOwnProperty('min_confirmations')) {
-                obj['min_confirmations'] = ApiClient.convertToType(data['min_confirmations'], 'Number');
+            if (data.hasOwnProperty('minConfirmations')) {
+                obj['minConfirmations'] = ApiClient.convertToType(data['minConfirmations'], 'Number');
             }
         }
         return obj;
     }
 
     /**
-    * Target host implementing Encoded Listener Subscriber API interface.
-    * @member {String} host
+    * Target target URL to POST Encoded Listener events to.
+    * @member {String} callbackUrl
     */
-    host = undefined;
+    callbackUrl = undefined;
     /**
-    * Confirmations required before event is sent to subscribers.
-    * @member {Number} min_confirmations
+    * Confirmations required before event is sent to subscriber.
+    * @member {Number} minConfirmations
     */
-    min_confirmations = undefined;
+    minConfirmations = undefined;
 
 
 

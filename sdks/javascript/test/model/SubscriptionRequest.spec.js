@@ -54,13 +54,13 @@
       //expect(instance).to.be.a(AcesEncodedListenerApi.SubscriptionRequest);
     });
 
-    it('should have the property host (base name: "host")', function() {
-      // uncomment below and update the code to test the property host
+    it('should have the property callbackUrl (base name: "callbackUrl")', function() {
+      // uncomment below and update the code to test the property callbackUrl
       //var instane = new AcesEncodedListenerApi.SubscriptionRequest();
       //expect(instance).to.be();
     });
 
-    it('should have the property minConfirmations (base name: "min_confirmations")', function() {
+    it('should have the property minConfirmations (base name: "minConfirmations")', function() {
       // uncomment below and update the code to test the property minConfirmations
       //var instane = new AcesEncodedListenerApi.SubscriptionRequest();
       //expect(instance).to.be();

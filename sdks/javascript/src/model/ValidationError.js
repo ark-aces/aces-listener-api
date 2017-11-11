@@ -63,8 +63,8 @@ export default class ValidationError {
             if (data.hasOwnProperty('message')) {
                 obj['message'] = ApiClient.convertToType(data['message'], 'String');
             }
-            if (data.hasOwnProperty('field_errors')) {
-                obj['field_errors'] = ApiClient.convertToType(data['field_errors'], [FieldError]);
+            if (data.hasOwnProperty('fieldErrors')) {
+                obj['fieldErrors'] = ApiClient.convertToType(data['fieldErrors'], [FieldError]);
             }
         }
         return obj;
@@ -79,9 +79,9 @@ export default class ValidationError {
     */
     message = undefined;
     /**
-    * @member {Array.<module:model/FieldError>} field_errors
+    * @member {Array.<module:model/FieldError>} fieldErrors
     */
-    field_errors = undefined;
+    fieldErrors = undefined;
 
 
 

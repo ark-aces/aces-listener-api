@@ -19,7 +19,7 @@ type SubscriptionEvent struct {
 	Id string `json:"id,omitempty"`
 
 	// Date the Subscription Event was created.
-	CreatedAt time.Time `json:"created_at,omitempty"`
+	CreatedAt time.Time `json:"createdAt,omitempty"`
 
 	Status string `json:"status,omitempty"`
 

@@ -100,7 +100,7 @@ class Subscription implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'createdAt' => 'created_at',
+        'createdAt' => 'createdAt',
         'status' => 'status'
     ];
 

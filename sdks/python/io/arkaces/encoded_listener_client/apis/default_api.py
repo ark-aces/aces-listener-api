@@ -193,7 +193,7 @@ class DefaultApi(object):
 
         query_params = []
         if 'page_size' in params:
-            query_params.append(('page_size', params['page_size']))
+            query_params.append(('pageSize', params['page_size']))
         if 'page' in params:
             query_params.append(('page', params['page']))
         if 'continuation' in params:

@@ -101,7 +101,7 @@ class ValidationError implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
         'code' => 'code',
         'message' => 'message',
-        'fieldErrors' => 'field_errors'
+        'fieldErrors' => 'fieldErrors'
     ];
 
     /**

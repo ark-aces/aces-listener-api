@@ -59,8 +59,8 @@ export default class Subscription {
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
             }
-            if (data.hasOwnProperty('created_at')) {
-                obj['created_at'] = ApiClient.convertToType(data['created_at'], 'Date');
+            if (data.hasOwnProperty('createdAt')) {
+                obj['createdAt'] = ApiClient.convertToType(data['createdAt'], 'Date');
             }
             if (data.hasOwnProperty('status')) {
                 obj['status'] = ApiClient.convertToType(data['status'], 'String');
@@ -76,9 +76,9 @@ export default class Subscription {
     id = undefined;
     /**
     * Date the Subscription was created.
-    * @member {Date} created_at
+    * @member {Date} createdAt
     */
-    created_at = undefined;
+    createdAt = undefined;
     /**
     * @member {module:model/Subscription.StatusEnum} status
     */

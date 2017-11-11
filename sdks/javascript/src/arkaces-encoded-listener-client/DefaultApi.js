@@ -112,7 +112,7 @@ export default class DefaultApi {
         'id': id
       };
       let queryParams = {
-        'page_size': opts['pageSize'],
+        'pageSize': opts['pageSize'],
         'page': opts['page'],
         'continuation': opts['continuation']
       };

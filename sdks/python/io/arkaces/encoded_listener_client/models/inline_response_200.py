@@ -38,7 +38,7 @@ class InlineResponse200(object):
     }
 
     attribute_map = {
-        'page_size': 'page_size',
+        'page_size': 'pageSize',
         'page': 'page',
         'continuation': 'continuation',
         'items': 'items'

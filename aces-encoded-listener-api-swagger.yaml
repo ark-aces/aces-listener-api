@@ -34,15 +34,15 @@ paths:
           schema:
             type: object
             required:
-              - host
-              - min_confirmations
+              - callbackUrl
+              - minConfirmations
             properties:
-              host:
+              callbackUrl:
                 type: string
-                description: Target host implementing Encoded Listener Subscriber API interface.
-              min_confirmations:
+                description: Target target URL to POST Encoded Listener events to.
+              minConfirmations:
                 type: integer
-                description: Confirmations required before event is sent to subscribers.
+                description: Confirmations required before event is sent to subscriber.
       responses:
         200:
           description: The created Subscription
@@ -82,7 +82,7 @@ paths:
           type: string
           required: true
         -
-          name: page_size
+          name: pageSize
           in: query
           type: integer
           default: 100
@@ -103,7 +103,7 @@ paths:
           schema:
             type: object
             properties:
-              page_size:
+              pageSize:
                 type: integer
               page:
                 type: integer
@@ -151,7 +151,7 @@ definitions:
       id:
         type: string
         description: Unique identifier for a Subscription.
-      created_at:
+      createdAt:
         type: string
         format: date-time
         description: Date the Subscription was created.
@@ -164,7 +164,7 @@ definitions:
       id:
         type: string
         description: Subscription Event identifier
-      created_at:
+      createdAt:
         type: string
         format: date-time
         description: Date the Subscription Event was created.
@@ -183,7 +183,7 @@ definitions:
       id:
         type: string
         description: Unsubscription identifier
-      created_at:
+      createdAt:
         type: string
         format: date-time
         description: Date the Unsubscription was created.
@@ -200,7 +200,7 @@ definitions:
         type: string
       message:
         type: string
-      field_errors:
+      fieldErrors:
         type: array
         items:
           $ref: "#/definitions/FieldError"

@@ -11,7 +11,7 @@ package arkaces/encoded-listener-client
 
 type InlineResponse200 struct {
 
-	PageSize int32 `json:"page_size,omitempty"`
+	PageSize int32 `json:"pageSize,omitempty"`
 
 	Page int32 `json:"page,omitempty"`
 

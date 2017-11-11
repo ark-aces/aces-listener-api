@@ -77,9 +77,9 @@ class SubscriptionRequestTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "host"
+     * Test attribute "callbackUrl"
      */
-    public function testPropertyHost()
+    public function testPropertyCallbackUrl()
     {
     }
 

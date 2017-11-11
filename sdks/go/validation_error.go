@@ -15,5 +15,5 @@ type ValidationError struct {
 
 	Message string `json:"message,omitempty"`
 
-	FieldErrors []FieldError `json:"field_errors,omitempty"`
+	FieldErrors []FieldError `json:"fieldErrors,omitempty"`
 }

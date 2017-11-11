@@ -534,7 +534,7 @@ class DefaultApi
 
         // query params
         if ($pageSize !== null) {
-            $queryParams['page_size'] = ObjectSerializer::toQueryValue($pageSize);
+            $queryParams['pageSize'] = ObjectSerializer::toQueryValue($pageSize);
         }
         // query params
         if ($page !== null) {

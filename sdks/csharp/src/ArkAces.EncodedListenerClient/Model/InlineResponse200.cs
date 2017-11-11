@@ -48,7 +48,7 @@ namespace ArkAces.EncodedListenerClient.Model
         /// <summary>
         /// Gets or Sets PageSize
         /// </summary>
-        [DataMember(Name="page_size", EmitDefaultValue=false)]
+        [DataMember(Name="pageSize", EmitDefaultValue=false)]
         public int? PageSize { get; set; }
 
         /// <summary>

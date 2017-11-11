@@ -56,7 +56,7 @@ class SubscriptionRequest implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'host' => 'string',
+        'callbackUrl' => 'string',
         'minConfirmations' => 'int'
     ];
 
@@ -66,7 +66,7 @@ class SubscriptionRequest implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'host' => null,
+        'callbackUrl' => null,
         'minConfirmations' => null
     ];
 
@@ -97,8 +97,8 @@ class SubscriptionRequest implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'host' => 'host',
-        'minConfirmations' => 'min_confirmations'
+        'callbackUrl' => 'callbackUrl',
+        'minConfirmations' => 'minConfirmations'
     ];
 
     /**
@@ -107,7 +107,7 @@ class SubscriptionRequest implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'host' => 'setHost',
+        'callbackUrl' => 'setCallbackUrl',
         'minConfirmations' => 'setMinConfirmations'
     ];
 
@@ -117,7 +117,7 @@ class SubscriptionRequest implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'host' => 'getHost',
+        'callbackUrl' => 'getCallbackUrl',
         'minConfirmations' => 'getMinConfirmations'
     ];
 
@@ -181,7 +181,7 @@ class SubscriptionRequest implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['host'] = isset($data['host']) ? $data['host'] : null;
+        $this->container['callbackUrl'] = isset($data['callbackUrl']) ? $data['callbackUrl'] : null;
         $this->container['minConfirmations'] = isset($data['minConfirmations']) ? $data['minConfirmations'] : null;
     }
 
@@ -194,8 +194,8 @@ class SubscriptionRequest implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        if ($this->container['host'] === null) {
-            $invalidProperties[] = "'host' can't be null";
+        if ($this->container['callbackUrl'] === null) {
+            $invalidProperties[] = "'callbackUrl' can't be null";
         }
         if ($this->container['minConfirmations'] === null) {
             $invalidProperties[] = "'minConfirmations' can't be null";
@@ -212,7 +212,7 @@ class SubscriptionRequest implements ModelInterface, ArrayAccess
     public function valid()
     {
 
-        if ($this->container['host'] === null) {
+        if ($this->container['callbackUrl'] === null) {
             return false;
         }
         if ($this->container['minConfirmations'] === null) {
@@ -223,25 +223,25 @@ class SubscriptionRequest implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets host
+     * Gets callbackUrl
      *
      * @return string
      */
-    public function getHost()
+    public function getCallbackUrl()
     {
-        return $this->container['host'];
+        return $this->container['callbackUrl'];
     }
 
     /**
-     * Sets host
+     * Sets callbackUrl
      *
-     * @param string $host Target host implementing Encoded Listener Subscriber API interface.
+     * @param string $callbackUrl Target target URL to POST Encoded Listener events to.
      *
      * @return $this
      */
-    public function setHost($host)
+    public function setCallbackUrl($callbackUrl)
     {
-        $this->container['host'] = $host;
+        $this->container['callbackUrl'] = $callbackUrl;
 
         return $this;
     }
@@ -259,7 +259,7 @@ class SubscriptionRequest implements ModelInterface, ArrayAccess
     /**
      * Sets minConfirmations
      *
-     * @param int $minConfirmations Confirmations required before event is sent to subscribers.
+     * @param int $minConfirmations Confirmations required before event is sent to subscriber.
      *
      * @return $this
      */
