@@ -25,6 +25,9 @@ type SubscriptionEvent struct {
 
 	Tries int32 `json:"tries,omitempty"`
 
+	// Transaction id blockchain event.
+	TransactionId string `json:"transactionId,omitempty"`
+
 	// Event data encoded as a Json string.
 	Data string `json:"data,omitempty"`
 }

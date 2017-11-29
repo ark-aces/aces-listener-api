@@ -105,6 +105,13 @@ class SubscriptionEventTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "transactionId"
+     */
+    public function testPropertyTransactionId()
+    {
+    }
+
+    /**
      * Test attribute "data"
      */
     public function testPropertyData()

@@ -68,6 +68,9 @@ export default class SubscriptionEvent {
             if (data.hasOwnProperty('tries')) {
                 obj['tries'] = ApiClient.convertToType(data['tries'], 'Number');
             }
+            if (data.hasOwnProperty('transactionId')) {
+                obj['transactionId'] = ApiClient.convertToType(data['transactionId'], 'String');
+            }
             if (data.hasOwnProperty('data')) {
                 obj['data'] = ApiClient.convertToType(data['data'], 'String');
             }
@@ -93,6 +96,11 @@ export default class SubscriptionEvent {
     * @member {Number} tries
     */
     tries = undefined;
+    /**
+    * Transaction id blockchain event.
+    * @member {String} transactionId
+    */
+    transactionId = undefined;
     /**
     * Event data encoded as a Json string.
     * @member {String} data

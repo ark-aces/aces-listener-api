@@ -78,6 +78,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property transactionId (base name: "transactionId")', function() {
+      // uncomment below and update the code to test the property transactionId
+      //var instane = new AcesEncodedListenerApi.SubscriptionEvent();
+      //expect(instance).to.be();
+    });
+
     it('should have the property data (base name: "data")', function() {
       // uncomment below and update the code to test the property data
       //var instane = new AcesEncodedListenerApi.SubscriptionEvent();

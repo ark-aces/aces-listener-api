@@ -60,6 +60,7 @@ class SubscriptionEvent implements ModelInterface, ArrayAccess
         'createdAt' => '\DateTime',
         'status' => 'string',
         'tries' => 'int',
+        'transactionId' => 'string',
         'data' => 'string'
     ];
 
@@ -73,6 +74,7 @@ class SubscriptionEvent implements ModelInterface, ArrayAccess
         'createdAt' => 'date-time',
         'status' => null,
         'tries' => null,
+        'transactionId' => null,
         'data' => null
     ];
 
@@ -107,6 +109,7 @@ class SubscriptionEvent implements ModelInterface, ArrayAccess
         'createdAt' => 'createdAt',
         'status' => 'status',
         'tries' => 'tries',
+        'transactionId' => 'transactionId',
         'data' => 'data'
     ];
 
@@ -120,6 +123,7 @@ class SubscriptionEvent implements ModelInterface, ArrayAccess
         'createdAt' => 'setCreatedAt',
         'status' => 'setStatus',
         'tries' => 'setTries',
+        'transactionId' => 'setTransactionId',
         'data' => 'setData'
     ];
 
@@ -133,6 +137,7 @@ class SubscriptionEvent implements ModelInterface, ArrayAccess
         'createdAt' => 'getCreatedAt',
         'status' => 'getStatus',
         'tries' => 'getTries',
+        'transactionId' => 'getTransactionId',
         'data' => 'getData'
     ];
 
@@ -217,6 +222,7 @@ class SubscriptionEvent implements ModelInterface, ArrayAccess
         $this->container['createdAt'] = isset($data['createdAt']) ? $data['createdAt'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['tries'] = isset($data['tries']) ? $data['tries'] : null;
+        $this->container['transactionId'] = isset($data['transactionId']) ? $data['transactionId'] : null;
         $this->container['data'] = isset($data['data']) ? $data['data'] : null;
     }
 
@@ -358,6 +364,30 @@ class SubscriptionEvent implements ModelInterface, ArrayAccess
     public function setTries($tries)
     {
         $this->container['tries'] = $tries;
+
+        return $this;
+    }
+
+    /**
+     * Gets transactionId
+     *
+     * @return string
+     */
+    public function getTransactionId()
+    {
+        return $this->container['transactionId'];
+    }
+
+    /**
+     * Sets transactionId
+     *
+     * @param string $transactionId Transaction id blockchain event.
+     *
+     * @return $this
+     */
+    public function setTransactionId($transactionId)
+    {
+        $this->container['transactionId'] = $transactionId;
 
         return $this;
     }

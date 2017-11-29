@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **createdAt** | [**OffsetDateTime**](OffsetDateTime.md) | Date the Subscription Event was created. |  [optional]
 **status** | [**StatusEnum**](#StatusEnum) |  |  [optional]
 **tries** | **Integer** |  |  [optional]
+**transactionId** | **String** | Transaction id blockchain event. |  [optional]
 **data** | **String** | Event data encoded as a Json string. |  [optional]
 
 

@@ -68,13 +68,15 @@ namespace ArkAces.EncodedListenerClient.Model
         /// <param name="CreatedAt">Date the Subscription Event was created..</param>
         /// <param name="Status">Status.</param>
         /// <param name="Tries">Tries.</param>
+        /// <param name="TransactionId">Transaction id blockchain event..</param>
         /// <param name="Data">Event data encoded as a Json string..</param>
-        public SubscriptionEvent(string Id = default(string), DateTime? CreatedAt = default(DateTime?), StatusEnum? Status = default(StatusEnum?), int? Tries = default(int?), string Data = default(string))
+        public SubscriptionEvent(string Id = default(string), DateTime? CreatedAt = default(DateTime?), StatusEnum? Status = default(StatusEnum?), int? Tries = default(int?), string TransactionId = default(string), string Data = default(string))
         {
             this.Id = Id;
             this.CreatedAt = CreatedAt;
             this.Status = Status;
             this.Tries = Tries;
+            this.TransactionId = TransactionId;
             this.Data = Data;
         }
         
@@ -100,6 +102,13 @@ namespace ArkAces.EncodedListenerClient.Model
         public int? Tries { get; set; }
 
         /// <summary>
+        /// Transaction id blockchain event.
+        /// </summary>
+        /// <value>Transaction id blockchain event.</value>
+        [DataMember(Name="transactionId", EmitDefaultValue=false)]
+        public string TransactionId { get; set; }
+
+        /// <summary>
         /// Event data encoded as a Json string.
         /// </summary>
         /// <value>Event data encoded as a Json string.</value>
@@ -118,6 +127,7 @@ namespace ArkAces.EncodedListenerClient.Model
             sb.Append("  CreatedAt: ").Append(CreatedAt).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  Tries: ").Append(Tries).Append("\n");
+            sb.Append("  TransactionId: ").Append(TransactionId).Append("\n");
             sb.Append("  Data: ").Append(Data).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -174,6 +184,11 @@ namespace ArkAces.EncodedListenerClient.Model
                     this.Tries.Equals(input.Tries))
                 ) && 
                 (
+                    this.TransactionId == input.TransactionId ||
+                    (this.TransactionId != null &&
+                    this.TransactionId.Equals(input.TransactionId))
+                ) && 
+                (
                     this.Data == input.Data ||
                     (this.Data != null &&
                     this.Data.Equals(input.Data))
@@ -197,6 +212,8 @@ namespace ArkAces.EncodedListenerClient.Model
                     hashCode = hashCode * 59 + this.Status.GetHashCode();
                 if (this.Tries != null)
                     hashCode = hashCode * 59 + this.Tries.GetHashCode();
+                if (this.TransactionId != null)
+                    hashCode = hashCode * 59 + this.TransactionId.GetHashCode();
                 if (this.Data != null)
                     hashCode = hashCode * 59 + this.Data.GetHashCode();
                 return hashCode;

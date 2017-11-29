@@ -90,6 +90,9 @@ public class SubscriptionEvent {
   @SerializedName("tries")
   private Integer tries = null;
 
+  @SerializedName("transactionId")
+  private String transactionId = null;
+
   @SerializedName("data")
   private String data = null;
 
@@ -165,6 +168,24 @@ public class SubscriptionEvent {
     this.tries = tries;
   }
 
+  public SubscriptionEvent transactionId(String transactionId) {
+    this.transactionId = transactionId;
+    return this;
+  }
+
+   /**
+   * Transaction id blockchain event.
+   * @return transactionId
+  **/
+  @ApiModelProperty(value = "Transaction id blockchain event.")
+  public String getTransactionId() {
+    return transactionId;
+  }
+
+  public void setTransactionId(String transactionId) {
+    this.transactionId = transactionId;
+  }
+
   public SubscriptionEvent data(String data) {
     this.data = data;
     return this;
@@ -197,12 +218,13 @@ public class SubscriptionEvent {
         Objects.equals(this.createdAt, subscriptionEvent.createdAt) &&
         Objects.equals(this.status, subscriptionEvent.status) &&
         Objects.equals(this.tries, subscriptionEvent.tries) &&
+        Objects.equals(this.transactionId, subscriptionEvent.transactionId) &&
         Objects.equals(this.data, subscriptionEvent.data);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, createdAt, status, tries, data);
+    return Objects.hash(id, createdAt, status, tries, transactionId, data);
   }
 
 
@@ -215,6 +237,7 @@ public class SubscriptionEvent {
     sb.append("    createdAt: ").append(toIndentedString(createdAt)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    tries: ").append(toIndentedString(tries)).append("\n");
+    sb.append("    transactionId: ").append(toIndentedString(transactionId)).append("\n");
     sb.append("    data: ").append(toIndentedString(data)).append("\n");
     sb.append("}");
     return sb.toString();

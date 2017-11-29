@@ -35,6 +35,7 @@ class SubscriptionEvent(object):
         'created_at': 'datetime',
         'status': 'str',
         'tries': 'int',
+        'transaction_id': 'str',
         'data': 'str'
     }
 
@@ -43,10 +44,11 @@ class SubscriptionEvent(object):
         'created_at': 'createdAt',
         'status': 'status',
         'tries': 'tries',
+        'transaction_id': 'transactionId',
         'data': 'data'
     }
 
-    def __init__(self, id=None, created_at=None, status=None, tries=None, data=None):
+    def __init__(self, id=None, created_at=None, status=None, tries=None, transaction_id=None, data=None):
         """
         SubscriptionEvent - a model defined in Swagger
         """
@@ -55,6 +57,7 @@ class SubscriptionEvent(object):
         self._created_at = None
         self._status = None
         self._tries = None
+        self._transaction_id = None
         self._data = None
         self.discriminator = None
 
@@ -66,6 +69,8 @@ class SubscriptionEvent(object):
           self.status = status
         if tries is not None:
           self.tries = tries
+        if transaction_id is not None:
+          self.transaction_id = transaction_id
         if data is not None:
           self.data = data
 
@@ -162,6 +167,29 @@ class SubscriptionEvent(object):
         """
 
         self._tries = tries
+
+    @property
+    def transaction_id(self):
+        """
+        Gets the transaction_id of this SubscriptionEvent.
+        Transaction id blockchain event.
+
+        :return: The transaction_id of this SubscriptionEvent.
+        :rtype: str
+        """
+        return self._transaction_id
+
+    @transaction_id.setter
+    def transaction_id(self, transaction_id):
+        """
+        Sets the transaction_id of this SubscriptionEvent.
+        Transaction id blockchain event.
+
+        :param transaction_id: The transaction_id of this SubscriptionEvent.
+        :type: str
+        """
+
+        self._transaction_id = transaction_id
 
     @property
     def data(self):

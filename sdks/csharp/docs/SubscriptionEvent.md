@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **CreatedAt** | **DateTime?** | Date the Subscription Event was created. | [optional] 
 **Status** | **string** |  | [optional] 
 **Tries** | **int?** |  | [optional] 
+**TransactionId** | **string** | Transaction id blockchain event. | [optional] 
 **Data** | **string** | Event data encoded as a Json string. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

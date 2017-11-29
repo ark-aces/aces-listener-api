@@ -75,7 +75,7 @@ OpenAPI spec version: 0.1.0
   <Import Project="$(MsBuildToolsPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
       <ProjectReference Include="..\ArkAces.EncodedListenerClient\ArkAces.EncodedListenerClient.csproj">
-          <Project>{DB13E301-DC14-43D4-A732-25648A044E96}</Project>
+          <Project>{5C0EBE13-7F0C-40E0-B9A3-621604945FCC}</Project>
           <Name>ArkAces.EncodedListenerClient</Name>
       </ProjectReference>
   </ItemGroup>

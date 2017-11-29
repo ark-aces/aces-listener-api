@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **createdAt** | **Date** | Date the Subscription Event was created. | [optional] 
 **status** | **String** |  | [optional] 
 **tries** | **Number** |  | [optional] 
+**transactionId** | **String** | Transaction id blockchain event. | [optional] 
 **data** | **String** | Event data encoded as a Json string. | [optional] 
 
 
