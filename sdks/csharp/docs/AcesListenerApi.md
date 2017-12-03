@@ -1,4 +1,4 @@
-# ArkAces.EncodedListenerClient.Api.AcesListenerApi
+# ArkAces.AcesListenerApi.Api.AcesListenerApi
 
 All URIs are relative to *https://localhost/v1*
 
@@ -23,9 +23,9 @@ Get application health information.
 ```csharp
 using System;
 using System.Diagnostics;
-using ArkAces.EncodedListenerClient.Api;
-using ArkAces.EncodedListenerClient.Client;
-using ArkAces.EncodedListenerClient.Model;
+using ArkAces.AcesListenerApi.Api;
+using ArkAces.AcesListenerApi.Client;
+using ArkAces.AcesListenerApi.Model;
 
 namespace Example
 {
@@ -84,9 +84,9 @@ Gets a page of Subscription Events.
 ```csharp
 using System;
 using System.Diagnostics;
-using ArkAces.EncodedListenerClient.Api;
-using ArkAces.EncodedListenerClient.Client;
-using ArkAces.EncodedListenerClient.Model;
+using ArkAces.AcesListenerApi.Api;
+using ArkAces.AcesListenerApi.Client;
+using ArkAces.AcesListenerApi.Model;
 
 namespace Example
 {
@@ -155,9 +155,9 @@ Get a Subscription by identifier.
 ```csharp
 using System;
 using System.Diagnostics;
-using ArkAces.EncodedListenerClient.Api;
-using ArkAces.EncodedListenerClient.Client;
-using ArkAces.EncodedListenerClient.Model;
+using ArkAces.AcesListenerApi.Api;
+using ArkAces.AcesListenerApi.Client;
+using ArkAces.AcesListenerApi.Model;
 
 namespace Example
 {
@@ -220,9 +220,9 @@ Unsubscribes an active Subscription.
 ```csharp
 using System;
 using System.Diagnostics;
-using ArkAces.EncodedListenerClient.Api;
-using ArkAces.EncodedListenerClient.Client;
-using ArkAces.EncodedListenerClient.Model;
+using ArkAces.AcesListenerApi.Api;
+using ArkAces.AcesListenerApi.Client;
+using ArkAces.AcesListenerApi.Model;
 
 namespace Example
 {
@@ -285,9 +285,9 @@ The Subscribers endpoint allows subscriber to register their node to receive blo
 ```csharp
 using System;
 using System.Diagnostics;
-using ArkAces.EncodedListenerClient.Api;
-using ArkAces.EncodedListenerClient.Client;
-using ArkAces.EncodedListenerClient.Model;
+using ArkAces.AcesListenerApi.Api;
+using ArkAces.AcesListenerApi.Client;
+using ArkAces.AcesListenerApi.Model;
 
 namespace Example
 {

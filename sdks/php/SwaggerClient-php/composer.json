@@ -1,6 +1,6 @@
 {
-    "name": "ark-aces/aces-encoded-listener-api",
-    "version": "0.1.0",
+    "name": "ark-aces/aces-listener-api",
+    "version": "1.0.0",
     "description": "",
     "keywords": [
         "swagger",
@@ -29,9 +29,9 @@
         "friendsofphp/php-cs-fixer": "~1.12"
     },
     "autoload": {
-        "psr-4": { "ArkAces\\EncodedListenerClient\\" : "lib/" }
+        "psr-4": { "ArkAces\\AcesListenerApi\\" : "lib/" }
     },
     "autoload-dev": {
-        "psr-4": { "ArkAces\\EncodedListenerClient\\" : "test/" }
+        "psr-4": { "ArkAces\\AcesListenerApi\\" : "test/" }
     }
 }

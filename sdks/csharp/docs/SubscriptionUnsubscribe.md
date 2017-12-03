@@ -1,4 +1,4 @@
-# ArkAces.EncodedListenerClient.Model.SubscriptionUnsubscribe
+# ArkAces.AcesListenerApi.Model.SubscriptionUnsubscribe
 ## Properties
 
 Name | Type | Description | Notes

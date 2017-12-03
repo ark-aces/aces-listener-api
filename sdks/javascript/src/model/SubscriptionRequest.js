@@ -21,7 +21,7 @@ import ApiClient from '../ApiClient';
 /**
 * The SubscriptionRequest model module.
 * @module model/SubscriptionRequest
-* @version 0.1.0
+* @version 1.0.0
 */
 export default class SubscriptionRequest {
     /**

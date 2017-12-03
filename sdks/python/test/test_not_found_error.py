@@ -17,9 +17,9 @@ import os
 import sys
 import unittest
 
-import io.arkaces.encoded_listener_client
-from io.arkaces.encoded_listener_client.rest import ApiException
-from io.arkaces.encoded_listener_client.models.not_found_error import NotFoundError
+import com.arkaces.aces_listener_api
+from com.arkaces.aces_listener_api.rest import ApiException
+from com.arkaces.aces_listener_api.models.not_found_error import NotFoundError
 
 
 class TestNotFoundError(unittest.TestCase):
@@ -36,7 +36,7 @@ class TestNotFoundError(unittest.TestCase):
         Test NotFoundError
         """
         # FIXME: construct object with mandatory attributes with example values
-        #model = io.arkaces.encoded_listener_client.models.not_found_error.NotFoundError()
+        #model = com.arkaces.aces_listener_api.models.not_found_error.NotFoundError()
         pass
 
 

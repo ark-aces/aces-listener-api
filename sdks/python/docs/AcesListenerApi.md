@@ -1,4 +1,4 @@
-# io.arkaces.encoded_listener_client.AcesListenerApi
+# com.arkaces.aces_listener_api.AcesListenerApi
 
 All URIs are relative to *https://localhost/v1*
 
@@ -22,17 +22,17 @@ Get application health information.
 ```python
 from __future__ import print_function
 import time
-import io.arkaces.encoded_listener_client
-from io.arkaces.encoded_listener_client.rest import ApiException
+import com.arkaces.aces_listener_api
+from com.arkaces.aces_listener_api.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: basicAuth
-configuration = io.arkaces.encoded_listener_client.Configuration()
+configuration = com.arkaces.aces_listener_api.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = io.arkaces.encoded_listener_client.AcesListenerApi(io.arkaces.encoded_listener_client.ApiClient(configuration))
+api_instance = com.arkaces.aces_listener_api.AcesListenerApi(com.arkaces.aces_listener_api.ApiClient(configuration))
 
 try: 
     # Get Health of node.
@@ -71,17 +71,17 @@ Gets a page of Subscription Events.
 ```python
 from __future__ import print_function
 import time
-import io.arkaces.encoded_listener_client
-from io.arkaces.encoded_listener_client.rest import ApiException
+import com.arkaces.aces_listener_api
+from com.arkaces.aces_listener_api.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: basicAuth
-configuration = io.arkaces.encoded_listener_client.Configuration()
+configuration = com.arkaces.aces_listener_api.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = io.arkaces.encoded_listener_client.AcesListenerApi(io.arkaces.encoded_listener_client.ApiClient(configuration))
+api_instance = com.arkaces.aces_listener_api.AcesListenerApi(com.arkaces.aces_listener_api.ApiClient(configuration))
 id = 'id_example' # str | Subscription Identifier
 page_size = 100 # int | Number of items to return per page. (optional) (default to 100)
 page = 56 # int | Zero-offset page number to return. (optional)
@@ -130,17 +130,17 @@ Get a Subscription by identifier.
 ```python
 from __future__ import print_function
 import time
-import io.arkaces.encoded_listener_client
-from io.arkaces.encoded_listener_client.rest import ApiException
+import com.arkaces.aces_listener_api
+from com.arkaces.aces_listener_api.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: basicAuth
-configuration = io.arkaces.encoded_listener_client.Configuration()
+configuration = com.arkaces.aces_listener_api.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = io.arkaces.encoded_listener_client.AcesListenerApi(io.arkaces.encoded_listener_client.ApiClient(configuration))
+api_instance = com.arkaces.aces_listener_api.AcesListenerApi(com.arkaces.aces_listener_api.ApiClient(configuration))
 id = 'id_example' # str | Subscription Identifier
 
 try: 
@@ -183,17 +183,17 @@ Unsubscribes an active Subscription.
 ```python
 from __future__ import print_function
 import time
-import io.arkaces.encoded_listener_client
-from io.arkaces.encoded_listener_client.rest import ApiException
+import com.arkaces.aces_listener_api
+from com.arkaces.aces_listener_api.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: basicAuth
-configuration = io.arkaces.encoded_listener_client.Configuration()
+configuration = com.arkaces.aces_listener_api.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = io.arkaces.encoded_listener_client.AcesListenerApi(io.arkaces.encoded_listener_client.ApiClient(configuration))
+api_instance = com.arkaces.aces_listener_api.AcesListenerApi(com.arkaces.aces_listener_api.ApiClient(configuration))
 id = 'id_example' # str | Subscription Identifier
 
 try: 
@@ -236,18 +236,18 @@ The Subscribers endpoint allows subscriber to register their node to receive blo
 ```python
 from __future__ import print_function
 import time
-import io.arkaces.encoded_listener_client
-from io.arkaces.encoded_listener_client.rest import ApiException
+import com.arkaces.aces_listener_api
+from com.arkaces.aces_listener_api.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: basicAuth
-configuration = io.arkaces.encoded_listener_client.Configuration()
+configuration = com.arkaces.aces_listener_api.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = io.arkaces.encoded_listener_client.AcesListenerApi(io.arkaces.encoded_listener_client.ApiClient(configuration))
-subscription_request = io.arkaces.encoded_listener_client.SubscriptionRequest() # SubscriptionRequest | The request to create a new Subscription. (optional)
+api_instance = com.arkaces.aces_listener_api.AcesListenerApi(com.arkaces.aces_listener_api.ApiClient(configuration))
+subscription_request = com.arkaces.aces_listener_api.SubscriptionRequest() # SubscriptionRequest | The request to create a new Subscription. (optional)
 
 try: 
     # Registers a subscriber node to receive blockchain events.

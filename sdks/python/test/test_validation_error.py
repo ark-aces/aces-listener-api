@@ -17,9 +17,9 @@ import os
 import sys
 import unittest
 
-import io.arkaces.encoded_listener_client
-from io.arkaces.encoded_listener_client.rest import ApiException
-from io.arkaces.encoded_listener_client.models.validation_error import ValidationError
+import com.arkaces.aces_listener_api
+from com.arkaces.aces_listener_api.rest import ApiException
+from com.arkaces.aces_listener_api.models.validation_error import ValidationError
 
 
 class TestValidationError(unittest.TestCase):
@@ -36,7 +36,7 @@ class TestValidationError(unittest.TestCase):
         Test ValidationError
         """
         # FIXME: construct object with mandatory attributes with example values
-        #model = io.arkaces.encoded_listener_client.models.validation_error.ValidationError()
+        #model = com.arkaces.aces_listener_api.models.validation_error.ValidationError()
         pass
 
 

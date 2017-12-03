@@ -22,7 +22,7 @@ import SubscriptionEvent from './model/SubscriptionEvent';
 import SubscriptionRequest from './model/SubscriptionRequest';
 import SubscriptionUnsubscribe from './model/SubscriptionUnsubscribe';
 import ValidationError from './model/ValidationError';
-import AcesListenerApi from './arkaces-encoded-listener-client/AcesListenerApi';
+import AcesListenerApi from './arkaces-listener-client/AcesListenerApi';
 
 
 /**
@@ -54,7 +54,7 @@ import AcesListenerApi from './arkaces-encoded-listener-client/AcesListenerApi';
 * </pre>
 * </p>
 * @module index
-* @version 0.1.0
+* @version 1.0.0
 */
 export {
     /**
@@ -119,7 +119,7 @@ export {
 
     /**
     * The AcesListenerApi service constructor.
-    * @property {module:arkaces-encoded-listener-client/AcesListenerApi}
+    * @property {module:arkaces-listener-client/AcesListenerApi}
     */
     AcesListenerApi
 };

@@ -21,7 +21,7 @@ import ApiClient from '../ApiClient';
 /**
 * The NotFoundError model module.
 * @module model/NotFoundError
-* @version 0.1.0
+* @version 1.0.0
 */
 export default class NotFoundError {
     /**

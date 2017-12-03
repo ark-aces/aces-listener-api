@@ -1,8 +1,8 @@
 {
-  "apiPackage": "ArkAces\\EncodedListenerClient",
-  "artifactVersion": "0.1.0",
+  "apiPackage": "ArkAces\\AcesListener",
+  "artifactVersion": "1.0.0",
   "composerVendorName": "ark-aces",
-  "composerProjectName": "aces-encoded-listener-api",
+  "composerProjectName": "aces-listener-api",
   "variableNamingConvention": "camelCase",
-  "invokerPackage": "ArkAces\\EncodedListenerClient"
+  "invokerPackage": "ArkAces\\AcesListenerApi"
 }

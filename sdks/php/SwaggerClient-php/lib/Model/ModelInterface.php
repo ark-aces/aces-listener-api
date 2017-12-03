@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  ArkAces\EncodedListenerClient\Model
+ * @package  ArkAces\AcesListenerApi\Model
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,12 +26,12 @@
  * Do not edit the class manually.
  */
 
-namespace ArkAces\EncodedListenerClient\Model;
+namespace ArkAces\AcesListenerApi\Model;
 
 /**
  * Interface abstracting model access.
  *
- * @package ArkAces\EncodedListenerClient\Model
+ * @package ArkAces\AcesListenerApi\Model
  * @author  Swagger Codegen team
  */
 interface ModelInterface

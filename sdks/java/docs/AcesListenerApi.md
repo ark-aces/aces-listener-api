@@ -22,11 +22,11 @@ Get application health information.
 ### Example
 ```java
 // Import classes:
-//import io.arkaces.ApiClient;
-//import io.arkaces.ApiException;
-//import io.arkaces.Configuration;
-//import io.arkaces.auth.*;
-//import io.arkaces.encoded_listener_client.AcesListenerApi;
+//import com.arkaces.ApiClient;
+//import com.arkaces.ApiException;
+//import com.arkaces.Configuration;
+//import com.arkaces.auth.*;
+//import com.arkaces.aces_listener_api.AcesListenerApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -72,11 +72,11 @@ Gets a page of Subscription Events.
 ### Example
 ```java
 // Import classes:
-//import io.arkaces.ApiClient;
-//import io.arkaces.ApiException;
-//import io.arkaces.Configuration;
-//import io.arkaces.auth.*;
-//import io.arkaces.encoded_listener_client.AcesListenerApi;
+//import com.arkaces.ApiClient;
+//import com.arkaces.ApiException;
+//import com.arkaces.Configuration;
+//import com.arkaces.auth.*;
+//import com.arkaces.aces_listener_api.AcesListenerApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -132,11 +132,11 @@ Get a Subscription by identifier.
 ### Example
 ```java
 // Import classes:
-//import io.arkaces.ApiClient;
-//import io.arkaces.ApiException;
-//import io.arkaces.Configuration;
-//import io.arkaces.auth.*;
-//import io.arkaces.encoded_listener_client.AcesListenerApi;
+//import com.arkaces.ApiClient;
+//import com.arkaces.ApiException;
+//import com.arkaces.Configuration;
+//import com.arkaces.auth.*;
+//import com.arkaces.aces_listener_api.AcesListenerApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -186,11 +186,11 @@ Unsubscribes an active Subscription.
 ### Example
 ```java
 // Import classes:
-//import io.arkaces.ApiClient;
-//import io.arkaces.ApiException;
-//import io.arkaces.Configuration;
-//import io.arkaces.auth.*;
-//import io.arkaces.encoded_listener_client.AcesListenerApi;
+//import com.arkaces.ApiClient;
+//import com.arkaces.ApiException;
+//import com.arkaces.Configuration;
+//import com.arkaces.auth.*;
+//import com.arkaces.aces_listener_api.AcesListenerApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -240,11 +240,11 @@ The Subscribers endpoint allows subscriber to register their node to receive blo
 ### Example
 ```java
 // Import classes:
-//import io.arkaces.ApiClient;
-//import io.arkaces.ApiException;
-//import io.arkaces.Configuration;
-//import io.arkaces.auth.*;
-//import io.arkaces.encoded_listener_client.AcesListenerApi;
+//import com.arkaces.ApiClient;
+//import com.arkaces.ApiException;
+//import com.arkaces.Configuration;
+//import com.arkaces.auth.*;
+//import com.arkaces.aces_listener_api.AcesListenerApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 

@@ -1,5 +1,5 @@
 {
-  "apiPackage": "arkaces-encoded-listener-client",
+  "apiPackage": "arkaces-listener-client",
   "projectLicenseName": "MIT License",
-  "projectVersion": "0.1.0"
+  "projectVersion": "1.0.0"
 }

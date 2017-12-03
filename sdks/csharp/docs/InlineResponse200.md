@@ -1,4 +1,4 @@
-# ArkAces.EncodedListenerClient.Model.InlineResponse200
+# ArkAces.AcesListenerApi.Model.InlineResponse200
 ## Properties
 
 Name | Type | Description | Notes

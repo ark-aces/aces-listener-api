@@ -17,9 +17,9 @@ import os
 import sys
 import unittest
 
-import io.arkaces.encoded_listener_client
-from io.arkaces.encoded_listener_client.rest import ApiException
-from io.arkaces.encoded_listener_client.models.inline_response_200 import InlineResponse200
+import com.arkaces.aces_listener_api
+from com.arkaces.aces_listener_api.rest import ApiException
+from com.arkaces.aces_listener_api.models.inline_response_200 import InlineResponse200
 
 
 class TestInlineResponse200(unittest.TestCase):
@@ -36,7 +36,7 @@ class TestInlineResponse200(unittest.TestCase):
         Test InlineResponse200
         """
         # FIXME: construct object with mandatory attributes with example values
-        #model = io.arkaces.encoded_listener_client.models.inline_response_200.InlineResponse200()
+        #model = com.arkaces.aces_listener_api.models.inline_response_200.InlineResponse200()
         pass
 
 

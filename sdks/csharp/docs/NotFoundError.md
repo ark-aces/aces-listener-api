@@ -1,4 +1,4 @@
-# ArkAces.EncodedListenerClient.Model.NotFoundError
+# ArkAces.AcesListenerApi.Model.NotFoundError
 ## Properties
 
 Name | Type | Description | Notes

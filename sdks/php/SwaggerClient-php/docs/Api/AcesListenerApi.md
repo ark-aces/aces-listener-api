@@ -1,4 +1,4 @@
-# ArkAces\EncodedListenerClient\AcesListenerApi
+# ArkAces\AcesListenerApi\AcesListenerApi
 
 All URIs are relative to *https://localhost/v1*
 
@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 # **statusGet**
-> \ArkAces\EncodedListenerClient\Model\Health statusGet()
+> \ArkAces\AcesListenerApi\Model\Health statusGet()
 
 Get Health of node.
 
@@ -24,10 +24,10 @@ Get application health information.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basicAuth
-ArkAces\EncodedListenerClient\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-ArkAces\EncodedListenerClient\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+ArkAces\AcesListenerApi\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+ArkAces\AcesListenerApi\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new ArkAces\EncodedListenerClient\Api\AcesListenerApi(new \Http\Adapter\Guzzle6\Client());
+$api_instance = new ArkAces\AcesListenerApi\Api\AcesListenerApi(new \Http\Adapter\Guzzle6\Client());
 
 try {
     $result = $api_instance->statusGet();
@@ -43,7 +43,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\ArkAces\EncodedListenerClient\Model\Health**](../Model/Health.md)
+[**\ArkAces\AcesListenerApi\Model\Health**](../Model/Health.md)
 
 ### Authorization
 
@@ -57,7 +57,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **subscriptionsIdEventsGet**
-> \ArkAces\EncodedListenerClient\Model\InlineResponse200 subscriptionsIdEventsGet($id, $pageSize, $page, $continuation)
+> \ArkAces\AcesListenerApi\Model\InlineResponse200 subscriptionsIdEventsGet($id, $pageSize, $page, $continuation)
 
 List Subscription Events
 
@@ -69,10 +69,10 @@ Gets a page of Subscription Events.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basicAuth
-ArkAces\EncodedListenerClient\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-ArkAces\EncodedListenerClient\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+ArkAces\AcesListenerApi\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+ArkAces\AcesListenerApi\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new ArkAces\EncodedListenerClient\Api\AcesListenerApi(new \Http\Adapter\Guzzle6\Client());
+$api_instance = new ArkAces\AcesListenerApi\Api\AcesListenerApi(new \Http\Adapter\Guzzle6\Client());
 $id = "id_example"; // string | Subscription Identifier
 $pageSize = 100; // int | Number of items to return per page.
 $page = 56; // int | Zero-offset page number to return.
@@ -98,7 +98,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\ArkAces\EncodedListenerClient\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\ArkAces\AcesListenerApi\Model\InlineResponse200**](../Model/InlineResponse200.md)
 
 ### Authorization
 
@@ -112,7 +112,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **subscriptionsIdGet**
-> \ArkAces\EncodedListenerClient\Model\Subscription subscriptionsIdGet($id)
+> \ArkAces\AcesListenerApi\Model\Subscription subscriptionsIdGet($id)
 
 Gets Subscription
 
@@ -124,10 +124,10 @@ Get a Subscription by identifier.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basicAuth
-ArkAces\EncodedListenerClient\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-ArkAces\EncodedListenerClient\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+ArkAces\AcesListenerApi\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+ArkAces\AcesListenerApi\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new ArkAces\EncodedListenerClient\Api\AcesListenerApi(new \Http\Adapter\Guzzle6\Client());
+$api_instance = new ArkAces\AcesListenerApi\Api\AcesListenerApi(new \Http\Adapter\Guzzle6\Client());
 $id = "id_example"; // string | Subscription Identifier
 
 try {
@@ -147,7 +147,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\ArkAces\EncodedListenerClient\Model\Subscription**](../Model/Subscription.md)
+[**\ArkAces\AcesListenerApi\Model\Subscription**](../Model/Subscription.md)
 
 ### Authorization
 
@@ -161,7 +161,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **subscriptionsIdUnsubscribesPost**
-> \ArkAces\EncodedListenerClient\Model\SubscriptionUnsubscribe subscriptionsIdUnsubscribesPost($id)
+> \ArkAces\AcesListenerApi\Model\SubscriptionUnsubscribe subscriptionsIdUnsubscribesPost($id)
 
 Create an Unsubscription.
 
@@ -173,10 +173,10 @@ Unsubscribes an active Subscription.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basicAuth
-ArkAces\EncodedListenerClient\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-ArkAces\EncodedListenerClient\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+ArkAces\AcesListenerApi\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+ArkAces\AcesListenerApi\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new ArkAces\EncodedListenerClient\Api\AcesListenerApi(new \Http\Adapter\Guzzle6\Client());
+$api_instance = new ArkAces\AcesListenerApi\Api\AcesListenerApi(new \Http\Adapter\Guzzle6\Client());
 $id = "id_example"; // string | Subscription Identifier
 
 try {
@@ -196,7 +196,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\ArkAces\EncodedListenerClient\Model\SubscriptionUnsubscribe**](../Model/SubscriptionUnsubscribe.md)
+[**\ArkAces\AcesListenerApi\Model\SubscriptionUnsubscribe**](../Model/SubscriptionUnsubscribe.md)
 
 ### Authorization
 
@@ -210,7 +210,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **subscriptionsPost**
-> \ArkAces\EncodedListenerClient\Model\Subscription subscriptionsPost($subscriptionRequest)
+> \ArkAces\AcesListenerApi\Model\Subscription subscriptionsPost($subscriptionRequest)
 
 Registers a subscriber node to receive blockchain events.
 
@@ -222,11 +222,11 @@ The Subscribers endpoint allows subscriber to register their node to receive blo
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basicAuth
-ArkAces\EncodedListenerClient\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-ArkAces\EncodedListenerClient\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+ArkAces\AcesListenerApi\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+ArkAces\AcesListenerApi\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new ArkAces\EncodedListenerClient\Api\AcesListenerApi(new \Http\Adapter\Guzzle6\Client());
-$subscriptionRequest = new \ArkAces\EncodedListenerClient\Model\SubscriptionRequest(); // \ArkAces\EncodedListenerClient\Model\SubscriptionRequest | The request to create a new Subscription.
+$api_instance = new ArkAces\AcesListenerApi\Api\AcesListenerApi(new \Http\Adapter\Guzzle6\Client());
+$subscriptionRequest = new \ArkAces\AcesListenerApi\Model\SubscriptionRequest(); // \ArkAces\AcesListenerApi\Model\SubscriptionRequest | The request to create a new Subscription.
 
 try {
     $result = $api_instance->subscriptionsPost($subscriptionRequest);
@@ -241,11 +241,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **subscriptionRequest** | [**\ArkAces\EncodedListenerClient\Model\SubscriptionRequest**](../Model/SubscriptionRequest.md)| The request to create a new Subscription. | [optional]
+ **subscriptionRequest** | [**\ArkAces\AcesListenerApi\Model\SubscriptionRequest**](../Model/SubscriptionRequest.md)| The request to create a new Subscription. | [optional]
 
 ### Return type
 
-[**\ArkAces\EncodedListenerClient\Model\Subscription**](../Model/Subscription.md)
+[**\ArkAces\AcesListenerApi\Model\Subscription**](../Model/Subscription.md)
 
 ### Authorization
 

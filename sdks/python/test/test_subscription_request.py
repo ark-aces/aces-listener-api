@@ -17,9 +17,9 @@ import os
 import sys
 import unittest
 
-import io.arkaces.encoded_listener_client
-from io.arkaces.encoded_listener_client.rest import ApiException
-from io.arkaces.encoded_listener_client.models.subscription_request import SubscriptionRequest
+import com.arkaces.aces_listener_api
+from com.arkaces.aces_listener_api.rest import ApiException
+from com.arkaces.aces_listener_api.models.subscription_request import SubscriptionRequest
 
 
 class TestSubscriptionRequest(unittest.TestCase):
@@ -36,7 +36,7 @@ class TestSubscriptionRequest(unittest.TestCase):
         Test SubscriptionRequest
         """
         # FIXME: construct object with mandatory attributes with example values
-        #model = io.arkaces.encoded_listener_client.models.subscription_request.SubscriptionRequest()
+        #model = com.arkaces.aces_listener_api.models.subscription_request.SubscriptionRequest()
         pass
 
 

@@ -22,7 +22,7 @@ import FieldError from './FieldError';
 /**
 * The ValidationError model module.
 * @module model/ValidationError
-* @version 0.1.0
+* @version 1.0.0
 */
 export default class ValidationError {
     /**

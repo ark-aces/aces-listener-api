@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  ArkAces\EncodedListenerClient
+ * @package  ArkAces\AcesListenerApi
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,7 +26,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace ArkAces\EncodedListenerClient;
+namespace ArkAces\AcesListenerApi;
 
 /**
  * NotFoundErrorTest Class Doc Comment
@@ -34,7 +34,7 @@ namespace ArkAces\EncodedListenerClient;
  * @category    Class */
 // * @description NotFoundError
 /**
- * @package     ArkAces\EncodedListenerClient
+ * @package     ArkAces\AcesListenerApi
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */

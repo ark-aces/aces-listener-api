@@ -1,4 +1,4 @@
-# ArkAces.EncodedListenerClient.Model.SubscriptionEvent
+# ArkAces.AcesListenerApi.Model.SubscriptionEvent
 ## Properties
 
 Name | Type | Description | Notes

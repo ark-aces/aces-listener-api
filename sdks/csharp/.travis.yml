@@ -4,6 +4,6 @@
 language: csharp
 mono:
   - latest
-solution: ArkAces.EncodedListenerClient.sln
+solution: ArkAces.AcesListenerApi.sln
 script:
   - /bin/sh ./mono_nunit_test.sh

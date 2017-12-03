@@ -6,11 +6,11 @@
 SET CSCPATH=%SYSTEMROOT%\Microsoft.NET\Framework\v4.0.30319
 
 if not exist ".\nuget.exe" powershell -Command "(new-object System.Net.WebClient).DownloadFile('https://dist.nuget.org/win-x86-commandline/latest/nuget.exe', '.\nuget.exe')"
-.\nuget.exe install src\ArkAces.EncodedListenerClient\packages.config -o packages
+.\nuget.exe install src\ArkAces.AcesListenerApi\packages.config -o packages
 
 if not exist ".\bin" mkdir bin
 
 copy packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll bin\Newtonsoft.Json.dll
 copy packages\RestSharp.105.1.0\lib\net45\RestSharp.dll bin\RestSharp.dll
-%CSCPATH%\csc  /reference:bin\Newtonsoft.Json.dll;bin\RestSharp.dll;System.ComponentModel.DataAnnotations.dll  /target:library /out:bin\ArkAces.EncodedListenerClient.dll /recurse:src\ArkAces.EncodedListenerClient\*.cs /doc:bin\ArkAces.EncodedListenerClient.xml
+%CSCPATH%\csc  /reference:bin\Newtonsoft.Json.dll;bin\RestSharp.dll;System.ComponentModel.DataAnnotations.dll  /target:library /out:bin\ArkAces.AcesListenerApi.dll /recurse:src\ArkAces.AcesListenerApi\*.cs /doc:bin\ArkAces.AcesListenerApi.xml
 

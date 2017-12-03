@@ -17,16 +17,16 @@ import os
 import sys
 import unittest
 
-import io.arkaces.encoded_listener_client
-from io.arkaces.encoded_listener_client.rest import ApiException
-from io.arkaces.encoded_listener_client.apis.aces_listener_api import AcesListenerApi
+import com.arkaces.aces_listener_api
+from com.arkaces.aces_listener_api.rest import ApiException
+from com.arkaces.aces_listener_api.apis.aces_listener_api import AcesListenerApi
 
 
 class TestAcesListenerApi(unittest.TestCase):
     """ AcesListenerApi unit test stubs """
 
     def setUp(self):
-        self.api = io.arkaces.encoded_listener_client.apis.aces_listener_api.AcesListenerApi()
+        self.api = com.arkaces.aces_listener_api.apis.aces_listener_api.AcesListenerApi()
 
     def tearDown(self):
         pass

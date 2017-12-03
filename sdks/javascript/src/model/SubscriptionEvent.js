@@ -21,7 +21,7 @@ import ApiClient from '../ApiClient';
 /**
 * The SubscriptionEvent model module.
 * @module model/SubscriptionEvent
-* @version 0.1.0
+* @version 1.0.0
 */
 export default class SubscriptionEvent {
     /**

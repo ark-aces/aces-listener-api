@@ -1,4 +1,4 @@
-# ArkAces.EncodedListenerClient.Model.FieldError
+# ArkAces.AcesListenerApi.Model.FieldError
 ## Properties
 
 Name | Type | Description | Notes

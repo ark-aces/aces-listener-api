@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  ArkAces\EncodedListenerClient
+ * @package  ArkAces\AcesListenerApi
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -25,17 +25,17 @@
  * Please update the test case below to test the endpoint.
  */
 
-namespace ArkAces\EncodedListenerClient;
+namespace ArkAces\AcesListenerApi;
 
-use \ArkAces\EncodedListenerClient\Configuration;
-use \ArkAces\EncodedListenerClient\ApiException;
-use \ArkAces\EncodedListenerClient\ObjectSerializer;
+use \ArkAces\AcesListenerApi\Configuration;
+use \ArkAces\AcesListenerApi\ApiException;
+use \ArkAces\AcesListenerApi\ObjectSerializer;
 
 /**
  * AcesListenerApiTest Class Doc Comment
  *
  * @category Class
- * @package  ArkAces\EncodedListenerClient
+ * @package  ArkAces\AcesListenerApi
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */

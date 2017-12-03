@@ -1,12 +1,12 @@
 {
-  "apiPackage":"io.arkaces.encoded_listener_client",
-  "packageVersion":"0.1.0",
-  "groupId": "io.arkaces",
-  "artifactId": "encoded-listener-client",
+  "apiPackage":"com.arkaces.aces_listener_api",
+  "packageVersion":"1.0.0",
+  "groupId": "com.arkaces",
+  "artifactId": "aces_listener_api",
   "licenseName": "MIT License",
-  "licenseUrl": "https://github.com/ark-aces/aces-encoded-listener-api/blob/master/LICENSE",
+  "licenseUrl": "https://github.com/ark-aces/aces-listener-api/blob/master/LICENSE",
   "hideGenerationTimestamp": "true",
   "developerOrganization": "Ark ACES",
-  "developerOrganizationUrl": "https://aces-ark.io/",
+  "developerOrganizationUrl": "https://arkaces.com/",
   "bigDecimalAsString": true
 }

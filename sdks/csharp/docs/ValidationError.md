@@ -1,4 +1,4 @@
-# ArkAces.EncodedListenerClient.Model.ValidationError
+# ArkAces.AcesListenerApi.Model.ValidationError
 ## Properties
 
 Name | Type | Description | Notes
