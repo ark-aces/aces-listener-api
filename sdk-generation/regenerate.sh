@@ -9,7 +9,7 @@ for LANGUAGE in java php go javascript python csharp
 do
     rm -rf $REPO_PATH/sdks/$LANGUAGE/
     java -jar $SWAGGER_CODEGEN_PATH/swagger-codegen-cli.jar generate \
-        -i $REPO_PATH/aces-encoded-listener-api-swagger.yaml \
+        -i $REPO_PATH/aces-listener-api-swagger.yaml \
         -l $LANGUAGE \
         -o $REPO_PATH/sdks/$LANGUAGE/ \
         -c $DIR/configs/$LANGUAGE.json

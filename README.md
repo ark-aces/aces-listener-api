@@ -4,13 +4,13 @@ The ACES Listener API Specification defines an API interface for
 blockchain listeners. Implementations allows transaction events for a blockchain to be 
 consumed via a common REST-ful API.
 
-[ACES Listener API Specification](aces-listener-api-swagger.yaml)
+* [ACES Listener API Specification](aces-listener-api-swagger.yaml)
 
 
-## Implementations:
+## Implementations
 
-* [Ark Listener](https://github.com/ark-aces/aces-encoded-listener-ark)
-* [Bitcoin Listener](https://github.com/ark-aces/aces-encoded-listener-bitcoin)
+* [ACES Ark Listener](https://github.com/ark-aces/aces-listener-ark)
+* [ACES Bitcoin Listener](https://github.com/ark-aces/aces-listener-bitcoin)
 
 
 ## SDKs
