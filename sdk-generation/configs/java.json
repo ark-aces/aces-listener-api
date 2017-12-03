@@ -1,0 +1,12 @@
+{
+  "apiPackage":"io.arkaces.encoded_listener_client",
+  "packageVersion":"0.1.0",
+  "groupId": "io.arkaces",
+  "artifactId": "encoded-listener-client",
+  "licenseName": "MIT License",
+  "licenseUrl": "https://github.com/ark-aces/aces-encoded-listener-api/blob/master/LICENSE",
+  "hideGenerationTimestamp": "true",
+  "developerOrganization": "Ark ACES",
+  "developerOrganizationUrl": "https://aces-ark.io/",
+  "bigDecimalAsString": true
+}

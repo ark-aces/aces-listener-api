@@ -1,14 +1,14 @@
-# io.arkaces.encoded_listener_client.DefaultApi
+# io.arkaces.encoded_listener_client.AcesListenerApi
 
 All URIs are relative to *https://localhost/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**status_get**](DefaultApi.md#status_get) | **GET** /status | Get Health of node.
-[**subscriptions_id_events_get**](DefaultApi.md#subscriptions_id_events_get) | **GET** /subscriptions/{id}/events | List Subscription Events
-[**subscriptions_id_get**](DefaultApi.md#subscriptions_id_get) | **GET** /subscriptions/{id} | Gets Subscription
-[**subscriptions_id_unsubscribes_post**](DefaultApi.md#subscriptions_id_unsubscribes_post) | **POST** /subscriptions/{id}/unsubscribes | Create an Unsubscription.
-[**subscriptions_post**](DefaultApi.md#subscriptions_post) | **POST** /subscriptions | Registers a subscriber node to receive blockchain events.
+[**status_get**](AcesListenerApi.md#status_get) | **GET** /status | Get Health of node.
+[**subscriptions_id_events_get**](AcesListenerApi.md#subscriptions_id_events_get) | **GET** /subscriptions/{id}/events | List Subscription Events
+[**subscriptions_id_get**](AcesListenerApi.md#subscriptions_id_get) | **GET** /subscriptions/{id} | Gets Subscription
+[**subscriptions_id_unsubscribes_post**](AcesListenerApi.md#subscriptions_id_unsubscribes_post) | **POST** /subscriptions/{id}/unsubscribes | Create an Unsubscription.
+[**subscriptions_post**](AcesListenerApi.md#subscriptions_post) | **POST** /subscriptions | Registers a subscriber node to receive blockchain events.
 
 
 # **status_get**
@@ -26,15 +26,20 @@ import io.arkaces.encoded_listener_client
 from io.arkaces.encoded_listener_client.rest import ApiException
 from pprint import pprint
 
+# Configure HTTP basic authorization: basicAuth
+configuration = io.arkaces.encoded_listener_client.Configuration()
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+
 # create an instance of the API class
-api_instance = io.arkaces.encoded_listener_client.DefaultApi()
+api_instance = io.arkaces.encoded_listener_client.AcesListenerApi(io.arkaces.encoded_listener_client.ApiClient(configuration))
 
 try: 
     # Get Health of node.
     api_response = api_instance.status_get()
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling DefaultApi->status_get: %s\n" % e)
+    print("Exception when calling AcesListenerApi->status_get: %s\n" % e)
 ```
 
 ### Parameters
@@ -46,7 +51,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -70,8 +75,13 @@ import io.arkaces.encoded_listener_client
 from io.arkaces.encoded_listener_client.rest import ApiException
 from pprint import pprint
 
+# Configure HTTP basic authorization: basicAuth
+configuration = io.arkaces.encoded_listener_client.Configuration()
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+
 # create an instance of the API class
-api_instance = io.arkaces.encoded_listener_client.DefaultApi()
+api_instance = io.arkaces.encoded_listener_client.AcesListenerApi(io.arkaces.encoded_listener_client.ApiClient(configuration))
 id = 'id_example' # str | Subscription Identifier
 page_size = 100 # int | Number of items to return per page. (optional) (default to 100)
 page = 56 # int | Zero-offset page number to return. (optional)
@@ -82,7 +92,7 @@ try:
     api_response = api_instance.subscriptions_id_events_get(id, page_size=page_size, page=page, continuation=continuation)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling DefaultApi->subscriptions_id_events_get: %s\n" % e)
+    print("Exception when calling AcesListenerApi->subscriptions_id_events_get: %s\n" % e)
 ```
 
 ### Parameters
@@ -100,7 +110,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -124,8 +134,13 @@ import io.arkaces.encoded_listener_client
 from io.arkaces.encoded_listener_client.rest import ApiException
 from pprint import pprint
 
+# Configure HTTP basic authorization: basicAuth
+configuration = io.arkaces.encoded_listener_client.Configuration()
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+
 # create an instance of the API class
-api_instance = io.arkaces.encoded_listener_client.DefaultApi()
+api_instance = io.arkaces.encoded_listener_client.AcesListenerApi(io.arkaces.encoded_listener_client.ApiClient(configuration))
 id = 'id_example' # str | Subscription Identifier
 
 try: 
@@ -133,7 +148,7 @@ try:
     api_response = api_instance.subscriptions_id_get(id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling DefaultApi->subscriptions_id_get: %s\n" % e)
+    print("Exception when calling AcesListenerApi->subscriptions_id_get: %s\n" % e)
 ```
 
 ### Parameters
@@ -148,7 +163,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -172,8 +187,13 @@ import io.arkaces.encoded_listener_client
 from io.arkaces.encoded_listener_client.rest import ApiException
 from pprint import pprint
 
+# Configure HTTP basic authorization: basicAuth
+configuration = io.arkaces.encoded_listener_client.Configuration()
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+
 # create an instance of the API class
-api_instance = io.arkaces.encoded_listener_client.DefaultApi()
+api_instance = io.arkaces.encoded_listener_client.AcesListenerApi(io.arkaces.encoded_listener_client.ApiClient(configuration))
 id = 'id_example' # str | Subscription Identifier
 
 try: 
@@ -181,7 +201,7 @@ try:
     api_response = api_instance.subscriptions_id_unsubscribes_post(id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling DefaultApi->subscriptions_id_unsubscribes_post: %s\n" % e)
+    print("Exception when calling AcesListenerApi->subscriptions_id_unsubscribes_post: %s\n" % e)
 ```
 
 ### Parameters
@@ -196,7 +216,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -220,8 +240,13 @@ import io.arkaces.encoded_listener_client
 from io.arkaces.encoded_listener_client.rest import ApiException
 from pprint import pprint
 
+# Configure HTTP basic authorization: basicAuth
+configuration = io.arkaces.encoded_listener_client.Configuration()
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+
 # create an instance of the API class
-api_instance = io.arkaces.encoded_listener_client.DefaultApi()
+api_instance = io.arkaces.encoded_listener_client.AcesListenerApi(io.arkaces.encoded_listener_client.ApiClient(configuration))
 subscription_request = io.arkaces.encoded_listener_client.SubscriptionRequest() # SubscriptionRequest | The request to create a new Subscription. (optional)
 
 try: 
@@ -229,7 +254,7 @@ try:
     api_response = api_instance.subscriptions_post(subscription_request=subscription_request)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling DefaultApi->subscriptions_post: %s\n" % e)
+    print("Exception when calling AcesListenerApi->subscriptions_post: %s\n" % e)
 ```
 
 ### Parameters
@@ -244,7 +269,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 

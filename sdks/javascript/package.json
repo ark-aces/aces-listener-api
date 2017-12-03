@@ -1,7 +1,7 @@
 {
-  "name": "aces_encoded_listener_api",
+  "name": "aces_listener_api",
   "version": "0.1.0",
-  "description": "API_Specification_for_Encoded_Listeners_that_read_data_on_a_blockchain_andforward_transaction_events_to_registered_subscribers_",
+  "description": "API_Specification_for_ACES_Listeners_that_read_data_on_a_blockchain_andforward_transaction_events_to_registered_subscribers_",
   "license": "Unlicense",
   "main": "src/index.js",
   "scripts": {

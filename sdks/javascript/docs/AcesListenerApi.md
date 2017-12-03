@@ -1,14 +1,14 @@
-# AcesEncodedListenerApi.DefaultApi
+# AcesListenerApi.AcesListenerApi
 
 All URIs are relative to *https://localhost/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**statusGet**](DefaultApi.md#statusGet) | **GET** /status | Get Health of node.
-[**subscriptionsIdEventsGet**](DefaultApi.md#subscriptionsIdEventsGet) | **GET** /subscriptions/{id}/events | List Subscription Events
-[**subscriptionsIdGet**](DefaultApi.md#subscriptionsIdGet) | **GET** /subscriptions/{id} | Gets Subscription
-[**subscriptionsIdUnsubscribesPost**](DefaultApi.md#subscriptionsIdUnsubscribesPost) | **POST** /subscriptions/{id}/unsubscribes | Create an Unsubscription.
-[**subscriptionsPost**](DefaultApi.md#subscriptionsPost) | **POST** /subscriptions | Registers a subscriber node to receive blockchain events.
+[**statusGet**](AcesListenerApi.md#statusGet) | **GET** /status | Get Health of node.
+[**subscriptionsIdEventsGet**](AcesListenerApi.md#subscriptionsIdEventsGet) | **GET** /subscriptions/{id}/events | List Subscription Events
+[**subscriptionsIdGet**](AcesListenerApi.md#subscriptionsIdGet) | **GET** /subscriptions/{id} | Gets Subscription
+[**subscriptionsIdUnsubscribesPost**](AcesListenerApi.md#subscriptionsIdUnsubscribesPost) | **POST** /subscriptions/{id}/unsubscribes | Create an Unsubscription.
+[**subscriptionsPost**](AcesListenerApi.md#subscriptionsPost) | **POST** /subscriptions | Registers a subscriber node to receive blockchain events.
 
 
 <a name="statusGet"></a>
@@ -21,9 +21,15 @@ Get application health information.
 
 ### Example
 ```javascript
-import AcesEncodedListenerApi from 'aces_encoded_listener_api';
+import AcesListenerApi from 'aces_listener_api';
+let defaultClient = AcesListenerApi.ApiClient.instance;
 
-let apiInstance = new AcesEncodedListenerApi.DefaultApi();
+// Configure HTTP basic authorization: basicAuth
+let basicAuth = defaultClient.authentications['basicAuth'];
+basicAuth.username = 'YOUR USERNAME';
+basicAuth.password = 'YOUR PASSWORD';
+
+let apiInstance = new AcesListenerApi.AcesListenerApi();
 
 apiInstance.statusGet((error, data, response) => {
   if (error) {
@@ -43,7 +49,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -60,9 +66,15 @@ Gets a page of Subscription Events.
 
 ### Example
 ```javascript
-import AcesEncodedListenerApi from 'aces_encoded_listener_api';
+import AcesListenerApi from 'aces_listener_api';
+let defaultClient = AcesListenerApi.ApiClient.instance;
 
-let apiInstance = new AcesEncodedListenerApi.DefaultApi();
+// Configure HTTP basic authorization: basicAuth
+let basicAuth = defaultClient.authentications['basicAuth'];
+basicAuth.username = 'YOUR USERNAME';
+basicAuth.password = 'YOUR PASSWORD';
+
+let apiInstance = new AcesListenerApi.AcesListenerApi();
 
 let id = "id_example"; // String | Subscription Identifier
 
@@ -96,7 +108,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -113,9 +125,15 @@ Get a Subscription by identifier.
 
 ### Example
 ```javascript
-import AcesEncodedListenerApi from 'aces_encoded_listener_api';
+import AcesListenerApi from 'aces_listener_api';
+let defaultClient = AcesListenerApi.ApiClient.instance;
 
-let apiInstance = new AcesEncodedListenerApi.DefaultApi();
+// Configure HTTP basic authorization: basicAuth
+let basicAuth = defaultClient.authentications['basicAuth'];
+basicAuth.username = 'YOUR USERNAME';
+basicAuth.password = 'YOUR PASSWORD';
+
+let apiInstance = new AcesListenerApi.AcesListenerApi();
 
 let id = "id_example"; // String | Subscription Identifier
 
@@ -141,7 +159,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -158,9 +176,15 @@ Unsubscribes an active Subscription.
 
 ### Example
 ```javascript
-import AcesEncodedListenerApi from 'aces_encoded_listener_api';
+import AcesListenerApi from 'aces_listener_api';
+let defaultClient = AcesListenerApi.ApiClient.instance;
 
-let apiInstance = new AcesEncodedListenerApi.DefaultApi();
+// Configure HTTP basic authorization: basicAuth
+let basicAuth = defaultClient.authentications['basicAuth'];
+basicAuth.username = 'YOUR USERNAME';
+basicAuth.password = 'YOUR PASSWORD';
+
+let apiInstance = new AcesListenerApi.AcesListenerApi();
 
 let id = "id_example"; // String | Subscription Identifier
 
@@ -186,7 +210,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -203,12 +227,18 @@ The Subscribers endpoint allows subscriber to register their node to receive blo
 
 ### Example
 ```javascript
-import AcesEncodedListenerApi from 'aces_encoded_listener_api';
+import AcesListenerApi from 'aces_listener_api';
+let defaultClient = AcesListenerApi.ApiClient.instance;
 
-let apiInstance = new AcesEncodedListenerApi.DefaultApi();
+// Configure HTTP basic authorization: basicAuth
+let basicAuth = defaultClient.authentications['basicAuth'];
+basicAuth.username = 'YOUR USERNAME';
+basicAuth.password = 'YOUR PASSWORD';
+
+let apiInstance = new AcesListenerApi.AcesListenerApi();
 
 let opts = { 
-  'subscriptionRequest': new AcesEncodedListenerApi.SubscriptionRequest() // SubscriptionRequest | The request to create a new Subscription.
+  'subscriptionRequest': new AcesListenerApi.SubscriptionRequest() // SubscriptionRequest | The request to create a new Subscription.
 };
 
 apiInstance.subscriptionsPost(opts, (error, data, response) => {
@@ -232,7 +262,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 

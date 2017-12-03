@@ -1,14 +1,14 @@
-# ArkAces.EncodedListenerClient.Api.DefaultApi
+# ArkAces.EncodedListenerClient.Api.AcesListenerApi
 
 All URIs are relative to *https://localhost/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**StatusGet**](DefaultApi.md#statusget) | **GET** /status | Get Health of node.
-[**SubscriptionsIdEventsGet**](DefaultApi.md#subscriptionsideventsget) | **GET** /subscriptions/{id}/events | List Subscription Events
-[**SubscriptionsIdGet**](DefaultApi.md#subscriptionsidget) | **GET** /subscriptions/{id} | Gets Subscription
-[**SubscriptionsIdUnsubscribesPost**](DefaultApi.md#subscriptionsidunsubscribespost) | **POST** /subscriptions/{id}/unsubscribes | Create an Unsubscription.
-[**SubscriptionsPost**](DefaultApi.md#subscriptionspost) | **POST** /subscriptions | Registers a subscriber node to receive blockchain events.
+[**StatusGet**](AcesListenerApi.md#statusget) | **GET** /status | Get Health of node.
+[**SubscriptionsIdEventsGet**](AcesListenerApi.md#subscriptionsideventsget) | **GET** /subscriptions/{id}/events | List Subscription Events
+[**SubscriptionsIdGet**](AcesListenerApi.md#subscriptionsidget) | **GET** /subscriptions/{id} | Gets Subscription
+[**SubscriptionsIdUnsubscribesPost**](AcesListenerApi.md#subscriptionsidunsubscribespost) | **POST** /subscriptions/{id}/unsubscribes | Create an Unsubscription.
+[**SubscriptionsPost**](AcesListenerApi.md#subscriptionspost) | **POST** /subscriptions | Registers a subscriber node to receive blockchain events.
 
 
 <a name="statusget"></a>
@@ -33,7 +33,11 @@ namespace Example
     {
         public void main()
         {
-            var apiInstance = new DefaultApi();
+            // Configure HTTP basic authorization: basicAuth
+            Configuration.Default.Username = "YOUR_USERNAME";
+            Configuration.Default.Password = "YOUR_PASSWORD";
+
+            var apiInstance = new AcesListenerApi();
 
             try
             {
@@ -43,7 +47,7 @@ namespace Example
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling DefaultApi.StatusGet: " + e.Message );
+                Debug.Print("Exception when calling AcesListenerApi.StatusGet: " + e.Message );
             }
         }
     }
@@ -59,7 +63,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -90,7 +94,11 @@ namespace Example
     {
         public void main()
         {
-            var apiInstance = new DefaultApi();
+            // Configure HTTP basic authorization: basicAuth
+            Configuration.Default.Username = "YOUR_USERNAME";
+            Configuration.Default.Password = "YOUR_PASSWORD";
+
+            var apiInstance = new AcesListenerApi();
             var id = id_example;  // string | Subscription Identifier
             var pageSize = 56;  // int? | Number of items to return per page. (optional)  (default to 100)
             var page = 56;  // int? | Zero-offset page number to return. (optional) 
@@ -104,7 +112,7 @@ namespace Example
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling DefaultApi.SubscriptionsIdEventsGet: " + e.Message );
+                Debug.Print("Exception when calling AcesListenerApi.SubscriptionsIdEventsGet: " + e.Message );
             }
         }
     }
@@ -126,7 +134,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -157,7 +165,11 @@ namespace Example
     {
         public void main()
         {
-            var apiInstance = new DefaultApi();
+            // Configure HTTP basic authorization: basicAuth
+            Configuration.Default.Username = "YOUR_USERNAME";
+            Configuration.Default.Password = "YOUR_PASSWORD";
+
+            var apiInstance = new AcesListenerApi();
             var id = id_example;  // string | Subscription Identifier
 
             try
@@ -168,7 +180,7 @@ namespace Example
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling DefaultApi.SubscriptionsIdGet: " + e.Message );
+                Debug.Print("Exception when calling AcesListenerApi.SubscriptionsIdGet: " + e.Message );
             }
         }
     }
@@ -187,7 +199,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -218,7 +230,11 @@ namespace Example
     {
         public void main()
         {
-            var apiInstance = new DefaultApi();
+            // Configure HTTP basic authorization: basicAuth
+            Configuration.Default.Username = "YOUR_USERNAME";
+            Configuration.Default.Password = "YOUR_PASSWORD";
+
+            var apiInstance = new AcesListenerApi();
             var id = id_example;  // string | Subscription Identifier
 
             try
@@ -229,7 +245,7 @@ namespace Example
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling DefaultApi.SubscriptionsIdUnsubscribesPost: " + e.Message );
+                Debug.Print("Exception when calling AcesListenerApi.SubscriptionsIdUnsubscribesPost: " + e.Message );
             }
         }
     }
@@ -248,7 +264,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -279,7 +295,11 @@ namespace Example
     {
         public void main()
         {
-            var apiInstance = new DefaultApi();
+            // Configure HTTP basic authorization: basicAuth
+            Configuration.Default.Username = "YOUR_USERNAME";
+            Configuration.Default.Password = "YOUR_PASSWORD";
+
+            var apiInstance = new AcesListenerApi();
             var subscriptionRequest = new SubscriptionRequest(); // SubscriptionRequest | The request to create a new Subscription. (optional) 
 
             try
@@ -290,7 +310,7 @@ namespace Example
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling DefaultApi.SubscriptionsPost: " + e.Message );
+                Debug.Print("Exception when calling AcesListenerApi.SubscriptionsPost: " + e.Message );
             }
         }
     }
@@ -309,7 +329,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 

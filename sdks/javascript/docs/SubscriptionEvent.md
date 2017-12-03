@@ -1,4 +1,4 @@
-# AcesEncodedListenerApi.SubscriptionEvent
+# AcesListenerApi.SubscriptionEvent
 
 ## Properties
 Name | Type | Description | Notes

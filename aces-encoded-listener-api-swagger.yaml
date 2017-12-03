@@ -1,19 +1,31 @@
 swagger: '2.0'
 info:
-  title: Aces Encoded Listener API
+  title: ACES Listener API
   description: |
-    API Specification for Encoded Listeners that read data on a blockchain and
+    API Specification for ACES Listeners that read data on a blockchain and
     forward transaction events to registered subscribers.
-  version: "0.1.0"
+  version: "1.0.0"
 schemes:
   - https
   - http
 basePath: /v1
 produces:
   - application/json
+tags:
+  - name: AcesListener
+    description: ACES Listener API
+    externalDocs:
+      url: https://ark-aces.github.io/aces-encoded-listener-docs/
+securityDefinitions:
+  basicAuth:
+    type: basic
+security:
+  - basicAuth: []
 paths:
   /status:
     get:
+      tags:
+        - AcesListener
       summary: Get Health of node.
       description: Get application health information.
       responses:
@@ -21,8 +33,12 @@ paths:
           description: Health information.
           schema:
             $ref: "#/definitions/Health"
+        401:
+          $ref: "#/responses/Unauthorized"
   /subscriptions:
     post:
+      tags:
+        - AcesListener
       summary: Registers a subscriber node to receive blockchain events.
       description: |
         The Subscribers endpoint allows subscriber to register their node to receive blockchain
@@ -50,10 +66,14 @@ paths:
             $ref: '#/definitions/Subscription'
         400:
           $ref: "#/responses/BadRequest"
+        401:
+          $ref: "#/responses/Unauthorized"
         404:
           $ref: "#/responses/NotFound"
   /subscriptions/{id}:
     get:
+      tags:
+        - AcesListener
       summary: Gets Subscription
       description: Get a Subscription by identifier.
       parameters:
@@ -68,10 +88,14 @@ paths:
           description: The Subscription.
           schema:
             $ref: '#/definitions/Subscription'
+        401:
+          $ref: "#/responses/Unauthorized"
         404:
           $ref: "#/responses/NotFound"
   /subscriptions/{id}/events:
     get:
+      tags:
+        - AcesListener
       summary: List Subscription Events
       description: Gets a page of Subscription Events.
       parameters:
@@ -113,10 +137,14 @@ paths:
                 type: array
                 items:
                   $ref: "#/definitions/SubscriptionEvent"
+        401:
+          $ref: "#/responses/Unauthorized"
         404:
           $ref: "#/responses/NotFound"
   /subscriptions/{id}/unsubscribes:
     post:
+      tags:
+        - AcesListener
       summary: Create an Unsubscription.
       description: Unsubscribes an active Subscription.
       parameters:
@@ -131,6 +159,8 @@ paths:
           description: Page of Subscription Events
           schema:
             $ref: "#/definitions/SubscriptionUnsubscribe"
+        401:
+          $ref: "#/responses/Unauthorized"
         404:
           $ref: "#/responses/NotFound"
 
@@ -139,6 +169,11 @@ responses:
     description: The request was invalid.
     schema:
       $ref: "#/definitions/ValidationError"
+  Unauthorized:
+    description: Authentication information is missing or invalid
+    headers:
+      WWW_Authenticate:
+        type: string
   NotFound:
     description: The specified resource was not found.
     schema:

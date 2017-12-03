@@ -1,14 +1,14 @@
-# DefaultApi
+# AcesListenerApi
 
 All URIs are relative to *https://localhost/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**statusGet**](DefaultApi.md#statusGet) | **GET** /status | Get Health of node.
-[**subscriptionsIdEventsGet**](DefaultApi.md#subscriptionsIdEventsGet) | **GET** /subscriptions/{id}/events | List Subscription Events
-[**subscriptionsIdGet**](DefaultApi.md#subscriptionsIdGet) | **GET** /subscriptions/{id} | Gets Subscription
-[**subscriptionsIdUnsubscribesPost**](DefaultApi.md#subscriptionsIdUnsubscribesPost) | **POST** /subscriptions/{id}/unsubscribes | Create an Unsubscription.
-[**subscriptionsPost**](DefaultApi.md#subscriptionsPost) | **POST** /subscriptions | Registers a subscriber node to receive blockchain events.
+[**statusGet**](AcesListenerApi.md#statusGet) | **GET** /status | Get Health of node.
+[**subscriptionsIdEventsGet**](AcesListenerApi.md#subscriptionsIdEventsGet) | **GET** /subscriptions/{id}/events | List Subscription Events
+[**subscriptionsIdGet**](AcesListenerApi.md#subscriptionsIdGet) | **GET** /subscriptions/{id} | Gets Subscription
+[**subscriptionsIdUnsubscribesPost**](AcesListenerApi.md#subscriptionsIdUnsubscribesPost) | **POST** /subscriptions/{id}/unsubscribes | Create an Unsubscription.
+[**subscriptionsPost**](AcesListenerApi.md#subscriptionsPost) | **POST** /subscriptions | Registers a subscriber node to receive blockchain events.
 
 
 <a name="statusGet"></a>
@@ -22,16 +22,25 @@ Get application health information.
 ### Example
 ```java
 // Import classes:
+//import io.arkaces.ApiClient;
 //import io.arkaces.ApiException;
-//import io.arkaces.encoded_listener_client.DefaultApi;
+//import io.arkaces.Configuration;
+//import io.arkaces.auth.*;
+//import io.arkaces.encoded_listener_client.AcesListenerApi;
 
+ApiClient defaultClient = Configuration.getDefaultApiClient();
 
-DefaultApi apiInstance = new DefaultApi();
+// Configure HTTP basic authorization: basicAuth
+HttpBasicAuth basicAuth = (HttpBasicAuth) defaultClient.getAuthentication("basicAuth");
+basicAuth.setUsername("YOUR USERNAME");
+basicAuth.setPassword("YOUR PASSWORD");
+
+AcesListenerApi apiInstance = new AcesListenerApi();
 try {
     Health result = apiInstance.statusGet();
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling DefaultApi#statusGet");
+    System.err.println("Exception when calling AcesListenerApi#statusGet");
     e.printStackTrace();
 }
 ```
@@ -45,7 +54,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -63,11 +72,20 @@ Gets a page of Subscription Events.
 ### Example
 ```java
 // Import classes:
+//import io.arkaces.ApiClient;
 //import io.arkaces.ApiException;
-//import io.arkaces.encoded_listener_client.DefaultApi;
+//import io.arkaces.Configuration;
+//import io.arkaces.auth.*;
+//import io.arkaces.encoded_listener_client.AcesListenerApi;
 
+ApiClient defaultClient = Configuration.getDefaultApiClient();
 
-DefaultApi apiInstance = new DefaultApi();
+// Configure HTTP basic authorization: basicAuth
+HttpBasicAuth basicAuth = (HttpBasicAuth) defaultClient.getAuthentication("basicAuth");
+basicAuth.setUsername("YOUR USERNAME");
+basicAuth.setPassword("YOUR PASSWORD");
+
+AcesListenerApi apiInstance = new AcesListenerApi();
 String id = "id_example"; // String | Subscription Identifier
 Integer pageSize = 100; // Integer | Number of items to return per page.
 Integer page = 56; // Integer | Zero-offset page number to return.
@@ -76,7 +94,7 @@ try {
     InlineResponse200 result = apiInstance.subscriptionsIdEventsGet(id, pageSize, page, continuation);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling DefaultApi#subscriptionsIdEventsGet");
+    System.err.println("Exception when calling AcesListenerApi#subscriptionsIdEventsGet");
     e.printStackTrace();
 }
 ```
@@ -96,7 +114,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -114,17 +132,26 @@ Get a Subscription by identifier.
 ### Example
 ```java
 // Import classes:
+//import io.arkaces.ApiClient;
 //import io.arkaces.ApiException;
-//import io.arkaces.encoded_listener_client.DefaultApi;
+//import io.arkaces.Configuration;
+//import io.arkaces.auth.*;
+//import io.arkaces.encoded_listener_client.AcesListenerApi;
 
+ApiClient defaultClient = Configuration.getDefaultApiClient();
 
-DefaultApi apiInstance = new DefaultApi();
+// Configure HTTP basic authorization: basicAuth
+HttpBasicAuth basicAuth = (HttpBasicAuth) defaultClient.getAuthentication("basicAuth");
+basicAuth.setUsername("YOUR USERNAME");
+basicAuth.setPassword("YOUR PASSWORD");
+
+AcesListenerApi apiInstance = new AcesListenerApi();
 String id = "id_example"; // String | Subscription Identifier
 try {
     Subscription result = apiInstance.subscriptionsIdGet(id);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling DefaultApi#subscriptionsIdGet");
+    System.err.println("Exception when calling AcesListenerApi#subscriptionsIdGet");
     e.printStackTrace();
 }
 ```
@@ -141,7 +168,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -159,17 +186,26 @@ Unsubscribes an active Subscription.
 ### Example
 ```java
 // Import classes:
+//import io.arkaces.ApiClient;
 //import io.arkaces.ApiException;
-//import io.arkaces.encoded_listener_client.DefaultApi;
+//import io.arkaces.Configuration;
+//import io.arkaces.auth.*;
+//import io.arkaces.encoded_listener_client.AcesListenerApi;
 
+ApiClient defaultClient = Configuration.getDefaultApiClient();
 
-DefaultApi apiInstance = new DefaultApi();
+// Configure HTTP basic authorization: basicAuth
+HttpBasicAuth basicAuth = (HttpBasicAuth) defaultClient.getAuthentication("basicAuth");
+basicAuth.setUsername("YOUR USERNAME");
+basicAuth.setPassword("YOUR PASSWORD");
+
+AcesListenerApi apiInstance = new AcesListenerApi();
 String id = "id_example"; // String | Subscription Identifier
 try {
     SubscriptionUnsubscribe result = apiInstance.subscriptionsIdUnsubscribesPost(id);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling DefaultApi#subscriptionsIdUnsubscribesPost");
+    System.err.println("Exception when calling AcesListenerApi#subscriptionsIdUnsubscribesPost");
     e.printStackTrace();
 }
 ```
@@ -186,7 +222,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -204,17 +240,26 @@ The Subscribers endpoint allows subscriber to register their node to receive blo
 ### Example
 ```java
 // Import classes:
+//import io.arkaces.ApiClient;
 //import io.arkaces.ApiException;
-//import io.arkaces.encoded_listener_client.DefaultApi;
+//import io.arkaces.Configuration;
+//import io.arkaces.auth.*;
+//import io.arkaces.encoded_listener_client.AcesListenerApi;
 
+ApiClient defaultClient = Configuration.getDefaultApiClient();
 
-DefaultApi apiInstance = new DefaultApi();
+// Configure HTTP basic authorization: basicAuth
+HttpBasicAuth basicAuth = (HttpBasicAuth) defaultClient.getAuthentication("basicAuth");
+basicAuth.setUsername("YOUR USERNAME");
+basicAuth.setPassword("YOUR PASSWORD");
+
+AcesListenerApi apiInstance = new AcesListenerApi();
 SubscriptionRequest subscriptionRequest = new SubscriptionRequest(); // SubscriptionRequest | The request to create a new Subscription.
 try {
     Subscription result = apiInstance.subscriptionsPost(subscriptionRequest);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling DefaultApi#subscriptionsPost");
+    System.err.println("Exception when calling AcesListenerApi#subscriptionsPost");
     e.printStackTrace();
 }
 ```
@@ -231,7 +276,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 

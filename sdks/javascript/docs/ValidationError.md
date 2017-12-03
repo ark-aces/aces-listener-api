@@ -1,4 +1,4 @@
-# AcesEncodedListenerApi.ValidationError
+# AcesListenerApi.ValidationError
 
 ## Properties
 Name | Type | Description | Notes

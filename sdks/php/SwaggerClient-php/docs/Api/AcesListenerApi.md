@@ -1,14 +1,14 @@
-# ArkAces\EncodedListenerClient\DefaultApi
+# ArkAces\EncodedListenerClient\AcesListenerApi
 
 All URIs are relative to *https://localhost/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**statusGet**](DefaultApi.md#statusGet) | **GET** /status | Get Health of node.
-[**subscriptionsIdEventsGet**](DefaultApi.md#subscriptionsIdEventsGet) | **GET** /subscriptions/{id}/events | List Subscription Events
-[**subscriptionsIdGet**](DefaultApi.md#subscriptionsIdGet) | **GET** /subscriptions/{id} | Gets Subscription
-[**subscriptionsIdUnsubscribesPost**](DefaultApi.md#subscriptionsIdUnsubscribesPost) | **POST** /subscriptions/{id}/unsubscribes | Create an Unsubscription.
-[**subscriptionsPost**](DefaultApi.md#subscriptionsPost) | **POST** /subscriptions | Registers a subscriber node to receive blockchain events.
+[**statusGet**](AcesListenerApi.md#statusGet) | **GET** /status | Get Health of node.
+[**subscriptionsIdEventsGet**](AcesListenerApi.md#subscriptionsIdEventsGet) | **GET** /subscriptions/{id}/events | List Subscription Events
+[**subscriptionsIdGet**](AcesListenerApi.md#subscriptionsIdGet) | **GET** /subscriptions/{id} | Gets Subscription
+[**subscriptionsIdUnsubscribesPost**](AcesListenerApi.md#subscriptionsIdUnsubscribesPost) | **POST** /subscriptions/{id}/unsubscribes | Create an Unsubscription.
+[**subscriptionsPost**](AcesListenerApi.md#subscriptionsPost) | **POST** /subscriptions | Registers a subscriber node to receive blockchain events.
 
 
 # **statusGet**
@@ -23,13 +23,17 @@ Get application health information.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new ArkAces\EncodedListenerClient\Api\DefaultApi(new \Http\Adapter\Guzzle6\Client());
+// Configure HTTP basic authorization: basicAuth
+ArkAces\EncodedListenerClient\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+ArkAces\EncodedListenerClient\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+
+$api_instance = new ArkAces\EncodedListenerClient\Api\AcesListenerApi(new \Http\Adapter\Guzzle6\Client());
 
 try {
     $result = $api_instance->statusGet();
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling DefaultApi->statusGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling AcesListenerApi->statusGet: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -43,7 +47,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[basicAuth](../../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -64,7 +68,11 @@ Gets a page of Subscription Events.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new ArkAces\EncodedListenerClient\Api\DefaultApi(new \Http\Adapter\Guzzle6\Client());
+// Configure HTTP basic authorization: basicAuth
+ArkAces\EncodedListenerClient\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+ArkAces\EncodedListenerClient\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+
+$api_instance = new ArkAces\EncodedListenerClient\Api\AcesListenerApi(new \Http\Adapter\Guzzle6\Client());
 $id = "id_example"; // string | Subscription Identifier
 $pageSize = 100; // int | Number of items to return per page.
 $page = 56; // int | Zero-offset page number to return.
@@ -74,7 +82,7 @@ try {
     $result = $api_instance->subscriptionsIdEventsGet($id, $pageSize, $page, $continuation);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling DefaultApi->subscriptionsIdEventsGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling AcesListenerApi->subscriptionsIdEventsGet: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -94,7 +102,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[basicAuth](../../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -115,14 +123,18 @@ Get a Subscription by identifier.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new ArkAces\EncodedListenerClient\Api\DefaultApi(new \Http\Adapter\Guzzle6\Client());
+// Configure HTTP basic authorization: basicAuth
+ArkAces\EncodedListenerClient\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+ArkAces\EncodedListenerClient\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+
+$api_instance = new ArkAces\EncodedListenerClient\Api\AcesListenerApi(new \Http\Adapter\Guzzle6\Client());
 $id = "id_example"; // string | Subscription Identifier
 
 try {
     $result = $api_instance->subscriptionsIdGet($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling DefaultApi->subscriptionsIdGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling AcesListenerApi->subscriptionsIdGet: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -139,7 +151,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[basicAuth](../../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -160,14 +172,18 @@ Unsubscribes an active Subscription.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new ArkAces\EncodedListenerClient\Api\DefaultApi(new \Http\Adapter\Guzzle6\Client());
+// Configure HTTP basic authorization: basicAuth
+ArkAces\EncodedListenerClient\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+ArkAces\EncodedListenerClient\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+
+$api_instance = new ArkAces\EncodedListenerClient\Api\AcesListenerApi(new \Http\Adapter\Guzzle6\Client());
 $id = "id_example"; // string | Subscription Identifier
 
 try {
     $result = $api_instance->subscriptionsIdUnsubscribesPost($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling DefaultApi->subscriptionsIdUnsubscribesPost: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling AcesListenerApi->subscriptionsIdUnsubscribesPost: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -184,7 +200,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[basicAuth](../../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -205,14 +221,18 @@ The Subscribers endpoint allows subscriber to register their node to receive blo
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new ArkAces\EncodedListenerClient\Api\DefaultApi(new \Http\Adapter\Guzzle6\Client());
+// Configure HTTP basic authorization: basicAuth
+ArkAces\EncodedListenerClient\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+ArkAces\EncodedListenerClient\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+
+$api_instance = new ArkAces\EncodedListenerClient\Api\AcesListenerApi(new \Http\Adapter\Guzzle6\Client());
 $subscriptionRequest = new \ArkAces\EncodedListenerClient\Model\SubscriptionRequest(); // \ArkAces\EncodedListenerClient\Model\SubscriptionRequest | The request to create a new Subscription.
 
 try {
     $result = $api_instance->subscriptionsPost($subscriptionRequest);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling DefaultApi->subscriptionsPost: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling AcesListenerApi->subscriptionsPost: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -229,7 +249,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[basicAuth](../../README.md#basicAuth)
 
 ### HTTP request headers
 

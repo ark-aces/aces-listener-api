@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-Aces Encoded Listener API
+ACES Listener API
 
-API Specification for Encoded Listeners that read data on a blockchain and forward transaction events to registered subscribers. 
+API Specification for ACES Listeners that read data on a blockchain and forward transaction events to registered subscribers. 
 
-OpenAPI spec version: 0.1.0
+OpenAPI spec version: 1.0.0
 
 -->
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -75,7 +75,7 @@ OpenAPI spec version: 0.1.0
   <Import Project="$(MsBuildToolsPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
       <ProjectReference Include="..\ArkAces.EncodedListenerClient\ArkAces.EncodedListenerClient.csproj">
-          <Project>{5C0EBE13-7F0C-40E0-B9A3-621604945FCC}</Project>
+          <Project>{EECF151E-B34F-4548-8F82-9DCC45642948}</Project>
           <Name>ArkAces.EncodedListenerClient</Name>
       </ProjectReference>
   </ItemGroup>

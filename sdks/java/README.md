@@ -61,21 +61,27 @@ Please follow the [installation](#installation) instruction and execute the foll
 import io.arkaces.*;
 import io.arkaces.auth.*;
 import io.swagger.client.model.*;
-import io.arkaces.encoded_listener_client.DefaultApi;
+import io.arkaces.encoded_listener_client.AcesListenerApi;
 
 import java.io.File;
 import java.util.*;
 
-public class DefaultApiExample {
+public class AcesListenerApiExample {
 
     public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
         
-        DefaultApi apiInstance = new DefaultApi();
+        // Configure HTTP basic authorization: basicAuth
+        HttpBasicAuth basicAuth = (HttpBasicAuth) defaultClient.getAuthentication("basicAuth");
+        basicAuth.setUsername("YOUR USERNAME");
+        basicAuth.setPassword("YOUR PASSWORD");
+
+        AcesListenerApi apiInstance = new AcesListenerApi();
         try {
             Health result = apiInstance.statusGet();
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling DefaultApi#statusGet");
+            System.err.println("Exception when calling AcesListenerApi#statusGet");
             e.printStackTrace();
         }
     }
@@ -89,11 +95,11 @@ All URIs are relative to *https://localhost/v1*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*DefaultApi* | [**statusGet**](docs/DefaultApi.md#statusGet) | **GET** /status | Get Health of node.
-*DefaultApi* | [**subscriptionsIdEventsGet**](docs/DefaultApi.md#subscriptionsIdEventsGet) | **GET** /subscriptions/{id}/events | List Subscription Events
-*DefaultApi* | [**subscriptionsIdGet**](docs/DefaultApi.md#subscriptionsIdGet) | **GET** /subscriptions/{id} | Gets Subscription
-*DefaultApi* | [**subscriptionsIdUnsubscribesPost**](docs/DefaultApi.md#subscriptionsIdUnsubscribesPost) | **POST** /subscriptions/{id}/unsubscribes | Create an Unsubscription.
-*DefaultApi* | [**subscriptionsPost**](docs/DefaultApi.md#subscriptionsPost) | **POST** /subscriptions | Registers a subscriber node to receive blockchain events.
+*AcesListenerApi* | [**statusGet**](docs/AcesListenerApi.md#statusGet) | **GET** /status | Get Health of node.
+*AcesListenerApi* | [**subscriptionsIdEventsGet**](docs/AcesListenerApi.md#subscriptionsIdEventsGet) | **GET** /subscriptions/{id}/events | List Subscription Events
+*AcesListenerApi* | [**subscriptionsIdGet**](docs/AcesListenerApi.md#subscriptionsIdGet) | **GET** /subscriptions/{id} | Gets Subscription
+*AcesListenerApi* | [**subscriptionsIdUnsubscribesPost**](docs/AcesListenerApi.md#subscriptionsIdUnsubscribesPost) | **POST** /subscriptions/{id}/unsubscribes | Create an Unsubscription.
+*AcesListenerApi* | [**subscriptionsPost**](docs/AcesListenerApi.md#subscriptionsPost) | **POST** /subscriptions | Registers a subscriber node to receive blockchain events.
 
 
 ## Documentation for Models
@@ -111,8 +117,11 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Authorization
 
-All endpoints do not require authorization.
 Authentication schemes defined for the API:
+### basicAuth
+
+- **Type**: HTTP basic authentication
+
 
 ## Recommendation
 
