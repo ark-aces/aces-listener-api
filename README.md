@@ -9,8 +9,8 @@ consumed via a common REST-ful API.
 
 ## Implementations
 
-* [ACES Ark Listener](https://github.com/ark-aces/aces-listener-ark)
-* [ACES Bitcoin Listener](https://github.com/ark-aces/aces-listener-bitcoin)
+* [ACES Listener Ark](https://github.com/ark-aces/aces-listener-ark)
+* [ACES Listener Bitcoin](https://github.com/ark-aces/aces-listener-bitcoin)
 
 
 ## SDKs
