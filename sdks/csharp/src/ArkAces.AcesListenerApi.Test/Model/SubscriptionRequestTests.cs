@@ -82,6 +82,14 @@ namespace ArkAces.AcesListenerApi.Test
         {
             // TODO unit test for the property 'MinConfirmations'
         }
+        /// <summary>
+        /// Test the property 'RecipientAddress'
+        /// </summary>
+        [Test]
+        public void RecipientAddressTest()
+        {
+            // TODO unit test for the property 'RecipientAddress'
+        }
 
     }
 

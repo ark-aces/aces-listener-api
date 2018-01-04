@@ -64,6 +64,9 @@ export default class SubscriptionRequest {
             if (data.hasOwnProperty('minConfirmations')) {
                 obj['minConfirmations'] = ApiClient.convertToType(data['minConfirmations'], 'Number');
             }
+            if (data.hasOwnProperty('recipientAddress')) {
+                obj['recipientAddress'] = ApiClient.convertToType(data['recipientAddress'], 'String');
+            }
         }
         return obj;
     }
@@ -78,6 +81,10 @@ export default class SubscriptionRequest {
     * @member {Number} minConfirmations
     */
     minConfirmations = undefined;
+    /**
+    * @member {String} recipientAddress
+    */
+    recipientAddress = undefined;
 
 
 

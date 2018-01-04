@@ -32,25 +32,30 @@ class SubscriptionRequest(object):
     """
     swagger_types = {
         'callback_url': 'str',
-        'min_confirmations': 'int'
+        'min_confirmations': 'int',
+        'recipient_address': 'str'
     }
 
     attribute_map = {
         'callback_url': 'callbackUrl',
-        'min_confirmations': 'minConfirmations'
+        'min_confirmations': 'minConfirmations',
+        'recipient_address': 'recipientAddress'
     }
 
-    def __init__(self, callback_url=None, min_confirmations=None):
+    def __init__(self, callback_url=None, min_confirmations=None, recipient_address=None):
         """
         SubscriptionRequest - a model defined in Swagger
         """
 
         self._callback_url = None
         self._min_confirmations = None
+        self._recipient_address = None
         self.discriminator = None
 
         self.callback_url = callback_url
         self.min_confirmations = min_confirmations
+        if recipient_address is not None:
+          self.recipient_address = recipient_address
 
     @property
     def callback_url(self):
@@ -101,6 +106,27 @@ class SubscriptionRequest(object):
             raise ValueError("Invalid value for `min_confirmations`, must not be `None`")
 
         self._min_confirmations = min_confirmations
+
+    @property
+    def recipient_address(self):
+        """
+        Gets the recipient_address of this SubscriptionRequest.
+
+        :return: The recipient_address of this SubscriptionRequest.
+        :rtype: str
+        """
+        return self._recipient_address
+
+    @recipient_address.setter
+    def recipient_address(self, recipient_address):
+        """
+        Sets the recipient_address of this SubscriptionRequest.
+
+        :param recipient_address: The recipient_address of this SubscriptionRequest.
+        :type: str
+        """
+
+        self._recipient_address = recipient_address
 
     def to_dict(self):
         """

@@ -40,7 +40,8 @@ namespace ArkAces.AcesListenerApi.Model
         /// </summary>
         /// <param name="CallbackUrl">Target target URL to POST Encoded Listener events to. (required).</param>
         /// <param name="MinConfirmations">Confirmations required before event is sent to subscriber. (required).</param>
-        public SubscriptionRequest(string CallbackUrl = default(string), int? MinConfirmations = default(int?))
+        /// <param name="RecipientAddress">RecipientAddress.</param>
+        public SubscriptionRequest(string CallbackUrl = default(string), int? MinConfirmations = default(int?), string RecipientAddress = default(string))
         {
             // to ensure "CallbackUrl" is required (not null)
             if (CallbackUrl == null)
@@ -60,6 +61,7 @@ namespace ArkAces.AcesListenerApi.Model
             {
                 this.MinConfirmations = MinConfirmations;
             }
+            this.RecipientAddress = RecipientAddress;
         }
         
         /// <summary>
@@ -77,6 +79,12 @@ namespace ArkAces.AcesListenerApi.Model
         public int? MinConfirmations { get; set; }
 
         /// <summary>
+        /// Gets or Sets RecipientAddress
+        /// </summary>
+        [DataMember(Name="recipientAddress", EmitDefaultValue=false)]
+        public string RecipientAddress { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -86,6 +94,7 @@ namespace ArkAces.AcesListenerApi.Model
             sb.Append("class SubscriptionRequest {\n");
             sb.Append("  CallbackUrl: ").Append(CallbackUrl).Append("\n");
             sb.Append("  MinConfirmations: ").Append(MinConfirmations).Append("\n");
+            sb.Append("  RecipientAddress: ").Append(RecipientAddress).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -129,6 +138,11 @@ namespace ArkAces.AcesListenerApi.Model
                     this.MinConfirmations == input.MinConfirmations ||
                     (this.MinConfirmations != null &&
                     this.MinConfirmations.Equals(input.MinConfirmations))
+                ) && 
+                (
+                    this.RecipientAddress == input.RecipientAddress ||
+                    (this.RecipientAddress != null &&
+                    this.RecipientAddress.Equals(input.RecipientAddress))
                 );
         }
 
@@ -145,6 +159,8 @@ namespace ArkAces.AcesListenerApi.Model
                     hashCode = hashCode * 59 + this.CallbackUrl.GetHashCode();
                 if (this.MinConfirmations != null)
                     hashCode = hashCode * 59 + this.MinConfirmations.GetHashCode();
+                if (this.RecipientAddress != null)
+                    hashCode = hashCode * 59 + this.RecipientAddress.GetHashCode();
                 return hashCode;
             }
         }

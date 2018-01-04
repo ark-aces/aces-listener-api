@@ -59,6 +59,8 @@ paths:
               minConfirmations:
                 type: integer
                 description: Confirmations required before event is sent to subscriber.
+              recipientAddress:
+                type: string
       responses:
         200:
           description: The created Subscription

@@ -57,7 +57,8 @@ class SubscriptionRequest implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'callbackUrl' => 'string',
-        'minConfirmations' => 'int'
+        'minConfirmations' => 'int',
+        'recipientAddress' => 'string'
     ];
 
     /**
@@ -67,7 +68,8 @@ class SubscriptionRequest implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'callbackUrl' => null,
-        'minConfirmations' => null
+        'minConfirmations' => null,
+        'recipientAddress' => null
     ];
 
     /**
@@ -98,7 +100,8 @@ class SubscriptionRequest implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'callbackUrl' => 'callbackUrl',
-        'minConfirmations' => 'minConfirmations'
+        'minConfirmations' => 'minConfirmations',
+        'recipientAddress' => 'recipientAddress'
     ];
 
     /**
@@ -108,7 +111,8 @@ class SubscriptionRequest implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'callbackUrl' => 'setCallbackUrl',
-        'minConfirmations' => 'setMinConfirmations'
+        'minConfirmations' => 'setMinConfirmations',
+        'recipientAddress' => 'setRecipientAddress'
     ];
 
     /**
@@ -118,7 +122,8 @@ class SubscriptionRequest implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'callbackUrl' => 'getCallbackUrl',
-        'minConfirmations' => 'getMinConfirmations'
+        'minConfirmations' => 'getMinConfirmations',
+        'recipientAddress' => 'getRecipientAddress'
     ];
 
     /**
@@ -183,6 +188,7 @@ class SubscriptionRequest implements ModelInterface, ArrayAccess
     {
         $this->container['callbackUrl'] = isset($data['callbackUrl']) ? $data['callbackUrl'] : null;
         $this->container['minConfirmations'] = isset($data['minConfirmations']) ? $data['minConfirmations'] : null;
+        $this->container['recipientAddress'] = isset($data['recipientAddress']) ? $data['recipientAddress'] : null;
     }
 
     /**
@@ -266,6 +272,30 @@ class SubscriptionRequest implements ModelInterface, ArrayAccess
     public function setMinConfirmations($minConfirmations)
     {
         $this->container['minConfirmations'] = $minConfirmations;
+
+        return $this;
+    }
+
+    /**
+     * Gets recipientAddress
+     *
+     * @return string
+     */
+    public function getRecipientAddress()
+    {
+        return $this->container['recipientAddress'];
+    }
+
+    /**
+     * Sets recipientAddress
+     *
+     * @param string $recipientAddress recipientAddress
+     *
+     * @return $this
+     */
+    public function setRecipientAddress($recipientAddress)
+    {
+        $this->container['recipientAddress'] = $recipientAddress;
 
         return $this;
     }

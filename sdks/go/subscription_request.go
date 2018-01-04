@@ -16,4 +16,6 @@ type SubscriptionRequest struct {
 
 	// Confirmations required before event is sent to subscriber.
 	MinConfirmations int32 `json:"minConfirmations"`
+
+	RecipientAddress string `json:"recipientAddress,omitempty"`
 }

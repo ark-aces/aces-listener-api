@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **CallbackUrl** | **string** | Target target URL to POST Encoded Listener events to. | 
 **MinConfirmations** | **int?** | Confirmations required before event is sent to subscriber. | 
+**RecipientAddress** | **string** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

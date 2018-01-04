@@ -34,6 +34,9 @@ public class SubscriptionRequest {
   @SerializedName("minConfirmations")
   private Integer minConfirmations = null;
 
+  @SerializedName("recipientAddress")
+  private String recipientAddress = null;
+
   public SubscriptionRequest callbackUrl(String callbackUrl) {
     this.callbackUrl = callbackUrl;
     return this;
@@ -70,6 +73,24 @@ public class SubscriptionRequest {
     this.minConfirmations = minConfirmations;
   }
 
+  public SubscriptionRequest recipientAddress(String recipientAddress) {
+    this.recipientAddress = recipientAddress;
+    return this;
+  }
+
+   /**
+   * Get recipientAddress
+   * @return recipientAddress
+  **/
+  @ApiModelProperty(value = "")
+  public String getRecipientAddress() {
+    return recipientAddress;
+  }
+
+  public void setRecipientAddress(String recipientAddress) {
+    this.recipientAddress = recipientAddress;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -81,12 +102,13 @@ public class SubscriptionRequest {
     }
     SubscriptionRequest subscriptionRequest = (SubscriptionRequest) o;
     return Objects.equals(this.callbackUrl, subscriptionRequest.callbackUrl) &&
-        Objects.equals(this.minConfirmations, subscriptionRequest.minConfirmations);
+        Objects.equals(this.minConfirmations, subscriptionRequest.minConfirmations) &&
+        Objects.equals(this.recipientAddress, subscriptionRequest.recipientAddress);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(callbackUrl, minConfirmations);
+    return Objects.hash(callbackUrl, minConfirmations, recipientAddress);
   }
 
 
@@ -97,6 +119,7 @@ public class SubscriptionRequest {
     
     sb.append("    callbackUrl: ").append(toIndentedString(callbackUrl)).append("\n");
     sb.append("    minConfirmations: ").append(toIndentedString(minConfirmations)).append("\n");
+    sb.append("    recipientAddress: ").append(toIndentedString(recipientAddress)).append("\n");
     sb.append("}");
     return sb.toString();
   }

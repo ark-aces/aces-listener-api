@@ -89,4 +89,11 @@ class SubscriptionRequestTest extends \PHPUnit_Framework_TestCase
     public function testPropertyMinConfirmations()
     {
     }
+
+    /**
+     * Test attribute "recipientAddress"
+     */
+    public function testPropertyRecipientAddress()
+    {
+    }
 }
