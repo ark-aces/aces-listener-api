@@ -17,6 +17,14 @@
     <maven>2.2.0</maven>
   </prerequisites>
 
+  <distributionManagement>
+    <repository>
+      <id>bintray-ark-aces-aces-maven</id>
+      <name>ark-aces-aces-maven</name>
+      <url>https://api.bintray.com/maven/ark-aces/aces-maven/aces_listener_api/;publish=1</url>
+    </repository>
+  </distributionManagement>
+  
   <licenses>
     <license>
       <name>MIT License</name>
