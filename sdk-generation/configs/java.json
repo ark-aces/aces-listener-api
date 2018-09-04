@@ -1,6 +1,7 @@
 {
   "apiPackage":"com.arkaces.aces_listener_api",
   "packageVersion":"1.1.0",
+  "artifactVersion": "1.1.0",
   "groupId": "com.arkaces",
   "artifactId": "aces_listener_api",
   "licenseName": "MIT License",

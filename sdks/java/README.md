@@ -39,7 +39,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>com.arkaces</groupId>
   <artifactId>aces_listener_api</artifactId>
-  <version>1.0.0</version>
+  <version>1.1.0</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -49,7 +49,7 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
-compile "com.arkaces:aces_listener_api:1.0.0"
+compile "com.arkaces:aces_listener_api:1.1.0"
 ```
 
 ### Others
@@ -62,7 +62,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/aces_listener_api-1.0.0.jar`
+* `target/aces_listener_api-1.1.0.jar`
 * `target/lib/*.jar`
 
 ## Getting Started

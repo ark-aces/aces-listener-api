@@ -81,7 +81,7 @@ OpenAPI spec version: 1.1.0
   <Import Project="$(MsBuildToolsPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
       <ProjectReference Include="..\ArkAces.AcesListenerApi\ArkAces.AcesListenerApi.csproj">
-          <Project>{3975F5AB-606F-4C59-AE18-5362352E1657}</Project>
+          <Project>{E1C47B22-8D8C-438A-BDFE-F2041CB2EDB0}</Project>
           <Name>ArkAces.AcesListenerApi</Name>
       </ProjectReference>
   </ItemGroup>
