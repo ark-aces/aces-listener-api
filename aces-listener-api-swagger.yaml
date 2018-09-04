@@ -4,7 +4,7 @@ info:
   description: |
     API Specification for ACES Listeners that read data on a blockchain and
     forward transaction events to registered subscribers.
-  version: "1.0.0"
+  version: "1.1.0"
 schemes:
   - https
   - http
@@ -143,6 +143,28 @@ paths:
           $ref: "#/responses/Unauthorized"
         404:
           $ref: "#/responses/NotFound"
+  /subscriptions/{id}/resubscribes:
+    post:
+      tags:
+        - AcesListener
+      summary: Create a Resubscribe.
+      description: Resubscribes an inactive subscription.
+      parameters:
+        -
+          name: id
+          in: path
+          description: Subscription Identifier
+          type: string
+          required: true
+      responses:
+        200:
+          description: Resubscribe info
+          schema:
+            $ref: "#/definitions/SubscriptionResubscribe"
+        401:
+          $ref: "#/responses/Unauthorized"
+        404:
+          $ref: "#/responses/NotFound"
   /subscriptions/{id}/unsubscribes:
     post:
       tags:
@@ -195,6 +217,13 @@ definitions:
       status:
         type: string
         enum: [active, unsubscribed, cancelled]
+  SubscriptionResubscribe:
+    type: object
+    properties:
+      createdAt:
+        type: string
+        format: date-time
+        description: Date the Resubscription was created.
   SubscriptionEvent:
     type: object
     properties:

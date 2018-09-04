@@ -21,3 +21,20 @@ consumed via a common REST-ful API.
 * [Javascript SDK](sdks/javascript/)
 * [Python SDK](sdks/python/)
 * [C# SDK](sdks/csharp/)
+
+
+## Building SDKs
+
+Clone [Swagger Codegen](https://github.com/swagger-api/swagger-codegen) down into an adjacent directory
+and build the codegen app:
+
+```
+cd ../swagger-codegen/modules/swagger-codegen-cli/
+mvn clean package
+```
+
+Then run the SDK build script in this repo:
+
+```
+sh ./sdk-generation/regenerate.sh
+```

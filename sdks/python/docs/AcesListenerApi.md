@@ -7,6 +7,7 @@ Method | HTTP request | Description
 [**status_get**](AcesListenerApi.md#status_get) | **GET** /status | Get Health of node.
 [**subscriptions_id_events_get**](AcesListenerApi.md#subscriptions_id_events_get) | **GET** /subscriptions/{id}/events | List Subscription Events
 [**subscriptions_id_get**](AcesListenerApi.md#subscriptions_id_get) | **GET** /subscriptions/{id} | Gets Subscription
+[**subscriptions_id_resubscribes_post**](AcesListenerApi.md#subscriptions_id_resubscribes_post) | **POST** /subscriptions/{id}/resubscribes | Create a Resubscribe.
 [**subscriptions_id_unsubscribes_post**](AcesListenerApi.md#subscriptions_id_unsubscribes_post) | **POST** /subscriptions/{id}/unsubscribes | Create an Unsubscription.
 [**subscriptions_post**](AcesListenerApi.md#subscriptions_post) | **POST** /subscriptions | Registers a subscriber node to receive blockchain events.
 
@@ -18,7 +19,7 @@ Get Health of node.
 
 Get application health information.
 
-### Example 
+### Example
 ```python
 from __future__ import print_function
 import time
@@ -34,7 +35,7 @@ configuration.password = 'YOUR_PASSWORD'
 # create an instance of the API class
 api_instance = com.arkaces.aces_listener_api.AcesListenerApi(com.arkaces.aces_listener_api.ApiClient(configuration))
 
-try: 
+try:
     # Get Health of node.
     api_response = api_instance.status_get()
     pprint(api_response)
@@ -67,7 +68,7 @@ List Subscription Events
 
 Gets a page of Subscription Events.
 
-### Example 
+### Example
 ```python
 from __future__ import print_function
 import time
@@ -87,7 +88,7 @@ page_size = 100 # int | Number of items to return per page. (optional) (default 
 page = 56 # int | Zero-offset page number to return. (optional)
 continuation = 'continuation_example' # str | Continuation param for fetching next page. (optional)
 
-try: 
+try:
     # List Subscription Events
     api_response = api_instance.subscriptions_id_events_get(id, page_size=page_size, page=page, continuation=continuation)
     pprint(api_response)
@@ -126,7 +127,7 @@ Gets Subscription
 
 Get a Subscription by identifier.
 
-### Example 
+### Example
 ```python
 from __future__ import print_function
 import time
@@ -143,7 +144,7 @@ configuration.password = 'YOUR_PASSWORD'
 api_instance = com.arkaces.aces_listener_api.AcesListenerApi(com.arkaces.aces_listener_api.ApiClient(configuration))
 id = 'id_example' # str | Subscription Identifier
 
-try: 
+try:
     # Gets Subscription
     api_response = api_instance.subscriptions_id_get(id)
     pprint(api_response)
@@ -172,14 +173,14 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **subscriptions_id_unsubscribes_post**
-> SubscriptionUnsubscribe subscriptions_id_unsubscribes_post(id)
+# **subscriptions_id_resubscribes_post**
+> SubscriptionResubscribe subscriptions_id_resubscribes_post(id)
 
-Create an Unsubscription.
+Create a Resubscribe.
 
-Unsubscribes an active Subscription.
+Resubscribes an inactive subscription.
 
-### Example 
+### Example
 ```python
 from __future__ import print_function
 import time
@@ -196,7 +197,60 @@ configuration.password = 'YOUR_PASSWORD'
 api_instance = com.arkaces.aces_listener_api.AcesListenerApi(com.arkaces.aces_listener_api.ApiClient(configuration))
 id = 'id_example' # str | Subscription Identifier
 
-try: 
+try:
+    # Create a Resubscribe.
+    api_response = api_instance.subscriptions_id_resubscribes_post(id)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling AcesListenerApi->subscriptions_id_resubscribes_post: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **str**| Subscription Identifier | 
+
+### Return type
+
+[**SubscriptionResubscribe**](SubscriptionResubscribe.md)
+
+### Authorization
+
+[basicAuth](../README.md#basicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **subscriptions_id_unsubscribes_post**
+> SubscriptionUnsubscribe subscriptions_id_unsubscribes_post(id)
+
+Create an Unsubscription.
+
+Unsubscribes an active Subscription.
+
+### Example
+```python
+from __future__ import print_function
+import time
+import com.arkaces.aces_listener_api
+from com.arkaces.aces_listener_api.rest import ApiException
+from pprint import pprint
+
+# Configure HTTP basic authorization: basicAuth
+configuration = com.arkaces.aces_listener_api.Configuration()
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+
+# create an instance of the API class
+api_instance = com.arkaces.aces_listener_api.AcesListenerApi(com.arkaces.aces_listener_api.ApiClient(configuration))
+id = 'id_example' # str | Subscription Identifier
+
+try:
     # Create an Unsubscription.
     api_response = api_instance.subscriptions_id_unsubscribes_post(id)
     pprint(api_response)
@@ -232,7 +286,7 @@ Registers a subscriber node to receive blockchain events.
 
 The Subscribers endpoint allows subscriber to register their node to receive blockchain events from the Encoded Listener. 
 
-### Example 
+### Example
 ```python
 from __future__ import print_function
 import time
@@ -249,7 +303,7 @@ configuration.password = 'YOUR_PASSWORD'
 api_instance = com.arkaces.aces_listener_api.AcesListenerApi(com.arkaces.aces_listener_api.ApiClient(configuration))
 subscription_request = com.arkaces.aces_listener_api.SubscriptionRequest() # SubscriptionRequest | The request to create a new Subscription. (optional)
 
-try: 
+try:
     # Registers a subscriber node to receive blockchain events.
     api_response = api_instance.subscriptions_post(subscription_request=subscription_request)
     pprint(api_response)

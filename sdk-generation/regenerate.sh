@@ -3,7 +3,7 @@
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 REPO_PATH=$DIR/..
-SWAGGER_CODEGEN_PATH=$REPO_PATH/../aces-swagger-codegen/modules/swagger-codegen-cli/target
+SWAGGER_CODEGEN_PATH=$REPO_PATH/../swagger-codegen/modules/swagger-codegen-cli/target
 
 for LANGUAGE in java php go javascript python csharp
 do

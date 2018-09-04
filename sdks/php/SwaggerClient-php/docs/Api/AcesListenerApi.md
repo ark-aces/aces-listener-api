@@ -7,6 +7,7 @@ Method | HTTP request | Description
 [**statusGet**](AcesListenerApi.md#statusGet) | **GET** /status | Get Health of node.
 [**subscriptionsIdEventsGet**](AcesListenerApi.md#subscriptionsIdEventsGet) | **GET** /subscriptions/{id}/events | List Subscription Events
 [**subscriptionsIdGet**](AcesListenerApi.md#subscriptionsIdGet) | **GET** /subscriptions/{id} | Gets Subscription
+[**subscriptionsIdResubscribesPost**](AcesListenerApi.md#subscriptionsIdResubscribesPost) | **POST** /subscriptions/{id}/resubscribes | Create a Resubscribe.
 [**subscriptionsIdUnsubscribesPost**](AcesListenerApi.md#subscriptionsIdUnsubscribesPost) | **POST** /subscriptions/{id}/unsubscribes | Create an Unsubscription.
 [**subscriptionsPost**](AcesListenerApi.md#subscriptionsPost) | **POST** /subscriptions | Registers a subscriber node to receive blockchain events.
 
@@ -24,13 +25,20 @@ Get application health information.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basicAuth
-ArkAces\AcesListenerApi\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-ArkAces\AcesListenerApi\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+$config = ArkAces\AcesListenerApi\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
 
-$api_instance = new ArkAces\AcesListenerApi\Api\AcesListenerApi(new \Http\Adapter\Guzzle6\Client());
+
+$apiInstance = new ArkAces\AcesListenerApi\Api\AcesListenerApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 
 try {
-    $result = $api_instance->statusGet();
+    $result = $apiInstance->statusGet();
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AcesListenerApi->statusGet: ', $e->getMessage(), PHP_EOL;
@@ -69,17 +77,24 @@ Gets a page of Subscription Events.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basicAuth
-ArkAces\AcesListenerApi\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-ArkAces\AcesListenerApi\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+$config = ArkAces\AcesListenerApi\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
 
-$api_instance = new ArkAces\AcesListenerApi\Api\AcesListenerApi(new \Http\Adapter\Guzzle6\Client());
+
+$apiInstance = new ArkAces\AcesListenerApi\Api\AcesListenerApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $id = "id_example"; // string | Subscription Identifier
 $pageSize = 100; // int | Number of items to return per page.
 $page = 56; // int | Zero-offset page number to return.
 $continuation = "continuation_example"; // string | Continuation param for fetching next page.
 
 try {
-    $result = $api_instance->subscriptionsIdEventsGet($id, $pageSize, $page, $continuation);
+    $result = $apiInstance->subscriptionsIdEventsGet($id, $pageSize, $page, $continuation);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AcesListenerApi->subscriptionsIdEventsGet: ', $e->getMessage(), PHP_EOL;
@@ -124,14 +139,21 @@ Get a Subscription by identifier.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basicAuth
-ArkAces\AcesListenerApi\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-ArkAces\AcesListenerApi\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+$config = ArkAces\AcesListenerApi\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
 
-$api_instance = new ArkAces\AcesListenerApi\Api\AcesListenerApi(new \Http\Adapter\Guzzle6\Client());
+
+$apiInstance = new ArkAces\AcesListenerApi\Api\AcesListenerApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $id = "id_example"; // string | Subscription Identifier
 
 try {
-    $result = $api_instance->subscriptionsIdGet($id);
+    $result = $apiInstance->subscriptionsIdGet($id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AcesListenerApi->subscriptionsIdGet: ', $e->getMessage(), PHP_EOL;
@@ -160,6 +182,62 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
+# **subscriptionsIdResubscribesPost**
+> \ArkAces\AcesListenerApi\Model\SubscriptionResubscribe subscriptionsIdResubscribesPost($id)
+
+Create a Resubscribe.
+
+Resubscribes an inactive subscription.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure HTTP basic authorization: basicAuth
+$config = ArkAces\AcesListenerApi\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+
+
+$apiInstance = new ArkAces\AcesListenerApi\Api\AcesListenerApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$id = "id_example"; // string | Subscription Identifier
+
+try {
+    $result = $apiInstance->subscriptionsIdResubscribesPost($id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling AcesListenerApi->subscriptionsIdResubscribesPost: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Subscription Identifier |
+
+### Return type
+
+[**\ArkAces\AcesListenerApi\Model\SubscriptionResubscribe**](../Model/SubscriptionResubscribe.md)
+
+### Authorization
+
+[basicAuth](../../README.md#basicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
 # **subscriptionsIdUnsubscribesPost**
 > \ArkAces\AcesListenerApi\Model\SubscriptionUnsubscribe subscriptionsIdUnsubscribesPost($id)
 
@@ -173,14 +251,21 @@ Unsubscribes an active Subscription.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basicAuth
-ArkAces\AcesListenerApi\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-ArkAces\AcesListenerApi\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+$config = ArkAces\AcesListenerApi\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
 
-$api_instance = new ArkAces\AcesListenerApi\Api\AcesListenerApi(new \Http\Adapter\Guzzle6\Client());
+
+$apiInstance = new ArkAces\AcesListenerApi\Api\AcesListenerApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $id = "id_example"; // string | Subscription Identifier
 
 try {
-    $result = $api_instance->subscriptionsIdUnsubscribesPost($id);
+    $result = $apiInstance->subscriptionsIdUnsubscribesPost($id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AcesListenerApi->subscriptionsIdUnsubscribesPost: ', $e->getMessage(), PHP_EOL;
@@ -222,14 +307,21 @@ The Subscribers endpoint allows subscriber to register their node to receive blo
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basicAuth
-ArkAces\AcesListenerApi\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-ArkAces\AcesListenerApi\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+$config = ArkAces\AcesListenerApi\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
 
-$api_instance = new ArkAces\AcesListenerApi\Api\AcesListenerApi(new \Http\Adapter\Guzzle6\Client());
+
+$apiInstance = new ArkAces\AcesListenerApi\Api\AcesListenerApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $subscriptionRequest = new \ArkAces\AcesListenerApi\Model\SubscriptionRequest(); // \ArkAces\AcesListenerApi\Model\SubscriptionRequest | The request to create a new Subscription.
 
 try {
-    $result = $api_instance->subscriptionsPost($subscriptionRequest);
+    $result = $apiInstance->subscriptionsPost($subscriptionRequest);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AcesListenerApi->subscriptionsPost: ', $e->getMessage(), PHP_EOL;

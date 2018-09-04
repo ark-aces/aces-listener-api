@@ -1,0 +1,387 @@
+---
+swagger: "2.0"
+info:
+  description: "API Specification for ACES Listeners that read data on a blockchain\
+    \ and\nforward transaction events to registered subscribers.\n"
+  version: "1.1.0"
+  title: "ACES Listener API"
+basePath: "/v1"
+tags:
+- name: "AcesListener"
+  description: "ACES Listener API"
+  externalDocs:
+    url: "https://ark-aces.github.io/aces-encoded-listener-docs/"
+schemes:
+- "https"
+- "http"
+produces:
+- "application/json"
+security:
+- basicAuth: []
+paths:
+  /status:
+    get:
+      tags:
+      - "AcesListener"
+      summary: "Get Health of node."
+      description: "Get application health information."
+      parameters: []
+      responses:
+        200:
+          description: "Health information."
+          schema:
+            $ref: "#/definitions/Health"
+        401:
+          description: "Authentication information is missing or invalid"
+          headers:
+            WWW_Authenticate:
+              type: "string"
+  /subscriptions:
+    post:
+      tags:
+      - "AcesListener"
+      summary: "Registers a subscriber node to receive blockchain events."
+      description: "The Subscribers endpoint allows subscriber to register their node\
+        \ to receive blockchain\nevents from the Encoded Listener.\n"
+      parameters:
+      - in: "body"
+        name: "SubscriptionRequest"
+        description: "The request to create a new Subscription."
+        required: false
+        schema:
+          $ref: "#/definitions/SubscriptionRequest"
+        x-exportParamName: "SubscriptionRequest"
+      responses:
+        200:
+          description: "The created Subscription"
+          schema:
+            $ref: "#/definitions/Subscription"
+        400:
+          description: "The request was invalid."
+          schema:
+            $ref: "#/definitions/ValidationError"
+        401:
+          description: "Authentication information is missing or invalid"
+          headers:
+            WWW_Authenticate:
+              type: "string"
+        404:
+          description: "The specified resource was not found."
+          schema:
+            $ref: "#/definitions/NotFoundError"
+  /subscriptions/{id}:
+    get:
+      tags:
+      - "AcesListener"
+      summary: "Gets Subscription"
+      description: "Get a Subscription by identifier."
+      parameters:
+      - name: "id"
+        in: "path"
+        description: "Subscription Identifier"
+        required: true
+        type: "string"
+        x-exportParamName: "Id"
+      responses:
+        200:
+          description: "The Subscription."
+          schema:
+            $ref: "#/definitions/Subscription"
+        401:
+          description: "Authentication information is missing or invalid"
+          headers:
+            WWW_Authenticate:
+              type: "string"
+        404:
+          description: "The specified resource was not found."
+          schema:
+            $ref: "#/definitions/NotFoundError"
+  /subscriptions/{id}/events:
+    get:
+      tags:
+      - "AcesListener"
+      summary: "List Subscription Events"
+      description: "Gets a page of Subscription Events."
+      parameters:
+      - name: "id"
+        in: "path"
+        description: "Subscription Identifier"
+        required: true
+        type: "string"
+        x-exportParamName: "Id"
+      - name: "pageSize"
+        in: "query"
+        description: "Number of items to return per page."
+        required: false
+        type: "integer"
+        default: 100
+        x-exportParamName: "PageSize"
+        x-optionalDataType: "Int32"
+      - name: "page"
+        in: "query"
+        description: "Zero-offset page number to return."
+        required: false
+        type: "integer"
+        x-exportParamName: "Page"
+        x-optionalDataType: "Int32"
+      - name: "continuation"
+        in: "query"
+        description: "Continuation param for fetching next page."
+        required: false
+        type: "string"
+        x-exportParamName: "Continuation"
+        x-optionalDataType: "String"
+      responses:
+        200:
+          description: "Page of Subscription Events"
+          schema:
+            type: "object"
+            properties:
+              pageSize:
+                type: "integer"
+              page:
+                type: "integer"
+              continuation:
+                type: "string"
+              items:
+                type: "array"
+                items:
+                  $ref: "#/definitions/SubscriptionEvent"
+        401:
+          description: "Authentication information is missing or invalid"
+          headers:
+            WWW_Authenticate:
+              type: "string"
+        404:
+          description: "The specified resource was not found."
+          schema:
+            $ref: "#/definitions/NotFoundError"
+  /subscriptions/{id}/resubscribes:
+    post:
+      tags:
+      - "AcesListener"
+      summary: "Create a Resubscribe."
+      description: "Resubscribes an inactive subscription."
+      parameters:
+      - name: "id"
+        in: "path"
+        description: "Subscription Identifier"
+        required: true
+        type: "string"
+        x-exportParamName: "Id"
+      responses:
+        200:
+          description: "Resubscribe info"
+          schema:
+            $ref: "#/definitions/SubscriptionResubscribe"
+        401:
+          description: "Authentication information is missing or invalid"
+          headers:
+            WWW_Authenticate:
+              type: "string"
+        404:
+          description: "The specified resource was not found."
+          schema:
+            $ref: "#/definitions/NotFoundError"
+  /subscriptions/{id}/unsubscribes:
+    post:
+      tags:
+      - "AcesListener"
+      summary: "Create an Unsubscription."
+      description: "Unsubscribes an active Subscription."
+      parameters:
+      - name: "id"
+        in: "path"
+        description: "Subscription Identifier"
+        required: true
+        type: "string"
+        x-exportParamName: "Id"
+      responses:
+        200:
+          description: "Page of Subscription Events"
+          schema:
+            $ref: "#/definitions/SubscriptionUnsubscribe"
+        401:
+          description: "Authentication information is missing or invalid"
+          headers:
+            WWW_Authenticate:
+              type: "string"
+        404:
+          description: "The specified resource was not found."
+          schema:
+            $ref: "#/definitions/NotFoundError"
+securityDefinitions:
+  basicAuth:
+    type: "basic"
+definitions:
+  Subscription:
+    type: "object"
+    properties:
+      id:
+        type: "string"
+        description: "Unique identifier for a Subscription."
+      createdAt:
+        type: "string"
+        format: "date-time"
+        description: "Date the Subscription was created."
+      status:
+        type: "string"
+        enum:
+        - "active"
+        - "unsubscribed"
+        - "cancelled"
+    example:
+      createdAt: "2000-01-23T04:56:07.000+00:00"
+      id: "id"
+      status: "active"
+  SubscriptionResubscribe:
+    type: "object"
+    properties:
+      createdAt:
+        type: "string"
+        format: "date-time"
+        description: "Date the Resubscription was created."
+    example:
+      createdAt: "2000-01-23T04:56:07.000+00:00"
+  SubscriptionEvent:
+    type: "object"
+    properties:
+      id:
+        type: "string"
+        description: "Subscription Event identifier"
+      createdAt:
+        type: "string"
+        format: "date-time"
+        description: "Date the Subscription Event was created."
+      status:
+        type: "string"
+        enum:
+        - "new"
+        - "delivered"
+        - "failed"
+      tries:
+        type: "integer"
+      transactionId:
+        type: "string"
+        description: "Transaction id blockchain event."
+      data:
+        type: "string"
+        description: "Event data encoded as a Json string."
+    example:
+      createdAt: "2000-01-23T04:56:07.000+00:00"
+      tries: 1
+      data: "data"
+      id: "id"
+      transactionId: "transactionId"
+      status: "new"
+  SubscriptionUnsubscribe:
+    type: "object"
+    properties:
+      id:
+        type: "string"
+        description: "Unsubscription identifier"
+      createdAt:
+        type: "string"
+        format: "date-time"
+        description: "Date the Unsubscription was created."
+    example:
+      createdAt: "2000-01-23T04:56:07.000+00:00"
+      id: "id"
+  Health:
+    type: "object"
+    properties:
+      status:
+        type: "string"
+        enum:
+        - "up"
+        - "down"
+    example:
+      status: "up"
+  ValidationError:
+    type: "object"
+    properties:
+      code:
+        type: "string"
+      message:
+        type: "string"
+      fieldErrors:
+        type: "array"
+        items:
+          $ref: "#/definitions/FieldError"
+  FieldError:
+    type: "object"
+    properties:
+      field:
+        type: "string"
+      code:
+        type: "string"
+      message:
+        type: "string"
+  NotFoundError:
+    type: "object"
+    properties:
+      code:
+        type: "string"
+      message:
+        type: "string"
+  SubscriptionRequest:
+    type: "object"
+    required:
+    - "callbackUrl"
+    - "minConfirmations"
+    properties:
+      callbackUrl:
+        type: "string"
+        description: "Target target URL to POST Encoded Listener events to."
+      minConfirmations:
+        type: "integer"
+        description: "Confirmations required before event is sent to subscriber."
+      recipientAddress:
+        type: "string"
+    example:
+      minConfirmations: 0
+      callbackUrl: "callbackUrl"
+      recipientAddress: "recipientAddress"
+  inline_response_200:
+    properties:
+      pageSize:
+        type: "integer"
+      page:
+        type: "integer"
+      continuation:
+        type: "string"
+      items:
+        type: "array"
+        items:
+          $ref: "#/definitions/SubscriptionEvent"
+    example:
+      pageSize: 0
+      page: 6
+      continuation: "continuation"
+      items:
+      - createdAt: "2000-01-23T04:56:07.000+00:00"
+        tries: 1
+        data: "data"
+        id: "id"
+        transactionId: "transactionId"
+        status: "new"
+      - createdAt: "2000-01-23T04:56:07.000+00:00"
+        tries: 1
+        data: "data"
+        id: "id"
+        transactionId: "transactionId"
+        status: "new"
+responses:
+  BadRequest:
+    description: "The request was invalid."
+    schema:
+      $ref: "#/definitions/ValidationError"
+  NotFound:
+    description: "The specified resource was not found."
+    schema:
+      $ref: "#/definitions/NotFoundError"
+  Unauthorized:
+    description: "Authentication information is missing or invalid"
+    headers:
+      WWW_Authenticate:
+        type: "string"

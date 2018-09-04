@@ -7,6 +7,7 @@ Method | HTTP request | Description
 [**statusGet**](AcesListenerApi.md#statusGet) | **GET** /status | Get Health of node.
 [**subscriptionsIdEventsGet**](AcesListenerApi.md#subscriptionsIdEventsGet) | **GET** /subscriptions/{id}/events | List Subscription Events
 [**subscriptionsIdGet**](AcesListenerApi.md#subscriptionsIdGet) | **GET** /subscriptions/{id} | Gets Subscription
+[**subscriptionsIdResubscribesPost**](AcesListenerApi.md#subscriptionsIdResubscribesPost) | **POST** /subscriptions/{id}/resubscribes | Create a Resubscribe.
 [**subscriptionsIdUnsubscribesPost**](AcesListenerApi.md#subscriptionsIdUnsubscribesPost) | **POST** /subscriptions/{id}/unsubscribes | Create an Unsubscription.
 [**subscriptionsPost**](AcesListenerApi.md#subscriptionsPost) | **POST** /subscriptions | Registers a subscriber node to receive blockchain events.
 
@@ -21,23 +22,24 @@ Get application health information.
 
 ### Example
 ```javascript
-import AcesListenerApi from 'aces_listener_api';
-let defaultClient = AcesListenerApi.ApiClient.instance;
+var AcesListenerApi = require('aces_listener_api');
+var defaultClient = AcesListenerApi.ApiClient.instance;
 
 // Configure HTTP basic authorization: basicAuth
-let basicAuth = defaultClient.authentications['basicAuth'];
+var basicAuth = defaultClient.authentications['basicAuth'];
 basicAuth.username = 'YOUR USERNAME';
 basicAuth.password = 'YOUR PASSWORD';
 
-let apiInstance = new AcesListenerApi.AcesListenerApi();
+var apiInstance = new AcesListenerApi.AcesListenerApi();
 
-apiInstance.statusGet((error, data, response) => {
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.statusGet(callback);
 ```
 
 ### Parameters
@@ -66,31 +68,32 @@ Gets a page of Subscription Events.
 
 ### Example
 ```javascript
-import AcesListenerApi from 'aces_listener_api';
-let defaultClient = AcesListenerApi.ApiClient.instance;
+var AcesListenerApi = require('aces_listener_api');
+var defaultClient = AcesListenerApi.ApiClient.instance;
 
 // Configure HTTP basic authorization: basicAuth
-let basicAuth = defaultClient.authentications['basicAuth'];
+var basicAuth = defaultClient.authentications['basicAuth'];
 basicAuth.username = 'YOUR USERNAME';
 basicAuth.password = 'YOUR PASSWORD';
 
-let apiInstance = new AcesListenerApi.AcesListenerApi();
+var apiInstance = new AcesListenerApi.AcesListenerApi();
 
-let id = "id_example"; // String | Subscription Identifier
+var id = "id_example"; // String | Subscription Identifier
 
-let opts = { 
+var opts = { 
   'pageSize': 100, // Number | Number of items to return per page.
   'page': 56, // Number | Zero-offset page number to return.
   'continuation': "continuation_example" // String | Continuation param for fetching next page.
 };
 
-apiInstance.subscriptionsIdEventsGet(id, opts, (error, data, response) => {
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.subscriptionsIdEventsGet(id, opts, callback);
 ```
 
 ### Parameters
@@ -125,26 +128,27 @@ Get a Subscription by identifier.
 
 ### Example
 ```javascript
-import AcesListenerApi from 'aces_listener_api';
-let defaultClient = AcesListenerApi.ApiClient.instance;
+var AcesListenerApi = require('aces_listener_api');
+var defaultClient = AcesListenerApi.ApiClient.instance;
 
 // Configure HTTP basic authorization: basicAuth
-let basicAuth = defaultClient.authentications['basicAuth'];
+var basicAuth = defaultClient.authentications['basicAuth'];
 basicAuth.username = 'YOUR USERNAME';
 basicAuth.password = 'YOUR PASSWORD';
 
-let apiInstance = new AcesListenerApi.AcesListenerApi();
+var apiInstance = new AcesListenerApi.AcesListenerApi();
 
-let id = "id_example"; // String | Subscription Identifier
+var id = "id_example"; // String | Subscription Identifier
 
 
-apiInstance.subscriptionsIdGet(id, (error, data, response) => {
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.subscriptionsIdGet(id, callback);
 ```
 
 ### Parameters
@@ -166,6 +170,58 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
+<a name="subscriptionsIdResubscribesPost"></a>
+# **subscriptionsIdResubscribesPost**
+> SubscriptionResubscribe subscriptionsIdResubscribesPost(id)
+
+Create a Resubscribe.
+
+Resubscribes an inactive subscription.
+
+### Example
+```javascript
+var AcesListenerApi = require('aces_listener_api');
+var defaultClient = AcesListenerApi.ApiClient.instance;
+
+// Configure HTTP basic authorization: basicAuth
+var basicAuth = defaultClient.authentications['basicAuth'];
+basicAuth.username = 'YOUR USERNAME';
+basicAuth.password = 'YOUR PASSWORD';
+
+var apiInstance = new AcesListenerApi.AcesListenerApi();
+
+var id = "id_example"; // String | Subscription Identifier
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.subscriptionsIdResubscribesPost(id, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**| Subscription Identifier | 
+
+### Return type
+
+[**SubscriptionResubscribe**](SubscriptionResubscribe.md)
+
+### Authorization
+
+[basicAuth](../README.md#basicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
 <a name="subscriptionsIdUnsubscribesPost"></a>
 # **subscriptionsIdUnsubscribesPost**
 > SubscriptionUnsubscribe subscriptionsIdUnsubscribesPost(id)
@@ -176,26 +232,27 @@ Unsubscribes an active Subscription.
 
 ### Example
 ```javascript
-import AcesListenerApi from 'aces_listener_api';
-let defaultClient = AcesListenerApi.ApiClient.instance;
+var AcesListenerApi = require('aces_listener_api');
+var defaultClient = AcesListenerApi.ApiClient.instance;
 
 // Configure HTTP basic authorization: basicAuth
-let basicAuth = defaultClient.authentications['basicAuth'];
+var basicAuth = defaultClient.authentications['basicAuth'];
 basicAuth.username = 'YOUR USERNAME';
 basicAuth.password = 'YOUR PASSWORD';
 
-let apiInstance = new AcesListenerApi.AcesListenerApi();
+var apiInstance = new AcesListenerApi.AcesListenerApi();
 
-let id = "id_example"; // String | Subscription Identifier
+var id = "id_example"; // String | Subscription Identifier
 
 
-apiInstance.subscriptionsIdUnsubscribesPost(id, (error, data, response) => {
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.subscriptionsIdUnsubscribesPost(id, callback);
 ```
 
 ### Parameters
@@ -227,27 +284,28 @@ The Subscribers endpoint allows subscriber to register their node to receive blo
 
 ### Example
 ```javascript
-import AcesListenerApi from 'aces_listener_api';
-let defaultClient = AcesListenerApi.ApiClient.instance;
+var AcesListenerApi = require('aces_listener_api');
+var defaultClient = AcesListenerApi.ApiClient.instance;
 
 // Configure HTTP basic authorization: basicAuth
-let basicAuth = defaultClient.authentications['basicAuth'];
+var basicAuth = defaultClient.authentications['basicAuth'];
 basicAuth.username = 'YOUR USERNAME';
 basicAuth.password = 'YOUR PASSWORD';
 
-let apiInstance = new AcesListenerApi.AcesListenerApi();
+var apiInstance = new AcesListenerApi.AcesListenerApi();
 
-let opts = { 
+var opts = { 
   'subscriptionRequest': new AcesListenerApi.SubscriptionRequest() // SubscriptionRequest | The request to create a new Subscription.
 };
 
-apiInstance.subscriptionsPost(opts, (error, data, response) => {
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.subscriptionsPost(opts, callback);
 ```
 
 ### Parameters

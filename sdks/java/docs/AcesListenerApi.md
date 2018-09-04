@@ -7,6 +7,7 @@ Method | HTTP request | Description
 [**statusGet**](AcesListenerApi.md#statusGet) | **GET** /status | Get Health of node.
 [**subscriptionsIdEventsGet**](AcesListenerApi.md#subscriptionsIdEventsGet) | **GET** /subscriptions/{id}/events | List Subscription Events
 [**subscriptionsIdGet**](AcesListenerApi.md#subscriptionsIdGet) | **GET** /subscriptions/{id} | Gets Subscription
+[**subscriptionsIdResubscribesPost**](AcesListenerApi.md#subscriptionsIdResubscribesPost) | **POST** /subscriptions/{id}/resubscribes | Create a Resubscribe.
 [**subscriptionsIdUnsubscribesPost**](AcesListenerApi.md#subscriptionsIdUnsubscribesPost) | **POST** /subscriptions/{id}/unsubscribes | Create an Unsubscription.
 [**subscriptionsPost**](AcesListenerApi.md#subscriptionsPost) | **POST** /subscriptions | Registers a subscriber node to receive blockchain events.
 
@@ -165,6 +166,60 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**Subscription**](Subscription.md)
+
+### Authorization
+
+[basicAuth](../README.md#basicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="subscriptionsIdResubscribesPost"></a>
+# **subscriptionsIdResubscribesPost**
+> SubscriptionResubscribe subscriptionsIdResubscribesPost(id)
+
+Create a Resubscribe.
+
+Resubscribes an inactive subscription.
+
+### Example
+```java
+// Import classes:
+//import com.arkaces.ApiClient;
+//import com.arkaces.ApiException;
+//import com.arkaces.Configuration;
+//import com.arkaces.auth.*;
+//import com.arkaces.aces_listener_api.AcesListenerApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure HTTP basic authorization: basicAuth
+HttpBasicAuth basicAuth = (HttpBasicAuth) defaultClient.getAuthentication("basicAuth");
+basicAuth.setUsername("YOUR USERNAME");
+basicAuth.setPassword("YOUR PASSWORD");
+
+AcesListenerApi apiInstance = new AcesListenerApi();
+String id = "id_example"; // String | Subscription Identifier
+try {
+    SubscriptionResubscribe result = apiInstance.subscriptionsIdResubscribesPost(id);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling AcesListenerApi#subscriptionsIdResubscribesPost");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**| Subscription Identifier |
+
+### Return type
+
+[**SubscriptionResubscribe**](SubscriptionResubscribe.md)
 
 ### Authorization
 

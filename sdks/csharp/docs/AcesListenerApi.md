@@ -7,6 +7,7 @@ Method | HTTP request | Description
 [**StatusGet**](AcesListenerApi.md#statusget) | **GET** /status | Get Health of node.
 [**SubscriptionsIdEventsGet**](AcesListenerApi.md#subscriptionsideventsget) | **GET** /subscriptions/{id}/events | List Subscription Events
 [**SubscriptionsIdGet**](AcesListenerApi.md#subscriptionsidget) | **GET** /subscriptions/{id} | Gets Subscription
+[**SubscriptionsIdResubscribesPost**](AcesListenerApi.md#subscriptionsidresubscribespost) | **POST** /subscriptions/{id}/resubscribes | Create a Resubscribe.
 [**SubscriptionsIdUnsubscribesPost**](AcesListenerApi.md#subscriptionsidunsubscribespost) | **POST** /subscriptions/{id}/unsubscribes | Create an Unsubscription.
 [**SubscriptionsPost**](AcesListenerApi.md#subscriptionspost) | **POST** /subscriptions | Registers a subscriber node to receive blockchain events.
 
@@ -196,6 +197,71 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**Subscription**](Subscription.md)
+
+### Authorization
+
+[basicAuth](../README.md#basicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="subscriptionsidresubscribespost"></a>
+# **SubscriptionsIdResubscribesPost**
+> SubscriptionResubscribe SubscriptionsIdResubscribesPost (string id)
+
+Create a Resubscribe.
+
+Resubscribes an inactive subscription.
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using ArkAces.AcesListenerApi.Api;
+using ArkAces.AcesListenerApi.Client;
+using ArkAces.AcesListenerApi.Model;
+
+namespace Example
+{
+    public class SubscriptionsIdResubscribesPostExample
+    {
+        public void main()
+        {
+            // Configure HTTP basic authorization: basicAuth
+            Configuration.Default.Username = "YOUR_USERNAME";
+            Configuration.Default.Password = "YOUR_PASSWORD";
+
+            var apiInstance = new AcesListenerApi();
+            var id = id_example;  // string | Subscription Identifier
+
+            try
+            {
+                // Create a Resubscribe.
+                SubscriptionResubscribe result = apiInstance.SubscriptionsIdResubscribesPost(id);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AcesListenerApi.SubscriptionsIdResubscribesPost: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Subscription Identifier | 
+
+### Return type
+
+[**SubscriptionResubscribe**](SubscriptionResubscribe.md)
 
 ### Authorization
 
