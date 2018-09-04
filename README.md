@@ -38,3 +38,15 @@ Then run the SDK build script in this repo:
 ```
 sh ./sdk-generation/regenerate.sh
 ```
+
+
+## Publishing SDKs
+
+### Java
+
+You must have an maven `settings.xml` set up with credentials to publish to the ACES artificatory repository.
+
+```
+cd ./sdks/java
+mvn clean publish --settings=settings.xml
+```

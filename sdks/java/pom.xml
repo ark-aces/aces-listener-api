@@ -22,6 +22,14 @@
         </license>
     </licenses>
 
+    <distributionManagement>
+        <repository>
+            <id>bintray-ark-aces-aces-maven</id>
+            <name>ark-aces-aces-maven</name>
+            <url>https://api.bintray.com/maven/ark-aces/aces-maven/aces_listener_api/;publish=1</url>
+        </repository>
+    </distributionManagement>
+
     <developers>
         <developer>
             <name>Swagger</name>
